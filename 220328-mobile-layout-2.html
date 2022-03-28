@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; transition: 1s;}
+
+    #back {
+      /* body */
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .display {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile {
+      /* 모바일 화면 */
+      width: 400px;
+      height: 800px;
+      background-color: #fff;
+      /* bgc:#c4c4c4 -> tab 하면 뿅 */
+      
+      flex-direction: column;
+    }
+
+    .box1 {
+      /* 검색하기 박스 */
+      width: 100%;
+      height: 9%;
+      background-color: #c4c4c4;
+
+      display: flex;
+      align-items: center;
+      justify-content: left;
+
+      margin-bottom: 1px;
+    }
+
+  h1 {
+    /* 검색하기 */
+    color:#fff;
+    font-size: larger;
+    font-weight: bold;
+
+    margin-left: 5%;
+  }
+
+  .box2 {
+    /* 검색창 박스 */
+    width: 100%;
+    height: 4%;
+    background-color:#fff;
+
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+
+  .box2 > div:nth-child(1) {
+    /* 검색창 원 박스 */
+    width: 15%;
+    height: 100%;
+    background-color: #c4c4c4;
+
+    margin-right: 2px;
+  }
+
+  nav {
+    /* 원 */
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #fff;
+  }
+
+  .box2 > div:nth-child(2) {
+    /* 검색창 */
+    width: 85%;
+    height: 100%;
+    background-color: #c4c4c4;
+
+    display: flex;
+      align-items: center;
+      justify-content: left;
+
+      padding-left: 5%;
+  }
+
+  h2 {
+    /* 아무거나 검색해보세요! */
+    color: #fff;
+    font-size: small;
+    font-weight: normal;
+  }
+
+  .box3 {
+    /* 카테고리 선택창 */
+    width: 100%;
+    height: 5%;
+
+    margin-bottom: 1px;
+    margin-top: 1px;
+  }
+  
+  h3 {
+    /* 장르 국가 특징 */
+    color:#fff;
+    font-size: large;
+    font-weight: bold;
+    
+    text-align: center;
+    padding-top: 6%;
+  }
+
+  .menu {
+    /* 카테고리 박스들 */
+    width: 35%;
+    height: 100%;
+    background-color: #c4c4c4;
+
+  }
+
+  .box4 {
+    /* 장르 페이지 */
+    width: 100%;
+    height: 76%;
+    
+    flex-direction: column;
+  }
+  
+  .boxes {
+    /* 코미디 박스 2개씩 들어간 박스 */
+  width: 100%;
+  height: 25%;
+  
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.comedy {
+  /* 코미디 박스 */
+  width: 50%;
+  height: 100%;
+  background-color: #c4c4c4;
+  
+  flex-direction: column;
+}
+
+.margin-r {
+  margin-right:1px;
+}
+
+.margin-l {
+  margin-left: 1px;
+}
+
+.circle {
+  /* 코미디 박스 안 원 */
+  width: 35%;
+  height: 60%;
+  border-radius: 50px;
+  background-color: #fff;
+  }
+
+  p {
+    /* 코미디 */
+    color:#fff;
+    font-weight: bold;
+    font-size: larger;
+
+    padding-top: 5%;
+  }
+
+  .box5 {
+    /* 맨 밑 메뉴 */
+  width: 100%;
+  height: 6%;
+  background-color: #c4c4c4;
+
+  margin-top: 1px;
+  justify-content: space-around;
+}
+
+section {
+  /* 맨 밑 메뉴 안 원들 */
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  background-color: #fff;
+}
+
+@media (min-width:1000px) {
+  *{margin:0; padding:0;}
+
+#back {
+  /* body */
+  width: 100vw;
+  height: 100vh;
+}
+
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile {
+  /* 모바일 화면 - 웹 화면 */
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  
+  flex-direction: column;
+}
+
+.box1 {
+  /* 검색하기 박스 */
+  width: 100%;
+  height: 15%;
+  background-color: #c4c4c4;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  margin-bottom: 1px;
+}
+
+h1 {
+/* 검색하기 */
+color:#fff;
+font-size: xx-large;
+font-weight: bold;
+
+margin-left: 5%;
+}
+
+.box2 {
+/* 검색창 박스 */
+width: 100%;
+height: 5%;
+background-color:#fff;
+
+margin-top: 1px;
+margin-bottom: 1px;
+}
+
+.box2 > div:nth-child(1) {
+/* 검색창 원 박스 */
+width: 10%;
+height: 100%;
+background-color: #c4c4c4;
+
+margin-right: 2px;
+}
+
+nav {
+/* 원 */
+width: 20px;
+height: 20px;
+border-radius: 100px;
+background-color: #fff;
+}
+
+.box2 > div:nth-child(2) {
+/* 검색창 */
+width: 90%;
+height: 100%;
+background-color: #c4c4c4;
+
+display: flex;
+  align-items: center;
+  justify-content: left;
+
+  padding-left: 2%;
+}
+
+h2 {
+/* 아무거나 검색해보세요! */
+color: #fff;
+font-size: medium;
+font-weight: normal;
+}
+
+.box3 {
+/* 카테고리 선택창 */
+width: 100%;
+height: 7%;
+
+margin-bottom: 1px;
+margin-top: 1px;
+}
+
+h3 {
+/* 장르 국가 특징 */
+color:#fff;
+font-size: x-large;
+font-weight: bold;
+
+text-align: center;
+padding: 2%;
+}
+
+.menu {
+/* 카테고리 박스들 */
+width: 35%;
+height: 100%;
+background-color: #c4c4c4;
+
+}
+
+.box4 {
+/* 장르 페이지 */
+width: 100%;
+height: 78%;
+
+flex-direction: column;
+}
+
+.boxes {
+/* 코미디 박스 2개씩 들어간 박스 */
+width: 100%;
+height: 25%;
+
+margin-top: 1px;
+margin-bottom: 1px;
+}
+
+.comedy {
+/* 코미디 박스 */
+width: 50%;
+height: 100%;
+background-color: #c4c4c4;
+
+flex-direction: column;
+}
+
+.margin-r {
+margin-right:1px;
+}
+
+.margin-l {
+margin-left: 1px;
+}
+
+.circle {
+/* 코미디 박스 안 원 */
+width: 60%;
+height: 40%;
+border-radius: 50px;
+background-color: #fff;
+
+padding-top: 3%;
+}
+
+p {
+/* 코미디 */
+color:#fff;
+font-weight: bold;
+font-size: larger;
+
+padding-top: 1%;
+}
+
+.box5 {
+width: 0%;
+height: 0%;
+background-color: #c4c4c4;
+
+margin-top: 1px;
+justify-content: space-around;
+}
+
+section {
+/* 맨 밑 메뉴 안 원들 */
+width: 0px;
+height: 0px;
+border-radius: 100px;
+background-color: #fff;
+}
+
+}
+
+  </style>
+</head>
+<body id="back">
+  <div class="mobile display">
+    <!-- 모바일 박스 -->
+    <div class="box1">
+      <!-- 맨 위 검색하기 박스 -->
+  <h1>검색하기</h1>
+</div>
+
+<div class="box2 display">
+  <!-- 검색박스 -->
+  <div class="display">
+    <!-- 원 박스 -->
+    <nav></nav>
+    <!-- 원 -->
+  </div>
+  <div>
+    <!-- 검색창 -->
+    <h2>아무거나 검색해보세요!</h2>
+  </div>
+</div>
+
+<div class="box3 display">
+  <!-- 카테고리 선택창 -->
+  <div class="menu margin-r">
+    <h3>장르</h3>
+    </div>
+  <div class="menu margin-r margin-l">
+    <h3>국가</h3>
+    </div>
+    <div class="menu margin-l">
+    <h3>특징</h3>
+    </div>
+</div>
+
+<div class="box4 display">
+  <!-- 장르 페이지 -->
+  <div class="boxes display">
+    <!-- 첫번째 줄 -->
+    <div class="comedy display margin-r">
+      <div class="circle"></div>
+      <p>코미디</p>
+    </div>
+    <div class="comedy display margin-l">
+      <div class="circle"></div>
+      <p>코미디</p>
+    </div>
+  </div>
+  <div class="boxes display">
+    <!-- 두번째 줄 -->
+    <div class="comedy display margin-r">
+      <div class="circle "></div>
+      <p>코미디</p>
+    </div>
+    <div class="comedy display margin-l">
+      <div class="circle"></div>
+      <p>코미디</p>
+    </div>
+  </div>
+  <div class="boxes display">
+    <!-- 세번째 줄 -->
+    <div class="comedy display margin-r">
+      <div class="circle"></div>
+      <p>코미디</p>
+    </div>
+    <div class="comedy display margin-l">
+      <div class="circle"></div>
+      <p>코미디</p>
+    </div>
+  </div>
+  <div class="boxes display">
+    <!-- 네번째 줄 -->
+    <div class="comedy display margin-r">
+      <div class="circle"></div>
+      <p>코미디</p>
+    </div>
+    <div class="comedy display margin-l">
+      <div class="circle"></div>
+      <p>코미디</p>
+    </div>
+  </div>
+</div>
+
+<div class="box5 display">
+  <!-- 맨 밑 메뉴 -->
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
+</div>
+  </div>
+</body>
+</html>
