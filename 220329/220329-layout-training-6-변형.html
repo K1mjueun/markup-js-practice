@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box; transition: 1s;}
+
+    #body {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      border: 2px solid #000;
+
+      display: flex;
+      align-items: center;
+    }
+
+    div {
+      width: 100vw;
+      height: 30vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    section {
+      width: 250px;
+      height: 250px;
+      background-color: orangered;
+
+      margin: 3vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      color: #fff;
+      font-weight: lighter;
+    }
+
+    @media (max-width:700px) {
+      
+      #body {
+      width: 100vw;
+      height: 100vh;
+      background-color: #000;
+      border: 5px dotted #fff;
+
+      display: flex;
+    }
+
+    div {
+      width: 100vw;
+      height: 100vh;
+
+      flex-direction: column;
+    }
+
+    section {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      border-radius: 50px;
+      border: palevioletred 20px solid;
+
+      margin: 5vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    div > section:nth-child(2) {
+      width: 300px;
+      height: 300px;
+      border-radius: 300px;
+      
+      position: absolute;
+      transform: rotate(360deg);
+    }
+
+    h1 {
+      color: #fff;
+      font-weight: bold;
+      font-size: 40px;
+    }
+    }
+    
+  </style>
+</head>
+<body id="body">
+  <div>
+    <section>
+      <h1>item</h1>
+    </section>
+    <section>
+      <h1>item</h1>
+    </section>
+    <section>
+      <h1>item</h1>
+    </section>
+  </div>
+</body>
+</html>
