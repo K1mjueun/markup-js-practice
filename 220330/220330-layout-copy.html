@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+*{margin:0; padding:0; box-sizing: border-box; list-style-type: none;}
+  
+#web {
+  width: 100vw;
+  height: 150vh;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+header {
+  /* 맨 위 박스 */
+  width: 100vw;
+  height: 15vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+menu {
+  /* 맨 위 박스 안 작은 메뉴 */
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+}
+
+ul {
+  /* 작은 메뉴들 박스 */
+  width: 25%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+menu > ul:nth-child(1) {
+  margin-right: 25%;
+}
+
+menu > ul:nth-child(2) {
+  margin-left: 25%;
+}
+
+li {
+  /* 메뉴들 */
+  font-size: small;
+}
+
+.title {
+  /* 이름 박스 */
+width: 100%;
+height: 80%;
+
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  /* 이름 */
+  font-size: 70px;
+}
+
+.box-2 {
+/* 두번째 박스 */
+width: 100%;
+height: 30%;
+
+display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 5%;
+}
+
+.box-2 > div:nth-child(1) {
+  /* 두번째 박스 안 왼쪽 박스 */
+  width: 45%;
+  height: 100%;
+  border: black solid 1px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-2 > div:nth-child(2) {
+  /* 두번째 박스 안 오른쪽 박스 */
+  width: 45%;
+  height: 100%;
+  background-color: #000;
+}
+
+section {
+  /* 세번째 박스 */
+  width: 95%;
+  height: 15%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section > p {
+  text-align: left;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.box-4 {
+/* 네번째 박스 */
+width: 100%;
+height: 30%;
+
+display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box-4 > div:nth-child(1) {
+  /* 네번째 박스 안 왼쪽 박스 */
+  width: 45%;
+  height: 100%;
+  background-color: #000;
+}
+
+.box-4 > div:nth-child(2) {
+  /* 네번째 박스 안 오른쪽 박스 */
+  width: 45%;
+  height: 100%;
+  border: black solid 1px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-4 > div:nth-child(2) > p {
+  font-size: medium;
+  margin: 2%;
+}
+
+footer {
+  /* 맨 밑 박스 */
+  width: 95vw;
+  height: 20vh;
+  border-top: #000 solid 1px;
+  border-bottom: #000 solid 1px;
+
+  margin-top: 10%;
+  margin-bottom: 5%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot {
+  /* 맨 밑 박스 안 박스 두개 */
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.foot > div:nth-child(1) {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+    word-spacing: 35px;
+    font-size: small;
+}
+
+.foot > div:nth-child(2), .foot > div:nth-child(3) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: small;
+}
+
+footer > div:nth-child(1)>div:nth-child(1)  {
+  /* 맨 밑 박스 안 왼쪽 박스 첫번째 */
+  width: 100%;
+  height: 30%;
+  border-bottom: #000 solid 1px;
+  border-right: #000 solid 1px;
+}
+
+footer > div:nth-child(2)>div:nth-child(1) {
+  /* 맨 밑 박스 안 오른쪽 박스 첫번째 */
+  width: 100%;
+  height: 30%;
+  border-bottom: #000 solid 1px;
+}
+
+footer > div:nth-child(1) > div:nth-child(2) {
+  /* 맨 밑 박스 안 왼쪽 박스 두번째 */
+  width: 100%;
+  height: 35%;
+  border-bottom: #000 solid 1px;
+  border-right: #000 solid 1px;
+}
+
+footer > div:nth-child(2) > div:nth-child(2) {
+  /* 맨 밑 박스 안 오른쪽 박스 두번째 */
+  width: 100%;
+  height: 35%;
+  border-bottom: #000 solid 1px;
+}
+
+footer > div:nth-child(1) > div:nth-child(3) {
+  /* 맨 밑 박스 안 왼쪽 박스 세번째 */
+  width: 100%;
+  height: 35%;
+  border-right: #000 solid 1px;
+}
+
+footer > div:nth-child(2) > div:nth-child(3) {
+  /* 맨 밑 박스 안 오른쪽 박스 세번째 */
+  width: 100%;
+  height: 35%;
+}
+    
+  .mini > div:nth-child(1), .minii > div:nth-child(1) {
+    width: 50%;
+    height: 100%;
+    border-right: #000 solid 1px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-left: 1%;
+  }
+
+  .mini > div:nth-child(2), .minii > div:nth-child(2) {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-left: 1%;
+  }
+
+  </style>
+</head>
+<body>
+  <div id="web">
+    <header>
+      <!-- 맨 위 박스 -->
+      <menu>
+        <!-- 맨 위 박스 안 작은 메뉴 -->
+        <ul>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+        </ul>
+        <ul>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+        </ul>
+      </menu>
+
+      <div class="title">
+        <!-- 맨 위 박스 안 이름 박스 -->
+        <h1>Lorem</h1>
+      </div>
+    </header>
+
+    <main class="box-2">
+      <!-- 두번째 박스 -->
+      <div>Welcome to Lorem World</div>
+      <!-- 왼쪽 박스 -->
+      <div></div>
+      <!-- 오른쪽 박스 -->
+    </main>
+
+    <section>
+      <!-- 세번째 박스 -->
+      <p>Lorem ipsum dolor snatur consectetur iusto vitae ullam ducimus! Obcaecati in inventore illo erro </p>
+    </section>
+
+    <main class="box-4">
+      <!-- 네번쨰 박스 -->
+      <div></div>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fugit, ad, quibusdam aliquid optio similique et atque quidem mollitia veniam dolorum nihil minus nisi. Veritatis necessitatibus possimus autem similique consectetur rem pariatur dolorem sit nihil eius aliquam exercitationem, debitis quidem, sunt minus ut saepe quo accusantium velit, deleniti nemo ipsam.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus voluptatum, aspernatur consectetur iusto vitae ullam ducimus! Obcaecati in inventore illo error alias! Ratione quam recusandae pariatur sit ducimus nostrum a.
+          </p>
+      </div>
+    </main>
+
+    <footer>
+      <!-- 맨 밑 박스 -->
+      <div class="foot">
+        <!-- 왼쪽 박스 -->
+      <div>lorem lorem lorem lorem lorem</div>
+      <div>Lorem ipsumadipisicing elit. Porro, quidem.<br>Lorem ipsum dolor sit amet.</div>
+      <div>Lorem ipsum, dolor sit amet elit</div>
+      </div>
+
+      <div class="foot">
+        <!-- 오른쪽 박스 -->
+      <div>lorem lorem lorem lorem lorem</div>
+
+      <div class="mini">
+      <div>Lorem ipsum, dolor sit amet elit</div>
+        <div>Lorem ipsum, dolor sit amet elit</div>
+      </div>
+
+      <div class="minii">
+        <div>Lorem ipsum, dolor sit amet elit</div>
+        <div>Lorem ipsum, dolor sit amet elit</div>
+      </div>
+
+      </div>
+    </footer>
+
+  </div>
+  
+</body>
+</html>
