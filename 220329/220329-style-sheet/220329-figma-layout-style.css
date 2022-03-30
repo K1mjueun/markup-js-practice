@@ -1,0 +1,165 @@
+ /* mobile */
+ *{margin:0; padding:0; transition: 1s;}
+  
+ #back {
+   width: 100vw;
+   height: 200vh;
+   background-color: #fff;
+ 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ 
+   flex-direction: column;
+ }
+ 
+ header {
+   /* 맨 위 박스 */
+   width: 100vw;
+   height: 15vh;
+ 
+   display: flex;
+   align-items: center;
+   justify-content: end;
+ 
+   flex-direction: column;
+ }
+ 
+ header > div:nth-child(1) {
+ width: 50%;
+ height: 30%;
+ background-color: #c8c8c8;
+ margin-bottom:5%;
+ }
+ 
+ header > div:nth-child(2) {
+ width: 70%;
+ height: 20%;
+ background-color: #c8c8c8;
+ }
+ 
+ main {
+   /* 가운데 박스 */
+   width: 100vw;
+   height: 180vh;
+ 
+   flex-wrap: wrap;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ section {
+   width: 45%;
+   height: 20%;
+   background-color: #c8c8c8;
+ 
+   margin: 2%;
+ }
+ 
+ footer {
+   /* 메뉴 */
+   width: 100vw;
+   height: 5vh;
+   background-color: #c8c8c8;
+   
+   position: fixed;
+   bottom:0%;
+ 
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+ }
+ 
+ .circle {
+   width: 25px;
+   height: 25px;
+   background-color: #fff;
+   border-radius: 100px;
+ }
+ 
+ @media (min-width:1920px) {
+  /* desktop */
+  *{margin:0; padding:0;}
+   
+   #back {
+     width: 100vw;
+     height: 200vh;
+     background-color: #fff;
+   
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   
+     flex-direction: column;
+   }
+   
+   header {
+     /* 맨 위 박스 */
+     width: 100vw;
+     height: 30vh;
+   
+     display: flex;
+     align-items: center;
+     justify-content: end;
+   
+     flex-direction: column;
+   }
+   
+   header > div:nth-child(1) {
+   width: 40%;
+   height: 30%;
+   background-color: #c8c8c8;
+   margin-bottom:2%;
+   }
+   
+   header > div:nth-child(2) {
+   width: 50%;
+   height: 20%;
+   background-color: #c8c8c8;
+   margin-bottom:1%;
+   }
+ 
+   
+   main {
+     /* 가운데 박스 */
+     width: 100vw;
+     height: 200vh;
+   
+     flex-wrap: wrap;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   
+   section {
+     width: 40%;
+     height: 30%;
+     background-color: #c8c8c8;
+     margin:1%
+     }
+   
+   footer {
+     /* 메뉴 */
+     width: 5vw;
+     height: 100vh;
+     background-color: #c8c8c8;
+     
+     position: fixed;
+     left: 0%;
+     top: 0%;
+   
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+ 
+     flex-direction: column;
+   }
+   
+   .circle {
+     width: 35px;
+     height: 35px;
+     background-color: #fff;
+     border-radius: 100px;
+   }
+ }
