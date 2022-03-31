@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* mobile */
+*{margin:0; padding:0; transition: 0.5s;}
+
+.display {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+header {
+  width: 50vw;
+  height: 10vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:#fff solid 1px;
+}
+
+header > div {
+  width: 77%;
+  height: 65%;
+
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+
+  border:red solid 1px;
+}
+
+.left {
+  width: 23%;
+  height: 100%;
+
+  border:red solid 1px;
+}
+
+.right {
+  width: 77%;
+  height: 100%;
+
+  border:red solid 1px;
+}
+
+main {
+  width: 50vw;
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+
+  border:#fff solid 1px;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 30px;
+  
+  border:red solid 1px;
+}
+
+section {
+  width: 100%;
+  height: 33.3%;
+
+  border:red solid 1px;
+}
+
+@media (min-width:700px) and (max-width:1920px) {
+  /* desktop */
+*{margin:0; padding:0;}
+
+.display {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+header {
+  width: 19vw;
+  height: 11vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:#fff solid 1px;
+}
+
+header > div {
+  width: 76%;
+  height: 65%;
+
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+
+  border:red solid 1px;
+}
+
+.left {
+  width: 23%;
+  height: 100%;
+
+  border:red solid 1px;
+}
+
+.right {
+  width: 77%;
+  height: 100%;
+
+  border:red solid 1px;
+}
+
+main {
+  width: 19vw;
+  height: 62vh;
+
+  display: flex;
+  flex-direction: column;
+
+  border:#fff solid 1px;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 30px;
+  
+  border:red solid 1px;
+}
+
+section {
+  width: 100%;
+  height: 33.3%;
+
+  border:red solid 1px;
+}
+}
+
+  </style>
+</head>
+<body>
+  <div class="display">
+    <header>
+      <div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </header>
+
+    <main>
+      <nav>
+      <section></section>
+      <section></section>
+      <section></section>
+    </nav>
+    </main>
+
+  </div>
+</body>
+</html>
