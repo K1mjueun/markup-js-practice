@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    #back {
+      width: 100vw;
+      height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    section {
+      width: 100%;
+      height: 33.3%;
+    }
+
+    section:nth-child(1) {
+    background-color: rgb(201, 201, 201);
+    }
+    section:nth-child(2) {
+      background-color: rgb(117, 117, 117);
+    }
+    section:nth-child(3) {
+      background-color: rgb(68, 68, 68);
+    }
+
+     section:nth-child(4){
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+    }
+
+    section > div {
+      width: 150px;
+      height: 150px;
+      border-radius: 150px;
+      background-color: #fff;
+
+      position:absolute;
+    }
+
+    section > div:nth-child(1) {top:2%; left:40%;}
+    section > div:nth-child(2) {top:20%; left:10%;}
+    section > div:nth-child(3) {top:25%; right:15%;}
+    section > div:nth-child(4) {bottom:20%; right:40%;}
+    section > div:nth-child(5) {bottom:5%; right:15%;}
+
+  </style>
+</head>
+<body>
+  <div id="back">
+    
+    <section></section>
+    <section></section>
+    <section></section>
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </div>
+  
+</body>
+</html>

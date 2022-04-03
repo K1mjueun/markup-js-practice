@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; list-style-type: none; color:#b9b9b9}
+
+    body {
+      width: 100vw;
+      height: 150vh;
+      background-color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #root {
+      width: 450px;
+      height: 900px;
+      background-color: rgb(44, 44, 44);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    main {
+      width: 95%;
+      height: 95%;
+      border: 1px solid #646464;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    div {
+      width: 100%;
+      height: 3%;
+    }
+    
+    header {
+      width: 100%;
+      height: 10%;
+
+      padding-top: 3%;
+      padding-left: 3%;
+
+      font-weight: bolder;
+      font-size: xx-large;
+    }
+
+    ul {
+      width: 100%;
+      height: 70%;
+
+      display: flex;
+      align-self: flex-end;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    li {
+      width: 100%;
+      height: 100%;
+      
+      font-family: impact;
+      font-size: 120px;
+      line-height:0.75em;
+
+      padding-left: 5%;
+    }
+
+    footer {
+      width: 100%;
+      height: 20%;
+
+      display: flex;
+      align-self: flex-start;
+      justify-content: center;
+    }
+
+    button {
+    width: 80%;
+    height: 40%;
+    background-color: rgb(97, 97, 97);
+    border-radius: 50px;
+
+    font-size: medium;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <main>
+
+      <header>
+      <nav> ＜ </nav>
+      </header>
+
+      <ul>
+        <li>
+          this is<br>
+          just<br>
+          exam<br>
+          but<br>
+          make<br>
+          my own
+        </li>
+      </ul>
+
+      <footer>
+        <button>view more</button>
+      </footer>
+
+    </main>
+    <div></div>
+  </div>
+  
+</body>
+</html>
