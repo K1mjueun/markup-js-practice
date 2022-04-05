@@ -6,46 +6,169 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    *{margin:0; padding:0; list-style-type: none; margin-bottom: 2px; background-color: #c8c8c8; width: 100%;}
+    *{margin:0; padding:0; list-style-type: none; border-bottom: 2px solid #fff; background-color: #c8c8c8; width: 100%; color:#fff}
     
     #back {
       width: 100vw;
-      height: 100vw;
+      height: 200vh;
       background-color: #fff;
 
       display: flex;
       justify-content: center;
-    }
+    }    
 
     #mobile {
       width: 400px;
       height: 100%;
       background-color: #fff;
-
-      border: 1px solid black;
+      border-radius: 30px;
+      box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+      overflow: hidden;
 
       display: flex;
       align-items: center;
       flex-direction: column;
     }
 
-   header {
-     height: 5%;
-   }
+    header {
+      /* 검색하기 박스 */
+      height: 4%;
 
-   aside {
-     height: 1%;
-   }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-   nav {
-     height: 2%;
-   }
+    header > p {
+      /* 검색하기 */
+      width: 95%;
+      height: fit-content;
+      text-align: left;
+      
+      padding-top: 2%;
+      font-size: larger;
+      font-weight: bold;
+    }
 
-   #searching-movie {
-     height: 2%;
-   }
+    aside {
+      /* 검색창 박스 */
+      height: 1.2%;
+      display: flex;
+    }
 
-   
+    aside > div {
+      /* 검색 아이콘 박스 */
+      height: 100%;
+      width: 0;
+      flex-grow: 1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    aside > div > div {
+      /* 검색 아이콘 */
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      background-color: #fff;
+    }
+
+    aside > h1 {
+      /* 아무거나 검색해보세요 */
+      height: 100%;
+      width: 0;
+      flex-grow: 6;
+
+      display: flex;
+      align-items: center;
+      
+      border-left: 2px #fff solid;
+      font-size: small;
+      font-weight: lighter;
+
+      padding-left: 2%;
+    }
+
+    nav {
+      /* 영화,감독,배우 박스 */
+      height: 1.5%;
+      display: flex;
+      border-bottom: 0;
+    }
+
+    nav > div {
+      /* 영화,감독,배우 */
+      flex-grow: 1;
+      height: 100%;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px #fff solid;
+
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    nav > div:nth-child(2) {
+      /* 감독 */
+      border-right: 2px #fff solid;
+      border-left: 2px #fff solid;
+    }
+
+    #searching-movie {
+      /* 검색한 영화 박스 */
+      height: 1.5%;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+    }
+
+    #searching-movie > div:nth-child(1) {
+      width: 50%;
+      height: 100%;
+
+      display: flex;
+      align-items: flex-start;
+    }
+
+    #searching-movie > div:nth-child(1) > h2 {
+      /* 검색한 영화 */
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    #searching-movie > div:nth-child(2) {
+      /* 아이콘 박스 */
+      height: 100%;
+      width: 50%;
+    }
+
+    #movie-img {
+      /* 영화 이미지 박스 */
+      height: 15%;
+    }
+
+    #movie-info {
+      /* 영화 설명 박스 */
+      height: 15%;
+    }
+
+    #movie-info > section {
+      /* 설명 박스 */
+      height: 62%;
+    }
+
+    #movie-info > footer {
+      /* fix할 맨 밑 메뉴 */
+      height: 3%;
+      position: absolute;
+    }
+    
+    
 
   </style>
 </head>
@@ -55,15 +178,13 @@
     <div id="mobile">
 
       <header>
-        <title>검색하기</title>
+        <p>검색하기</p>
       </header>
       
       <aside>
-        <div>●</div>
-        <div>
-          <h2>아무거나 검색해보세요!</h2>
-        </div>
-      </aside>
+        <div><div></div></div>
+        <h1>아무거나 검색해보세요!</h1>
+        </aside>
 
       <nav>
         <div>영화</div>
@@ -71,9 +192,14 @@
         <div>배우</div>
       </nav>
 
-      <div id="searcing-movie">
-        <h2>검색한 영화</h2>
-        <div>●</div>
+      <div id="searching-movie">
+        <div>
+          <h2>검색한 영화</h2>
+        </div>
+
+          <div>
+          <div></div>
+        </div>
       </div>
 
       <div id="movie-img">
