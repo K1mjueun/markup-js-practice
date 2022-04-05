@@ -42,6 +42,7 @@
       border-bottom: 0;
     } */
     /* 위, 아래 메뉴 다 fix 하기 */
+    /* 비율이 아직 넘 어색 */
 
     header {
       /* 검색하기 박스 */
@@ -304,6 +305,143 @@
       margin-left: 2.5%;
     }
 
+    #director-info {
+      /* 감독 정보 박스 */
+      height: 15%;
+      border-bottom: #fff solid 2px;
+
+      display: flex;
+    }
+
+    #director-info > div:nth-child(1) {
+      width: 55%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #director-info > div:nth-child(1) > div {
+      width: 150px;
+      height: 150px;
+      border-radius: 150px;
+
+      background-image: url('https://cdn.pixabay.com/photo/2017/11/19/07/30/girl-2961959_960_720.jpg');
+      background-size: cover;
+    }
+
+    #director-info > div:nth-child(2) {
+    width: 45%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    #director-info > div:nth-child(2) > ul {
+      width: 100%;
+      height: 50%;
+
+      display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    flex-direction: column;
+    }
+
+    #director-info > div:nth-child(2) > ul > li {
+      width: 50%;
+      height: 10%;
+      background-color: #fff;
+      margin-bottom: 5%;
+    }
+
+    #director-info > div:nth-child(2) > ul > li:nth-child(1) {
+      height: 20%;
+    }
+    #director-info > div:nth-child(2) > ul > li:nth-child(2) {
+      width: 65%;
+    }
+    #director-info > div:nth-child(2) > ul > li:nth-child(4) {
+      width: 85%;
+    }
+    #director-info > div:nth-child(2) > ul > li:nth-child(5) {
+      width: 75%;
+    }
+
+    #actor {
+      /* 배우 박스*/
+      height: 2%;
+
+      display: flex;
+      align-items: center;
+      border-bottom: #fff solid 2px;
+    }
+
+    #actor > h5 {
+      /* 배우 */
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      font-size: 18px;
+      font-weight: bold;
+
+      margin-left: 2.5%;
+    }
+
+    #actors {
+      /* 배우 정보 박스 */
+      height: 17%;
+      border-bottom: #fff solid 2px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #actors > div {
+      height: 75%;
+      width: 95%;
+
+      display: flex;
+    }
+
+    #actors > div > div {
+      height: 100%;
+      flex-grow: 1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    article {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      background-image: url('https://cdn.pixabay.com/photo/2016/06/06/17/05/woman-1439909_960_720.jpg');
+      background-size: cover;
+      
+      margin-bottom: 20%;
+    }
+    
+    #actors > div > div > div {
+      width: 75%;
+      height: 12%;
+      background-color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color:#c8c8c8
+    }
 
     
 
@@ -377,44 +515,49 @@
           <h4>감독:ㅇㅇㅇ</h4>
         </div>
 
-        <div id="info-director">
-          <ul>
-              <div></div>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
+        <div id="director-info">
+          <div>
+            <div></div>
+            </div>
+            
+            <div>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                </ul>
+                </div>
+
         </div>
 
           <div id="actor">
-             <h5>배우</h5>
+            <h5>배우</h5>
             </div>
 
             <div id="actors">
 
-              <article>
+              <div>
+
                 <div>
                   <article></article>
-                <li>이름</li>
+            <div>이름</div>
               </div>
 
               <div>
                 <article></article>
-              <li>이름</li>
+            <div>이름</div>
             </div>
 
             <div>
               <article></article>
-            <li>이름</li>
+            <div>이름</div>
           </div>
 
-          <div>
-            <article></article>
-          <li>이름</li>
         </div>
-              </article>
+
+      </div>
 
             </div>
     </div>
