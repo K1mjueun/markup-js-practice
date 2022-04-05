@@ -18,7 +18,7 @@
     }    
 
     #mobile {
-      width: 400px;
+      width: 350px;
       height: 100%;
       background-color: #fff;
       border-radius: 30px;
@@ -29,6 +29,19 @@
       align-items: center;
       flex-direction: column;
     }
+
+    /* .fix {
+      position: fixed;
+      width: inherit;
+      height: fit-content;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      border-bottom: 0;
+    } */
+    /* 위, 아래 메뉴 다 fix 하기 */
 
     header {
       /* 검색하기 박스 */
@@ -189,7 +202,7 @@
     }
 
     #movie-info > h3 {
-      /* 검색한 영화 */
+      /* 영화설명 */
       height: 100%;
 
       display: flex;
@@ -205,16 +218,18 @@
 
     section {
       /* 설명 박스 */
-      height: 40%;
+      height: 35%;
 
       display: flex;
       align-items: center;
       justify-content: center;
+
+      border-bottom: #fff solid 2px;
     }
 
     section > ul {
       width: 95%;
-      height: 95%;
+      height: 98%;
 
       display: flex;
       align-items: flex-start;
@@ -246,9 +261,9 @@
     }
     
     footer > div {
-    width: 25px;
-    height: 25px;
-    border-radius: 25px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
     background-color: #fff;
     }
 
@@ -266,7 +281,30 @@
       justify-content: space-around;
     }
 
-    
+    #director {
+      /* 감독 박스 */
+      height: 2%;
+
+      display: flex;
+      align-items: center;
+      border-bottom: #fff solid 2px;
+    }
+
+    #director > h4 {
+      /* 감독 */
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      font-size: 18px;
+      font-weight: bold;
+
+      margin-left: 2.5%;
+    }
+
+
     
 
   </style>
@@ -276,6 +314,7 @@
 
     <div id="mobile">
 
+      <!-- <div class="fix"> -->
       <header>
         <p>검색하기</p>
       </header>
@@ -290,6 +329,7 @@
         <div>감독</div>
         <div>배우</div>
       </nav>
+      <!-- </div> -->
 
       <div id="searching-movie">
         <div>
