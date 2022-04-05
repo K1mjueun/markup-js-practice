@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    *{margin:0; padding:0; list-style-type: none; border-bottom: 2px solid #fff; background-color: #c8c8c8; width: 100%; color:#fff}
+    *{margin:0; padding:0; list-style-type: none; background-color: #c8c8c8; width: 100%; color:#fff}
     
     #back {
       width: 100vw;
@@ -37,6 +37,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      border-bottom: #fff solid 2px;
     }
 
     header > p {
@@ -48,12 +50,15 @@
       padding-top: 2%;
       font-size: larger;
       font-weight: bold;
+
+      border-bottom: 0;
     }
 
     aside {
       /* 검색창 박스 */
       height: 1.2%;
       display: flex;
+      border-bottom: #fff solid 2px;
     }
 
     aside > div {
@@ -93,9 +98,9 @@
 
     nav {
       /* 영화,감독,배우 박스 */
-      height: 1.5%;
+      height: 1.7%;
       display: flex;
-      border-bottom: 0;
+      border-bottom: #fff solid 2px;
     }
 
     nav > div {
@@ -108,7 +113,7 @@
       justify-content: center;
       border-bottom: 2px #fff solid;
 
-      font-size: 15px;
+      font-size: 14px;
       font-weight: bold;
     }
 
@@ -120,11 +125,12 @@
 
     #searching-movie {
       /* 검색한 영화 박스 */
-      height: 1.5%;
+      height: 2%;
       width: 100%;
 
       display: flex;
       align-items: center;
+      border-bottom: #fff solid 2px;
     }
 
     #searching-movie > div:nth-child(1) {
@@ -132,41 +138,134 @@
       height: 100%;
 
       display: flex;
-      align-items: flex-start;
+      align-items: center;
+      justify-content: flex-start;
     }
 
     #searching-movie > div:nth-child(1) > h2 {
       /* 검색한 영화 */
-      font-size: 15px;
+      width: fit-content;
+      font-size: 18px;
       font-weight: bold;
+
+      margin-left: 5%;
     }
 
     #searching-movie > div:nth-child(2) {
       /* 아이콘 박스 */
       height: 100%;
       width: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    #searching-movie > div:nth-child(2) >div {
+      /* 아이콘 */
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+
+    margin-right: 5%;
     }
 
     #movie-img {
       /* 영화 이미지 박스 */
+      background-image: url('https://cdn.pixabay.com/photo/2016/05/06/17/06/ballerinas-1376250_960_720.jpg');
+      background-size: cover;
       height: 15%;
+      border-bottom: #fff solid 2px;
     }
 
     #movie-info {
       /* 영화 설명 박스 */
-      height: 15%;
+      height: 2%;
+
+      display: flex;
+      align-items: center;
+      border-bottom: #fff solid 2px;
     }
 
-    #movie-info > section {
+    #movie-info > h3 {
+      /* 검색한 영화 */
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      font-size: 18px;
+      font-weight: bold;
+
+      margin-left: 2.5%;
+      /* 똑같은 스타일은.. 똑같은 양식으로 만들기.. */
+    }
+
+    section {
       /* 설명 박스 */
-      height: 62%;
+      height: 40%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    #movie-info > footer {
-      /* fix할 맨 밑 메뉴 */
-      height: 3%;
-      position: absolute;
+    section > ul {
+      width: 95%;
+      height: 95%;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      flex-direction: column;
     }
+
+    section > ul > li {
+      width: 50%;
+      height: 3%;
+      background-color: #fff;
+
+      margin-bottom: 5%;
+    }
+
+    section > ul > li:nth-child(1), li:nth-child(5), li:nth-child(10) {
+      margin-bottom: 10%;
+    }
+
+    section > ul > li:nth-child(2), li:nth-child(5),li:nth-child(6),li:nth-child(9),li:nth-child(11) {
+      height: 3%;
+      width: 70%;
+    }
+
+    section > ul > li:nth-child(3), li:nth-child(7),li:nth-child(12),li:nth-child(13) {
+      height: 5%;
+    width: 85%;
+    }
+    
+    footer > div {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #fff;
+    }
+
+    footer {
+      /* fix할 맨 밑 메뉴 */
+      width: inherit;
+      height: 5%;
+      position: fixed;
+
+      bottom: 0;
+      border-top: 2px solid #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
     
     
 
@@ -194,7 +293,7 @@
 
       <div id="searching-movie">
         <div>
-          <h2>검색한 영화</h2>
+          <h2>검색한 영화의 이름</h2>
         </div>
 
           <div>
@@ -203,15 +302,17 @@
       </div>
 
       <div id="movie-img">
-        <img src="https://cdn.pixabay.com/photo/2016/05/06/17/06/ballerinas-1376250_960_720.jpg" alt="영화">
       </div>
 
       <div id="movie-info">
-        <h3>영화설명</h3>
-      </div>
+      <h3>영화설명</h3>
+    </div>
 
       <section>
         <ul>
+          <li></li>
+          <li></li>
+          <li></li>
           <li></li>
           <li></li>
           <li></li>
@@ -253,7 +354,7 @@
 
             <div id="actors">
 
-              <section>
+              <article>
                 <div>
                   <article></article>
                 <li>이름</li>
@@ -273,29 +374,9 @@
             <article></article>
           <li>이름</li>
         </div>
-              </section>
+              </article>
 
             </div>
-
-            <footer>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </footer>
     </div>
 
   </div>
