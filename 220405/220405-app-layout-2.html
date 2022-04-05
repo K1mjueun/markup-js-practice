@@ -8,6 +8,8 @@
   <style>
     *{margin:0; padding:0; background-color: #c8c8c8; color:#fff; list-style-type: none; width: 100%;}
 
+    /* 간격 조절, 비율 조절.. */
+
     #back {
       width: 1920px;
       height: 1080px;
@@ -164,7 +166,7 @@
     }
 
     article > p {
-      width: 90%;
+      width: 95%;
       height: 100%;
 
       display: flex;
@@ -176,9 +178,61 @@
       border-bottom: 1px solid #fff;
     }
 
-    
+    #movie-li {
+      height: 20%;
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
+      flex-direction: column;
+    }
+
+    .text {
+      width: 95%;
+      height: 17%;
+
+      margin-bottom: 1%;
+    }
+
+    .text > h2 {
+      width: 45%;
+      height: 100%;
+      background-color: #fff;
+    }
+
+    .boxx {
+      width: 95%;
+      height: 78%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .boxx > section {
+    background-color: #fff;
+
+    width: 32%;
+    height: 100%;
+    }
+
+    footer {
+      /* 맨 밑 메뉴 */
+      height: 5%;
+      border-top: 2px solid #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    footer > div {
+      width: 25px;
+      height: 25px;
+      border-radius: 25px;
+      background-color: #fff;
+    }
 
 
   </style>
@@ -224,21 +278,25 @@
           - 안녕하세요 안녕안녕안녕</p>
       </article>
 
-      <footer>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </footer>
-
-      <div id="movie-li"></div>
-      <div class="text"></div>
-      <div class="boxx"></div>
-      <section></section>
-      <section></section>
-      <section></section>
+      
+      <div id="movie-li">
+      <div class="text">
+        <h2></h2>
+      </div>
+      
+      <div class="boxx">
+        <section></section>
+        <section></section>
+        <section></section>
+      </div>
     </div>
-    </div>
+    
+    <footer>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </footer>
 
     </div>
   </div>
