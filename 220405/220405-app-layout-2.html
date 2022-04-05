@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    *{margin:0; padding:0; background-color: #c8c8c8; color:#fff; list-style-type: none; width: 100%;}
+    *{margin:0; padding:0; background-color: #3f3f3f; color:#fff; list-style-type: none; width: 100%;}
 
     /* 간격 조절, 비율 조절.. */
 
@@ -88,6 +88,8 @@
 
     #bg-img {
     /* 프로필 배경 이미지 */
+    background-image: url("https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29sb3JmdWx8ZW58MHx8MHx8&w=1000&q=80");
+    background-size: cover;
     height: 25%;
     border-bottom: 2px solid #fff;
     }
@@ -97,7 +99,8 @@
       width: 200px;
       height: 200px;
       border-radius: 200px;
-      background-color: #fff;
+      background-image: url(https://w.namu.la/s/5d0a364db733ce2e9e35192e0ba8ee4cc5ac8f6b4bc1d5fa7af23a08bc5b53a028cd3deef3e0e1d23c13fc3fca7f11820d2559ae3c671facd889ecc0ff533dc1420d6db90a7949e9f8f0707d9570cefb);
+      background-size: cover;
 
       position: absolute;
       top: 31.5%;
@@ -211,10 +214,23 @@
     }
 
     .boxx > section {
-    background-color: #fff;
-
     width: 32%;
     height: 100%;
+    }
+
+    .boxx > section:nth-child(1) {
+      background-image: url("https://img.hankyung.com/photo/201506/BF.10076699.1.jpg");
+      background-size: cover;
+    }
+
+    .boxx > section:nth-child(2) {
+      background-image: url("https://mblogthumb-phinf.pstatic.net/20160913_78/fortune7530_1473767538678itXAx_JPEG/moana.jpg?type=w800");
+      background-size: cover;
+    }
+
+    .boxx > section:nth-child(3) {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEqSiws0ejCbfNvp9IefV0gMlwzA4tjreOng&usqp=CAU");
+      background-size: cover;
     }
 
     footer {
