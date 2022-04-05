@@ -26,12 +26,34 @@
       background-color: #fff;
       border-radius: 30px;
       box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+      overflow: hidden;
 
       display: flex;
       flex-direction: column;
     }
+    
+    header {
+      /* 맨 위 */
+      height: 10%;
+      display: flex;
+      border-bottom: 2px solid #fff;
+    }
 
+    header > div:nth-child(1) {
+      width: 0;
+      flex-grow: 4;
+    }
+    header > div:nth-child(2) {
+      width: 0;
+      flex-grow: 1;
+      border-left: 2px solid #fff;
+    }
 
+    nav {
+    /* 메뉴 */
+    height: 5%;
+    display: flex;
+    }
 
   </style>
 </head>
@@ -44,8 +66,13 @@
       <div></div>
     </header>
 
-    <nav></nav>
-    <!-- 메뉴 -->
+    <nav>
+      <!-- 메뉴 -->
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </nav>
 
     <div class="text"></div>
     <!-- 설명 -->
@@ -85,7 +112,7 @@
     <div class="text"></div>
 
     <div class="movie-3"></div>
-    
+
     <div class="img-3"></div>
 
   </div>
