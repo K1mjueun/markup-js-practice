@@ -7,6 +7,7 @@
 
   <script src="https://kit.fontawesome.com/c0547f77dd.js" crossorigin="anonymous"></script>
 
+  <!-- flex-grow 내용물에 따라 크기가 바뀌어서 짜증난다 -->
   <title>Document</title>
   <style>
     *{margin:0; padding:0; list-style-type: none;}
@@ -403,6 +404,113 @@
       background-color: var(--color-1);
     }
 
+    .mobile-3 > header {
+      width: 100%;
+      height: 8%;
+      background-color: var(--color-2);
+      border-bottom: var(--color-1) solid 2px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-3 > header > h1 {
+      width: 88%;
+    height: fit-content;
+    color: var(--color-1);
+    font-size: x-large;
+    }
+
+    .mobile-3 > nav {
+      width: 100%;
+      height: 4%;
+      border-bottom: var(--color-1) solid 2px;
+      display: flex;
+    }
+
+    .mobile-3 > nav > div:nth-child(1) {
+      width: 64px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-3 > nav > div:nth-child(1) > div {
+      width: 20px;
+      height: 20px;
+      border-radius: 15px;
+      background-color: var(--color-1);
+    }
+
+    .mobile-3 > nav > div:nth-child(2) {
+      width: 286px;
+      height: 100%;
+      border-left: var(--color-1) solid 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-3 > nav > div:nth-child(2) > h2 {
+      width: 90%;
+      height: fit-content;
+      font-size: 13px;
+      color: var(--color-1);
+      font-weight: normal;
+    }
+
+    .mobile-3 > section {
+      /* 장르 국가 특징 */
+      width: 100%;
+      height: 5%;
+      display: flex;
+      border-bottom: var(--color-1) solid 2px;
+    }
+
+    .mobile-3 > section > div {
+      flex-grow: 1;
+      border-left: var(--color-1) solid 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: var(--color-1);
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .mobile-3 > section > div:nth-child(1) {
+      border-left:0;
+    }
+
+    .mobile-3 > main {
+      width: 100%;
+      height: 75%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .category {
+      flex-grow: 1;
+      border-bottom: var(--color-1) solid 2px;
+      display: flex;
+    }
+
+    .nemo {
+      flex-grow: 1;
+      border-left: var(--color-1) solid 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .category > div:nth-child(1) {
+      border-left:0;
+    }
+
 
   </style>
 </head>
@@ -577,40 +685,63 @@
 
     <main>
       <div class="category">
+
         <div class="nemo">
           <div class="box"></div>
           <h3>긍정적인</h3>
         </div>
-        <div class="nemo"></div>
+
+        <div class="nemo">
           <div class="box"></div>
           <h3>어두운</h3>
+        </div>
+
+          </div>
 
           <div class="category">
+
             <div class="nemo">
               <div class="box"></div>
-              <h3>긍정적인</h3>
+              <h3>가족</h3>
             </div>
-            <div class="nemo"></div>
+    
+            <div class="nemo">
               <div class="box"></div>
-              <h3>어두운</h3>
+              <h3>귀여운</h3>
+            </div>
+            
+              </div>
 
               <div class="category">
+
                 <div class="nemo">
                   <div class="box"></div>
-                  <h3>긍정적인</h3>
+                  <h3>밝은</h3>
                 </div>
-                <div class="nemo"></div>
+        
+                <div class="nemo">
                   <div class="box"></div>
-                  <h3>어두운</h3>
+                  <h3>학생</h3>
+                </div>
+                
+                  </div>
 
                   <div class="category">
+
                     <div class="nemo">
                       <div class="box"></div>
-                      <h3>긍정적인</h3>
+                      <h3>범죄</h3>
                     </div>
-                    <div class="nemo"></div>
+            
+                    <div class="nemo">
                       <div class="box"></div>
-                      <h3>어두운</h3>
+                      <h3>사랑</h3>
+                    </div>
+                    
+                      </div>
+
+
+          
         </div>
 
     </main>
