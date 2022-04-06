@@ -18,7 +18,7 @@
     }
 
     #mobile {
-      width: 400px;
+      width: 350px;
       height: 800px;
       background-color: rgb(44, 44, 44);
       box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
@@ -26,6 +26,175 @@
       display: flex;
       align-items: flex-end;
     }
+
+    main {
+      /* 메인 박스 */
+      width: 100%;
+      height: 60%;
+      background-color: #ccc;
+      border-radius: 30px 30px 0 0;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    header {
+      /* 큰 타이틀 박스*/
+    width: 90%;
+    height: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    header > h1 {
+      /* 큰 타이틀 */
+      width: 100%;
+      height: fit-content;
+      font-size: 30px;
+      color:#fff;
+    }
+
+    nav {
+      /* 메뉴 박스 */
+      width: 90%;
+      height: 5%;
+
+      display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    }
+
+    nav > ul {
+      /* 동그리 박스 */
+      width: 30%;
+      height: fit-content;
+
+      display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    nav > ul > li {
+      /* 동그리 */
+      width: 7px;
+      height: 7px;
+      border-radius: 7px;
+      background-color: #fff;
+    }
+
+    nav > ul > li:nth-child(1) {
+      background-color: gray;
+    }
+
+    .login-box {
+      width: 100%;
+      height: 15%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .id .pw{
+      width: 90%;
+      height: 100%;
+    }
+
+    .id > p , .pw > p {
+      width: 100%;
+      height: fit-content;
+      font-size: medium;
+      font-weight: bolder;
+      color: gray;
+    }
+
+    input {
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    }
+
+    #text {
+      width: 90%;
+      height: 10%;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
+    #text > p {
+      width: fit-content;
+      height: fit-content;
+      font-size: x-small;
+      color: gray;
+    }
+
+    .button {
+      width: 90%;
+      height: 15%;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    button {
+      width: 50%;
+      height: 60%;
+      background-color: #fff;
+      border: 0;
+      border-radius: 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button > h2 {
+      font-size: medium;
+      font-weight: bolder;
+      color: gray;
+    }
+
+    .text {
+      width: 90%;
+      height: 7%;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .text > h3 {
+      width: fit-content;
+      height: fit-content;
+      font-size: x-small;
+      color: gray;
+      font-weight: normal;
+    }
+
+    footer {
+      width: 100%;
+      height: 20%;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    footer > div {
+      width: 60%;
+      height: 7%;
+      background-color: gray;
+      border-radius: 10px;
+      margin-bottom: 1%;
+    }
+
 
     #pc {
       width: 1000px;
@@ -59,34 +228,30 @@
         </nav>
 
         <div class="login-box">
-          <div>
-          <h2>Email / ID</h2>
-          </div>
-          
-          <div>
-            <h3>Lorem ipsum dolor sit amet.</h3>
+          <div class="id">
+            <p>Email / ID</p>
+          <input type="id" size="40"></input>
           </div>
         </div>
-
-        <div class="login-box">
-          <div>
-          <h2>Password</h2>
-          </div>
           
-          <div>
-            <h3>Lorem ipsum dolor sit amet.</h3>
+          <div class="login-box">
+          <div class="pw">
+            <p>Password</p>
+          <input type="password" size="40"></input>
           </div>
         </div>
 
         <div id="text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, veritatis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
 
+      <div class="button">
       <button>
         <h2>Sign in</h2>
       </button>
+    </div>
 
-      <div>
+      <div class="text">
         <h3>Lorem ipsum dolor sit amet.</h3>
       </div>
 
