@@ -187,7 +187,7 @@
     }
     
     .mobile-2 > header > div:nth-child(1){
-      flex-grow: 5;
+      flex-grow: 6;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -197,6 +197,7 @@
     width: 85%;
     height: fit-content;
     color: var(--color-1);
+    font-size: x-large;
     }
 
     .mobile-2 > header > div:nth-child(2){
@@ -321,6 +322,69 @@
       width: 50%;
       height: 100%;
       border-left: var(--color-1) solid 2px;
+      display: flex;
+    }
+
+    .title-3, .icon-2{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .title-3 {
+      width: 50%;
+      height: 100%;
+    }
+
+    .title-3 > h3 {
+      width: 65%;
+      color: var(--color-1);
+    }
+
+    .tag-2 {
+      width: 30%;
+      height: 100%;
+      font-size: x-small;
+      color: var(--color-1);
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .icon-2 {
+      width: 20%;
+      height: 100%;
+    }
+
+    .icon-2 > div {
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      background-color: var(--color-1);
+    }
+
+    .img {
+      width: 100%;
+      height: 30%;
+      display: flex;
+    }
+
+    .movie-img {
+      width: 50%;
+      height: 100%;
+      border-left: var(--color-1) solid 2px;
+    }
+
+    .img > div:nth-child(1) {
+      border-left: 0;
+      background-image: url("https://cdn.pixabay.com/photo/2015/03/04/20/25/sad-659422_960_720.jpg");
+      background-size: cover;
+    }
+
+    .img > div:nth-child(2) {
+      background-image: url("https://cdn.pixabay.com/photo/2017/03/19/18/00/the-traffic-light-2157162_960_720.jpg");
+      background-size: cover;
     }
 
 
@@ -434,12 +498,34 @@
       </div>
 
       <section class="title-2">
-      <div class="movie-2"></div>
-      <div class="movie-2"></div>
-      <!-- 태그 이름을 헷갈리게 설정하지 말기 -->
+        <!-- 태그 이름을 헷갈리게 설정하지 말기 -->
+      <div class="movie-2">
+        <div class="title-3">
+          <h3>영화</h3>
+        </div>
+        <div class="tag-2">
+          #관련태그
+        </div>
+        <div class="icon-2">
+          <div></div>
+        </div>
+      </div>
+
+      <div class="movie-2">
+        <div class="title-3">
+          <h3>영화</h3>
+        </div>
+        <div class="tag-2">
+          #관련태그
+        </div>
+        <div class="icon-2">
+          <div></div>
+        </div>
+      </div>
+
       </section>
 
-      <section>
+      <section class="img">
       <div class="movie-img"></div>
       <div class="movie-img"></div>
       </section>
