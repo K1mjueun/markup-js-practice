@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/c0547f77dd.js" crossorigin="anonymous"></script>
+
   <title>Document</title>
   <style>
     *{margin:0; padding:0;}
@@ -23,24 +25,218 @@
       justify-content: space-around;
     }
 
-    .mobile {
+    .mobile-1, .mobile-2, .mobile-3 {
       width: 350px;
       height: 800px;
       border-radius: 20px;
       box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+      background-color: var(--color-2);
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    /* -------mobile 1------- */
+    .mobile-1 > header {
+    width: 55%;
+    height: 8%;
+    border-radius: 12px;
+    background-color: var(--color-1);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .mobile-1 > header > section {
+      width: 92%;
+      height: 80%;
+    border-radius: 10px;
+      border: var(--color-2) solid 2px;
+      background-color: var(--color-1);
+
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    }
+
+    .mobile-1 > header > section > div:nth-child(1){
+      /* 00 */
+      height: 100%;
+      flex-grow: 1;
+      background-color: black;
+      color: #fff;
+      border-right: var(--color-2) solid 2px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 25px;
+    }
+    
+    .mobile-1 > header > section > div:nth-child(2){
+      /* WINDIE */
+      flex-grow: 3;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    font-weight: bold;
+    }
+
+    .mobile-1 > main {
+      /* 메뉴 선택 */
+      width: 70%;
+      height: 45%;
+      background-color:var(--color-1);
+      border-radius: 25px;
+      margin-top: 5%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-1 > main > section {
+      width: 92%;
+      height: 95%;
+      border: var(--color-2) solid 3px;
+      border-radius: 20px;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mobile-1 > main > section > div {
+      flex-grow: 1;
+      display: flex;
+    }
+    
+    .menu {
+      padding-left: 4%;
+      width: 70%;
+    height: 100%;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      border-bottom: var(--color-2) solid 3px;
+    }
+
+    main > section > div:nth-child(3) >.menu,
+    main > section > div:nth-child(3) > aside {
+      border-bottom: 0;
     }
 
 
+    .menu > div {
+      width: 45px;
+      height: 32px;
+      background-color: var(--color-1);
+      color: black;
+      border-radius: 100%;
+      border: black solid 3px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: x-large;
+      font-weight: bolder;
+    }
+
+    .menu > h1 {
+    font-size: xx-large;
+    color: black;
+    }
+
+    aside {
+    width: 30%;
+    height: 100%;
+    border-bottom: var(--color-2) solid 3px;
+    color: black;
+    font-size: 45px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    }
+
+    aside > div {
+      width: fit-content;
+      height: fit-content;
+      margin-right: 15%;
+    }
 
   </style>
 </head>
 <body>
   <div id="display">
-    <div class="mobile"></div>
 
-    <div class="mobile"></div>
+    <div class="mobile-1">
+      <!-- 메뉴 선택 화면 -->
+    <header>
+      <!-- WINDIE -->
+      <section>
+        <div>00</div>
+        <div>WINDIE</div>
+      </section>
+    </header>
 
-    <div class="mobile"></div>
+    <main>
+      <!-- 메뉴 선택 -->
+      <section>
+        <div>
+          <div class="menu">
+            <div>01</div>
+            <h1>HOME</h1>
+          </div>
+          <aside>
+            <div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </aside>
+        </div>
+
+        <div>
+          <div class="menu">
+            <div>02</div>
+            <h1>CINEMA</h1>
+          </div>
+          <aside>
+            <div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </aside>
+        </div>
+
+        <div>
+          <div class="menu">
+            <div>03</div>
+            <h1>MAGAZINE</h1>
+          </div>
+          <aside>
+            <div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </aside>
+        </div>
+      
+      </section>
+    </main>
+    
+    </div>
+
+    <div class="mobile-2"></div>
+
+    <div class="mobile-3"></div>
 
   </div>
   
