@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://kit.fontawesome.com/c0547f77dd.js" crossorigin="anonymous"></script>
+  <!-- 아이콘 -->
+
+  <link rel="stylesheet" href="220405-app-layout-3-mobile-1.css">
+  <link rel="stylesheet" href="220405-app-layout-3-mobile-2.css">
+  <!-- 외부 스타일 시트 -->
+
+  <title>Document</title>
+
+  <style>
+    *{margin:0; padding:0; list-style-type: none;}
+
+    :root {
+      --color-1:rgb(219, 219, 219);
+      --color-2:rgb(51, 51, 51);
+    }
+
+    #display {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .mobile-1, .mobile-2, .mobile-3 {
+      width: 350px;
+      height: 800px;
+      border-radius: 20px;
+      box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+      background-color: var(--color-2);
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="display">
+
+    <div class="mobile-1">
+      <!-- 메뉴 선택 화면 -->
+    <header>
+      <!-- WINDIE -->
+      <section>
+        <div>00</div>
+        <div>WINDIE</div>
+      </section>
+    </header>
+
+    <main>
+      <!-- 메뉴 선택 -->
+      <section>
+        <div>
+          <div class="menu">
+            <div>01</div>
+            <h1>HOME</h1>
+          </div>
+          <aside>
+            <div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </aside>
+        </div>
+
+        <div>
+          <div class="menu">
+            <div>02</div>
+            <h1>CINEMA</h1>
+          </div>
+          <aside>
+            <div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </aside>
+        </div>
+
+        <div>
+          <div class="menu">
+            <div>03</div>
+            <h1>MAGAZINE</h1>
+          </div>
+          <aside>
+            <div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </aside>
+        </div>
+      
+      </section>
+    </main>
+    
+    </div>
+
+    <div class="mobile-2">
+      <header>
+        <div>
+          <h1>WINDIE</h1>
+        </div>
+
+        <div>
+          <div></div>
+        </div>
+      </header>
+
+      <nav>
+        <div>홈</div>
+        <div></div>
+        <div>씨네마</div>
+        <div>매거진</div>
+      </nav>
+
+      <div class="movie-info">
+        <h2>영화에 대한 설명란</h2>
+      </div>
+
+      <div class="movie">
+
+        <div class="title">
+          <h3>영화제목</h3>
+        </div>
+
+        <div class="tag">
+          #영화와 #관련된 #태그
+        </div>
+        <div class="icon">
+          <div></div>
+        </div>
+
+      </div>
+
+      <div id="movie-img"></div>
+
+      <nav>
+        <div>전체</div>
+        <div></div>
+        <div>장편</div>
+        <div>단편</div>
+      </nav>
+
+      <div class="movie-info">
+        <h2>영화에 대한 설명란</h2>
+      </div>
+
+      <section class="title-2">
+        <!-- 태그 이름을 헷갈리게 설정하지 말기 -->
+      <div class="movie-2">
+        <div class="title-3">
+          <h3>영화</h3>
+        </div>
+        <div class="tag-2">
+          #관련태그
+        </div>
+        <div class="icon-2">
+          <div></div>
+        </div>
+      </div>
+
+      <div class="movie-2">
+        <div class="title-3">
+          <h3>영화</h3>
+        </div>
+        <div class="tag-2">
+          #관련태그
+        </div>
+        <div class="icon-2">
+          <div></div>
+        </div>
+      </div>
+
+      </section>
+
+      <section class="img">
+      <div class="movie-img"></div>
+      <div class="movie-img"></div>
+      </section>
+
+      <footer>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+      </footer>
+    </div>
+
+    <div class="mobile-3"></div>
+
+  </div>
+  
+</body>
+</html>
