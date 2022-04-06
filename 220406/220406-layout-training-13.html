@@ -201,11 +201,12 @@
     #pc {
       width: 1000px;
       height: 600px;
-      background-color: black;
       box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 
       display: flex;
       flex-direction: column;
+      background-color: black;
+      z-index: -2;
     }
 
     #img-1 {
@@ -245,11 +246,21 @@
     }
 
     #img-2 {
-      width: 100%;
-      height: 60%;
+      width: 1000px;
+      height: 360px;
       background-image: url("https://cdn.pixabay.com/photo/2022/03/06/05/30/clouds-7050884_960_720.jpg");
       background-size: cover;
       opacity: 0.7;
+      position: absolute;
+      z-index: -1;
+      right: 6.5%;
+      top: 44.5%;
+
+    }
+
+    #container {
+      width: 100%;
+      height: 60%;
       
       display: flex;
       align-items: center;
@@ -257,7 +268,7 @@
       flex-direction: column;
     }
 
-    #img-2 > nav {
+    #container > nav {
       width: 100%;
       height: 10%;
       
@@ -266,7 +277,7 @@
       justify-content: center;
     }
     
-    #img-2 > nav > ul {
+    #container > nav > ul {
       width: 5%;
       height: 50%;
       
@@ -275,14 +286,14 @@
       justify-content: space-between;
     }
     
-    #img-2 > nav > ul > li {
+    #container > nav > ul > li {
       width: 5px;
       height: 5px;
       border-radius: 5px;
       color:rgba(255,255,255,1)
     }
     
-    #img-2 > nav > ul > li:nth-child(1) {
+    #container > nav > ul > li:nth-child(1) {
       color: gray;
     }
 
@@ -396,7 +407,8 @@
       <div></div>
     </div>
 
-    <div id ="img-2">
+    <div id ="img-2"></div>
+    <div id="container">
       <nav>
         <ul>
           <li></li>
@@ -406,7 +418,7 @@
           <li></li>
         </ul>
       </nav>
-      
+
       <div id="info">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit repudiandae, qui sequi voluptatibus adipisci consequatur commodi illum, quia tempora quis ipsa perferendis harum inventore nisi ipsum modi culpa repellat nobis? commodi illum repellat nobis? commodi illum</p>
       </div>
@@ -416,8 +428,7 @@
     <div id="info-2">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quae ipsum voluptates inventore blanditiis alias! Quibusdam eaque sunt quae cumque animi dolor voluptates vero officia, deleniti voluptatibus aperiam beatae non, magnam minima obcaecati voluptatum nam id porro aspernatur! Aut, cumque! Rem vel similique dignissimos at natus velit laborum libero, mollitia architecto minus quia. Iure perferendis eos dolorum placeat consectetur incidunt. Necessitatibus libero reprehenderit cum maxime! Et, nesciunt. Voluptates nemo velit nisi perspiciatis porro consequuntur eveniet ad quod, nulla similique voluptatum dolorum voluptas! Ullam perspiciatis commodi neque saepe ad. Distinctio minima tempora earum ratione, in deserunt cupiditate exercitationem voluptas voluptates unde?</p>
     </div>
-
-    </div>
+  </div>
 
     </div>
 
