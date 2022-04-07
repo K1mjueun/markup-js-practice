@@ -24,6 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: rgb(231, 242, 255);
   }
 
   .mobile-4,.mobile-5,.mobile-6 {
@@ -32,12 +33,136 @@
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     background-color: var(--color-2);
+    overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
+
+  .mobile-4 {
+    flex-direction: row;
+  }
+
+  aside {
+    width: 17%;
+    height: 100%;
+    background-color: var(--color-1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icons {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    font-size: xx-large;
+    color: var(--color-2);
+  }
+
+  main {
+    width: 83%;
+    height: 100%;
+    background-color: var(--color-2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  header {
+    width: 100%;
+    height: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  h6 {
+    width: 90%;
+    height: 20%;
+    color: var(--color-1);
+    font-size: xx-large;
+  }
+
+  .w-p-c {
+    width: 90%;
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circle {
+    width: 10%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-left: 1%;
+  }
+
+.circle > div {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: greenyellow;
+}
+
+.w-p-c > p {
+  width: 90%;
+  height: 100%;
+  color: var(--color-1);
+  font-size: small;
+
+  display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main {
+  width: 100%;
+  height: 60%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.QR {
+  width: 93%;
+  height: 55%;
+  background-color: var(--color-1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  font-size: 150px;
+  color: var(--color-2);
+}
+
+.QR > P {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
 
 
   </style>
@@ -46,12 +171,15 @@
 <div id="display">
 
   <div class="mobile-4">
+
   <aside>
+    <div class="icons">
     <i class="fa-regular fa-image"></i>
     <i class="fa-regular fa-copy"></i>
     <i class="fa-solid fa-code-compare"></i>
     <i class="fa-solid fa-calendar"></i>
     <i class="fa-regular fa-pen-to-square"></i>
+  </div>
   </aside>
 
   <main>
@@ -63,19 +191,16 @@
         <div class="circle">
           <div></div>
         </div>
-
-        <div class="web">
           <p>web publishing C</p>
-        </div>
-      </div>
     </header>
 
     <div class="main">
       <div class="QR">
         <i class="fa-solid fa-qrcode"></i>
+        <p>QRCODE CHECK</p>
       </div>
-      <p>QRCODE CHECK</p>
     </div>
+
   </main>
 
   </div>
