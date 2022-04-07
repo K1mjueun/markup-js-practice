@@ -38,10 +38,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-  }
-
-  .mobile-4 {
     flex-direction: row;
   }
 
@@ -162,6 +158,49 @@
   font-weight: bold;
 }
 
+.container {
+  width: 100%;
+  height: 75%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+article {
+width: 93%;
+height: 50%;
+background-color: var(--color-1);
+
+display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.w-u {
+width: 90%;
+height: 11%;
+border-bottom: var(--color-2) 3px solid;
+color: var(--color-2);
+font-size: 20px;
+font-weight: bold;
+}
+
+article > p {
+  width: 90%;
+  height: 80%;
+  color: black;
+  font-size: small;
+  line-height: 170%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 
 
@@ -206,6 +245,29 @@
   </div>
 
   <div class="mobile-5">
+
+    <aside>
+      <div class="icons">
+      <i class="fa-regular fa-image"></i>
+      <i class="fa-regular fa-copy"></i>
+      <i class="fa-solid fa-code-compare"></i>
+      <i class="fa-solid fa-calendar"></i>
+      <i class="fa-regular fa-pen-to-square"></i>
+    </div>
+    </aside>
+
+    <main>
+
+      <div class="container">
+      <article>
+        <div class="w-u">Web unit</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda corrupti ipsam commodi veniam adipisci ipsum, animi ut, architecto necessitatibus odit totam dolores est quas! Repellatpit, facere nisi animi illo? Ab vel itaque iste totam veritatis repudiandae quia quibusdam architecto harum vitae.</p>
+      </article>
+      
+      <i style="font-size: 55px;
+      color: var(--color-1); margin-top:5px;" class="fa-regular fa-square-plus"></i>
+      </div>
+    </main>
 
   </div>
 
