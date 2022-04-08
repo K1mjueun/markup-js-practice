@@ -19,51 +19,23 @@
     justify-content: center;
   }
 
+  #root > div:nth-child(1) {
+    /* 박스 */
+    width: 95%;
+    height: 85%;
+    border: 2px black solid;
+  }
+
+  #root > div:nth-child(1) > div:nth-child(1) {
+    /* 박스1 */
+    width: 50%;
+    height: 100%;
+    border-right: 2px solid black;
+  }
+
   </style>
 </head>
 <body>
-  <div id="root">
-    <!-- 화면 -->
-  <div>
-    <!-- 박스 / 1 -->
-  <div></div>
-  <!-- 박스1 -->
-  
-  <div>
-<!-- 박스2 -->
-  <div>
-  <!-- 박스2 안 박스 -->
-  <div></div>
-  <!-- 박스2 안 박스 안 박스1 -->
-  <div>
-    <!-- 박스2 안 박스 안 박스2 -->
-    <div>
-
-      <div>
-        <!-- 박스2안 박스 안 박스2의 박스1 -->
-        <div>
-          <div>
-            <div></div>
-            <!-- 빨간박스 -->
-          </div>
-          <div></div>
-        </div>
-      </div>
-      
-      <div></div>
-        <!-- 박스2안 박스 안 박스2의 박스2 -->
-    
-    </div>
-  </div>
-
-  </div>
-
-  </div>
-
-  </div>
-
-
-  </div>
   
 </body>
 </html>
