@@ -19,23 +19,46 @@
     justify-content: center;
   }
 
-  #root > div:nth-child(1) {
-    /* 박스 */
-    width: 95%;
-    height: 85%;
-    border: 2px black solid;
-  }
-
-  #root > div:nth-child(1) > div:nth-child(1) {
-    /* 박스1 */
-    width: 50%;
-    height: 100%;
-    border-right: 2px solid black;
-  }
 
   </style>
 </head>
 <body>
+  <div id="root">
+  <div>
+    <!-- 큰 박스 / 1 -->
+    <div></div>
+    <!-- 큰 박스 왼쪽 / 1-1 -->
+
+    <div>
+      <!-- 큰 박스 오른쪽 / 1-2 -->
+      <div>
+        <!-- 1-2-1 / 큰 박스 오른쪽 안 박스 -->
+        <div></div>
+        <!-- 1-2-1-1 / 큰 박스 오른쪽 안 박스 안 위 박스-->
+
+
+        <div>
+          <!-- 1-2-1-2 / 큰 박스 오른쪽 안 박스 안 아래 박스 -->
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div></div>
+                  <!-- 빨간 박스 -->
+                </div>
+                <div></div>
+              </div>
+            </div>
+
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
   
 </body>
 </html>
