@@ -101,12 +101,15 @@
       width: 90%;
       height: 26%;
       background-color: var(--color-2);
+      border-bottom: var(--color-1) solid 1px;
       border-radius: 15px;
 
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+
+      box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
     }
 
     main > h1 {
@@ -135,6 +138,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      
     }
 
     .info > .n-d-n {
@@ -145,28 +149,30 @@
     }
 
   .n-d-n-2 {
+    width: 100%;
+      height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
   }
 
   .n-d-n-2 > .h1,.h2,.h3 {
-    height: 100%;
     width: 100%;
+    height: fit-content;
     font-size: 0.8em;
     font-weight: lighter;
     line-height: 2;
     color: var(--color-3);
 
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  /* 텍스트 정렬이 왜 안되는가 */
+
+  .h1 {word-spacing: 15px;}
+  .h2 {word-spacing: 80px;}
+  .h3 {letter-spacing: 6.2px; color: var(--color-4);}
 
     .info > .m-logo {
-      flex-grow: 1;
+      width: 30%;
+      height: 100%;
       display: flex;
       align-items: flex-end;
       justify-content: center;
@@ -197,6 +203,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
 
       margin-top: 8%;
       margin-bottom: 8%;
@@ -244,10 +251,10 @@
    .var-3 {width: 60%;}
     
    .spot-1, .spot-2, .spot-3 {
-     width: 3px;
-     height: 3px;
+     width: 5px;
+     height: 5px;
      background-color: var(--color-1);
-     border-radius: 3px;
+     border-radius: 5px;
    }
    
    .spot-1 {margin-left: 20%;}
@@ -320,7 +327,7 @@
         <div class="n-d-n">
           <div class="n-d-n-2">
             <div class="h1">0000 1111 3333 2222</div>
-            <div class="h2">Bold Card 09/28</div>
+            <div class="h2">BoldCard 09/28</div>
             <div class="h3">Marilyn Monroe</div>
           </div>
         </div>
