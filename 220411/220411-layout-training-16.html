@@ -7,9 +7,23 @@
 
   <script src="https://kit.fontawesome.com/c0547f77dd.js" crossorigin="anonymous"></script>
   <!-- 아이콘 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<!-- 폰트 -->
+
   <title>Document</title>
   <style>
-    *{margin:0; padding:0; list-style-type: none;}
+    *{margin:0; padding:0; list-style-type: none; font-family: 'Roboto', 'sans-serif';}
 
     :root {
       --color-1:#fff;
@@ -61,8 +75,8 @@
       line-height: 1.5;
     }
 
-    header > h1 {font-size: 30px;}
-    header > h2 {font-size: 12px;}
+    header > h1 {font-size: 2em; font-weight: 400;}
+    header > h2 {font-size: small; font-weight: lighter;}
 
     ul {
       width: 85%;
@@ -80,8 +94,91 @@
       margin-left: 1.5%;
     }
 
-    ul > li:nth-child(1) { background-color: var(--color-3);}
+    ul > li:nth-child(1) {background-color: var(--color-3);}
 
+    main {
+      /* 카드 */
+      width: 90%;
+      height: 26%;
+      background-color: var(--color-2);
+      border-radius: 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    main > h1 {
+      width: 90%;
+      height: fit-content;
+      font-size: small;
+      color: #fff;
+      font-weight: lighter;
+      text-align: end;
+      margin-bottom: 1%;
+      margin-top:3%;
+    }
+
+    main > h2 {
+      width: 90%;
+      height: fit-content;
+      font-size: 3.5em;
+      font-weight: bolder;
+      color: var(--color-4);
+      word-spacing: 0.25em;
+    }
+
+    .info {
+      width: 90%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info > .n-d-n {
+      flex-grow: 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .info > .m-logo {
+      flex-grow: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .m-logo > .ic {
+    font-size: xx-large;
+    color: var(--color-3);
+    }
+
+    .m-logo > p {
+      /* VISA */
+      font-size: x-large;
+      font-weight: bold;
+      font-style: italic;
+      color: var(--color-4);
+    }
+
+    footer {
+      width: 90%;
+      height: 32%;
+      background-color: var(--color-2);
+      border-radius: 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      margin-top: 8%;
+      margin-bottom: 8%;
+    }
 
   </style>
 </head>
@@ -106,8 +203,8 @@
     </ul>
 
     <main>
-      <h3>Bold Card+</h3>
-      <h4>YOUR CARD</h4>
+      <h1>Bold Card+</h1>
+      <h2>YOUR CARD</h2>
 
       <div class="info">
         <div class="n-d-n">
@@ -122,9 +219,9 @@
           <div class="ic">
             <i class="fa-regular fa-credit-card"></i>
           </div>
-
-            <p>VISA</p>
+          <p>VISA</p>
         </div>
+      </main>
 
         <footer>
         <div class="one">
@@ -168,13 +265,12 @@
 
           <div class="per-3"></div>
         </div>
+      </main>
         
         <div class="button">
           <button>MORE</button>
         </div>
         </footer>
-      </div>
-    </main>
 
   </div>
 </div>  
