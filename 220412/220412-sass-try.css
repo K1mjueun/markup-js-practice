@@ -37,6 +37,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-top: 5%;
 }
 
 #pc nav ul {
@@ -59,5 +60,45 @@
   border: 1px solid black;
   border-radius: 15px;
   margin-right: 10%;
+}
+
+#pc main {
+  width: 90%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#pc main aside {
+  width: 30%;
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#pc main aside h1, #pc main aside h2, #pc main aside h3, #pc main aside h4 {
+  width: 80%;
+  height: 50%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=220412-sass-try.css.map */

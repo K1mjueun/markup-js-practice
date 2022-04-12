@@ -24,6 +24,7 @@
     @include border();
     border-radius: 5px;
     @include display(flex-start);
+    margin-top: 5%;
 
     ul{
       width: 15%;
@@ -38,5 +39,30 @@
         margin-right: 10%;
       }
     }
+  }
+
+  main {
+    width: 90%;
+    height: 90%;
+    @include display (center);
+
+    aside {
+      width: 30%;
+      height: 85%;
+      @include display(center);
+      flex-direction: column;
+
+      h1, h2, h3, h4 {
+      width: 80%;
+      height: 50%;
+      @include border();
+      border-radius: 5px;
+      margin-bottom: 30px;
+      }
+    }
+
+   section {
+     
+   }
   }
 }
