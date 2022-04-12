@@ -47,7 +47,7 @@
     @include display (center);
 
     aside {
-      width: 30%;
+      width: 10%;
       height: 85%;
       @include display(center);
       flex-direction: column;
@@ -62,7 +62,31 @@
     }
 
    section {
-     
+     width: 90%;
+     height: 85%;
+     @include display(center);
+     flex-direction: column;
+
+    .box {
+      width: 90%;
+      height: 20%;
+     @include display(center);
+
+     .photo {
+       width: 30%;
+       height: 80%;
+       @include border();
+       border-radius: 5px;
+       margin: 1%;
+     }
+    }
+
+    article {
+      width:90%;
+      height: 80%;
+      text-align: justify;
+      line-height: 3;
+    }
    }
   }
 }
