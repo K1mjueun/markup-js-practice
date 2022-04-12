@@ -1,0 +1,42 @@
+*{margin:0; padding:0; list-style-type: none;}
+
+@mixin display ($just) {
+  display: flex;
+  align-items: center;
+  justify-content: $just;
+}
+
+@mixin border () {
+  border: 1px solid black;
+}
+
+#pc{
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+
+  @include display(center);
+  flex-direction: column;
+
+  nav {
+    width: 90%;
+    height: 10%;
+    @include border();
+    border-radius: 5px;
+    @include display(flex-start);
+
+    ul{
+      width: 15%;
+      height: 100%;
+      @include display(center);
+
+      li {
+        width: 15px;
+        height: 15px;
+        @include border();
+        border-radius: 15px;
+        margin-right: 10%;
+      }
+    }
+  }
+}
