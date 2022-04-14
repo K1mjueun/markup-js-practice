@@ -6,9 +6,41 @@
   justify-content: $justify-c;
 }
 
+@keyframes bubble {
+  // 0% {
+  //   top:15%;
+  // }
+
+  // 25% {
+  //   top:25%;
+  //   opacity: .5;
+  // }
+
+  // 50% {
+  //   top:50%;
+  //   opacity: .2;
+  // }
+
+  // 75% {
+  //   top:75%;
+  //   opacity: .5;
+  // }
+
+  // 100% {
+  //   top:100%;
+  // }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 #phone {
   width: 1915px;
-  height: 950px;
+  height: 1000px;
   background-color: #fff;
   @include flex-setting(center);
   flex-direction: column;
@@ -57,6 +89,8 @@
     border-radius: 120px;
     top:15%;
     left: -1%;
+
+    animation : 3s bubble alternate infinite;
   }
 
   .circle-2 {
@@ -65,6 +99,8 @@
     border-radius: 300px;
     bottom:5%;
     left:5%;
+
+    animation : 5s bubble alternate infinite;
   }
 
   .circle-3 {
@@ -73,6 +109,8 @@
     border-radius: 70px;
     top:-1%;
     left:25%;
+
+    animation : 2s bubble alternate infinite;
   }
 
   .circle-4 {
@@ -81,6 +119,8 @@
     border-radius: 400px;
     bottom:-10%;
     left:50%;
+
+    animation : 4s bubble alternate infinite;
   }
 
   .circle-5 {
@@ -89,6 +129,8 @@
     border-radius: 150px;
     top:35%;
     right:15%;
+
+    animation : 5s bubble alternate infinite;
   }
 
   .circle-6 {
@@ -97,6 +139,8 @@
     border-radius: 200px;
     top:2%;
     right:-2%;
+
+    animation : 3s bubble alternate infinite;
   }
   
 }
