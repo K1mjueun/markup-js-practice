@@ -43,6 +43,8 @@
 #back #phone .circle-1, #back #phone .circle-2, #back #phone .circle-3, #back #phone .circle-4, #back #phone .circle-5, #back #phone .circle-6, #back #phone .circle-7 {
   background-color: #ccc;
   position: absolute;
+  -webkit-box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
 }
 
 #back #phone .circle-1 {
@@ -67,5 +69,37 @@
   border-radius: 100px;
   top: 35%;
   left: 5%;
+}
+
+#back #phone .circle-4 {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  top: 45%;
+  right: -5%;
+}
+
+#back #phone .circle-5 {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  top: 65%;
+  right: 25%;
+}
+
+#back #phone .circle-6 {
+  width: 190px;
+  height: 190px;
+  border-radius: 190px;
+  bottom: -2%;
+  left: -8%;
+}
+
+#back #phone .circle-7 {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  bottom: 3%;
+  right: 10%;
 }
 /*# sourceMappingURL=220414-animation-적용해보기-2.css.map */
