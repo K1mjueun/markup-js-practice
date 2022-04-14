@@ -44,4 +44,8 @@
   border-radius: 10px;
   background-color: #ccc;
 }
+
+#phone .circle-1, #phone .circle-2, #phone .circle-3, #phone .circle-4, #phone .circle-5, #phone .circle-6 {
+  position: absolute;
+}
 /*# sourceMappingURL=220414-animation-적용해보기.css.map */
