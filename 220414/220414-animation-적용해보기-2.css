@@ -3,6 +3,24 @@
   padding: 0;
 }
 
+@-webkit-keyframes bubble {
+  from {
+  }
+  to {
+    right: 12%;
+    opacity: 0.2;
+  }
+}
+
+@keyframes bubble {
+  from {
+  }
+  to {
+    right: 12%;
+    opacity: 0.2;
+  }
+}
+
 #back {
   width: 100vw;
   height: 100vh;
@@ -21,7 +39,8 @@
 #back #phone {
   width: 400px;
   height: 800px;
-  background-color: #fff;
+  background: -webkit-gradient(linear, left top, right bottom, from(#fff), to(#c7c7c7));
+  background: linear-gradient(to right bottom, #fff, #c7c7c7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,63 +62,85 @@
 #back #phone .circle-1, #back #phone .circle-2, #back #phone .circle-3, #back #phone .circle-4, #back #phone .circle-5, #back #phone .circle-6, #back #phone .circle-7 {
   background-color: #ccc;
   position: absolute;
-  -webkit-box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  background-size: cover;
 }
 
 #back #phone .circle-1 {
   width: 50px;
   height: 50px;
   border-radius: 50px;
+  background-image: url("http://file3.instiz.net/data/cached_img/upload/2020/08/26/20/9bbae96b9f80a61600f289585d9a5d32.png");
   top: -3%;
   right: 10%;
+  -webkit-animation: 2s bubble alternate infinite;
+          animation: 2s bubble alternate infinite;
 }
 
 #back #phone .circle-2 {
   width: 200px;
   height: 200px;
   border-radius: 200px;
+  background-image: url("http://file3.instiz.net/data/cached_img/upload/2020/08/26/20/9bbae96b9f80a61600f289585d9a5d32.png");
   top: 5%;
   right: 20%;
+  -webkit-animation: 4s bubble alternate infinite;
+          animation: 4s bubble alternate infinite;
 }
 
 #back #phone .circle-3 {
   width: 100px;
   height: 100px;
   border-radius: 100px;
+  background-image: url("http://img.segye.com/content/image/2021/11/16/20211116509679.jpg");
   top: 35%;
   left: 5%;
+  -webkit-animation: 3.5s bubble alternate infinite;
+          animation: 3.5s bubble alternate infinite;
 }
 
 #back #phone .circle-4 {
   width: 150px;
   height: 150px;
   border-radius: 150px;
+  background-image: url("https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/2XT/image/7pTs4URqh8k0Nh7H-0nOOYSvz_0");
   top: 45%;
   right: -5%;
+  -webkit-animation: 5s bubble alternate infinite;
+          animation: 5s bubble alternate infinite;
 }
 
 #back #phone .circle-5 {
   width: 100px;
   height: 100px;
   border-radius: 100px;
+  background-image: url("https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/2XT/image/7pTs4URqh8k0Nh7H-0nOOYSvz_0");
   top: 65%;
   right: 25%;
+  -webkit-animation: 5s bubble alternate infinite;
+          animation: 5s bubble alternate infinite;
 }
 
 #back #phone .circle-6 {
   width: 190px;
   height: 190px;
   border-radius: 190px;
+  background-image: url("http://daily.hankooki.com/news/photo/201910/20191026_1_bodyimg_626681.jpg");
   bottom: -2%;
   left: -8%;
+  -webkit-animation: 5s bubble alternate infinite;
+          animation: 5s bubble alternate infinite;
 }
 
 #back #phone .circle-7 {
   width: 60px;
   height: 60px;
   border-radius: 60px;
+  background-image: url("https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/2XT/image/7pTs4URqh8k0Nh7H-0nOOYSvz_0");
   bottom: 3%;
   right: 10%;
+  -webkit-animation: 3s bubble alternate infinite;
+          animation: 3s bubble alternate infinite;
 }
 /*# sourceMappingURL=220414-animation-적용해보기-2.css.map */
