@@ -1,0 +1,37 @@
+*{margin:0; padding:0;}
+
+@mixin flex-setting ($justify-c) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify-c;
+}
+
+#phone {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  @include flex-setting(center);
+
+  section {
+    width: 70%;
+    height:20%;
+    @include flex-setting(space-around);
+
+    .icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      background-color: #ccc;
+    }
+
+    .bar {
+      width: 75%;
+      height: 30%;
+      border-radius: 10px;
+      background-color: #ccc;
+    }
+  }
+  
+  
+  
+}
