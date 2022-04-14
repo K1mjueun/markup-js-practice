@@ -7,15 +7,29 @@
 }
 
 #phone {
-  width: 100vw;
-  height: 100vh;
+  width: 1915px;
+  height: 950px;
   background-color: #fff;
   @include flex-setting(center);
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+
+  nav {
+    width: 95%;
+    height: 10%;
+    @include flex-setting(flex-start);
+    color: #ccc;
+    font-size: 50px;
+    position: absolute;
+    top: 0%;
+  }
 
   section {
     width: 70%;
     height:20%;
     @include flex-setting(space-around);
+    z-index: 1;
 
     .icon {
       width: 100px;
@@ -33,11 +47,56 @@
   }
   
   .circle-1, .circle-2,.circle-3,.circle-4,.circle-5,.circle-6 {
+    background-color: rgb(230, 230, 230);
     position:absolute;
   }
 
   .circle-1 {
-    
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    top:15%;
+    left: -1%;
+  }
+
+  .circle-2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    bottom:5%;
+    left:5%;
+  }
+
+  .circle-3 {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    top:-1%;
+    left:25%;
+  }
+
+  .circle-4 {
+    width: 400px;
+    height: 400px;
+    border-radius: 400px;
+    bottom:-10%;
+    left:50%;
+  }
+
+  .circle-5 {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    top:35%;
+    right:15%;
+  }
+
+  .circle-6 {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    top:2%;
+    right:-2%;
   }
   
 }

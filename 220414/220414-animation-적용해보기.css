@@ -4,8 +4,8 @@
 }
 
 #phone {
-  width: 100vw;
-  height: 100vh;
+  width: 1915px;
+  height: 950px;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,6 +16,30 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+#phone nav {
+  width: 95%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #ccc;
+  font-size: 50px;
+  position: absolute;
+  top: 0%;
 }
 
 #phone section {
@@ -29,6 +53,7 @@
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  z-index: 1;
 }
 
 #phone section .icon {
@@ -46,6 +71,55 @@
 }
 
 #phone .circle-1, #phone .circle-2, #phone .circle-3, #phone .circle-4, #phone .circle-5, #phone .circle-6 {
+  background-color: #e6e6e6;
   position: absolute;
+}
+
+#phone .circle-1 {
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+  top: 15%;
+  left: -1%;
+}
+
+#phone .circle-2 {
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  bottom: 5%;
+  left: 5%;
+}
+
+#phone .circle-3 {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  top: -1%;
+  left: 25%;
+}
+
+#phone .circle-4 {
+  width: 400px;
+  height: 400px;
+  border-radius: 400px;
+  bottom: -10%;
+  left: 50%;
+}
+
+#phone .circle-5 {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  top: 35%;
+  right: 15%;
+}
+
+#phone .circle-6 {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  top: 2%;
+  right: -2%;
 }
 /*# sourceMappingURL=220414-animation-적용해보기.css.map */
