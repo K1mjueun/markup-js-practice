@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+*{margin:0; padding:0;}
+
+#img {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://cdn.pixabay.com/photo/2016/04/18/16/22/watercolour-1336856_960_720.jpg");
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#img > div {
+  width: 50vw;
+  height: 20vw;
+  border-radius: 2vw;
+  background-color: rgb(255, 255, 255,0.2);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: xx-large;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  <div id="img">
+  <div>backdrop-filter<br>블러 픽셀을 높일수록 배경이 흐려진다</div>
+  </div>
+</body>
+</html>
