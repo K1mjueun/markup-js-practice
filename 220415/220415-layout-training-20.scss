@@ -12,6 +12,26 @@
   justify-content: $justify;
 }
 
+@keyframes circle-1 {
+  0% {
+    top:30%;
+  }
+
+  100% {
+    left:10%
+  }
+}
+
+@keyframes circle-2 {
+  0% {
+    bottom:2%;
+  }
+
+  100% {
+    right:10%
+  }
+}
+
 #back {
   width: 100vw;
   height: 100vh;
@@ -84,6 +104,7 @@
       background-color: rgb(167, 93, 93);
 
       top:30%;
+      animation: 2s circle-1 alternate infinite;
       }
 
       .circle-2 {
@@ -93,6 +114,7 @@
       background-color: rgb(119, 187, 122);
 
       bottom:2%;
+      animation: 2s circle-2 alternate infinite;
       }
     }
 
