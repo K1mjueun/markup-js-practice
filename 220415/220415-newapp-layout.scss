@@ -29,10 +29,24 @@
     background-size: cover;
     opacity: .5;
   }
+  
+  .photo-1:hover {
+  opacity: 1; transition: 0.5s;
+  }
+  .photo-2:hover {
+  opacity: 1; transition: 0.5s;
+  }
+  .photo-3:hover {
+  opacity: 1; transition: 0.5s;
+  }
+  .photo-4:hover {
+  opacity: 1; transition: 0.5s;
+  }
 
   .photo-1 {
     background-image: url("https://a-static.besthdwallpaper.com/beulraeg-pingkeu-membeo-aiseukeurim-m-v-hwabo-aelbeom-byeogji-2560x1600-61139_7.jpg");
   }
+
   .photo-2 {
     background-image: url("https://i.ytimg.com/vi/dnQ-AWCgkjM/maxresdefault.jpg");
   }
@@ -55,8 +69,8 @@
   }
 
   main {
-  width: 100%;
-  height: 30%;
+  width: fit-content;
+  height: fit-content;
   @include flex(center,center);
   position: absolute;
   flex-direction: column;
@@ -77,9 +91,16 @@ background: linear-gradient(180deg, rgba(211,217,255,1) 0%, rgba(255,210,228,1) 
   h1 {
     font-size: 20px;
     font-weight: bolder;
-    padding-top: 3%;
+    padding-top: 5%;
     color: #fff;
   }
-  }
+}
+main:hover {
+  cursor: pointer;
+}
+
+nav:hover {
+  cursor: pointer;
+}
   }
 }
