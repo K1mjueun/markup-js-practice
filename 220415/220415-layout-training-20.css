@@ -12,37 +12,45 @@
 
 @-webkit-keyframes circle-1 {
   0% {
+    left: 37.5;
     top: 30%;
   }
   100% {
+    top: 30%;
     left: 10%;
   }
 }
 
 @keyframes circle-1 {
   0% {
+    left: 37.5;
     top: 30%;
   }
   100% {
+    top: 30%;
     left: 10%;
   }
 }
 
 @-webkit-keyframes circle-2 {
   0% {
+    left: 41.5%;
     bottom: 2%;
   }
   100% {
-    right: 10%;
+    bottom: 2%;
+    left: 70%;
   }
 }
 
 @keyframes circle-2 {
   0% {
+    left: 41.5%;
     bottom: 2%;
   }
   100% {
-    right: 10%;
+    bottom: 2%;
+    left: 70%;
   }
 }
 
@@ -170,6 +178,7 @@
   height: 100px;
   border-radius: 100px;
   background-color: #a75d5d;
+  left: 37.5%;
   top: 30%;
   -webkit-animation: 2s circle-1 alternate infinite;
           animation: 2s circle-1 alternate infinite;
@@ -180,6 +189,7 @@
   height: 70px;
   border-radius: 70px;
   background-color: #77bb7a;
+  left: 41.5%;
   bottom: 2%;
   -webkit-animation: 2s circle-2 alternate infinite;
           animation: 2s circle-2 alternate infinite;

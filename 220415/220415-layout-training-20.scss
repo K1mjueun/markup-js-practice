@@ -14,21 +14,25 @@
 
 @keyframes circle-1 {
   0% {
+    left:37.5;
     top:30%;
   }
 
   100% {
+    top: 30%;
     left:10%
   }
 }
 
 @keyframes circle-2 {
   0% {
+    left:41.5%;
     bottom:2%;
   }
 
   100% {
-    right:10%
+    bottom:2%;
+    left:70%
   }
 }
 
@@ -103,6 +107,7 @@
       border-radius: 100px;
       background-color: rgb(167, 93, 93);
 
+      left:37.5%;
       top:30%;
       animation: 2s circle-1 alternate infinite;
       }
@@ -112,7 +117,8 @@
       height: 70px;
       border-radius: 70px;
       background-color: rgb(119, 187, 122);
-
+      
+      left:41.5%;
       bottom:2%;
       animation: 2s circle-2 alternate infinite;
       }
