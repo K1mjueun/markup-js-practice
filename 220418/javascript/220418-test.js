@@ -14,16 +14,21 @@
 // let won = '원';
 
 // console.log((onion+cheese+water+tissue+apple)/2+won);
-//계산기 연습
+//node.js로 계산기 연습
 
-const jueun = {
-  name:"김주은",
-  like:"animal",
-  hate:"insect"
-}
+// const jueun = {
+//   name:"김주은",
+//   like:"animal",
+//   hate:"insect"
+// }
 
-console.log(jueun.name +" 안녀엉");
+// console.log(jueun.name +" 안녀엉");
 // console.log(jueun.like +" is so lovely");
 // console.log(jueun.hate +" is so terrible");
+
+let animal = ["cat", "dog", "cow", "rabbit", "hamster"]; //-array : 0,1,2,3,4
+
+// console.log(animal[2]);
+console.log(animal[animal.length-1]);
 
 
