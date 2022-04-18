@@ -1,1 +1,22 @@
 *{margin:0; padding:0; list-style-type: none;}
+
+:root {
+  --color-1:rgb(219, 219, 219);
+  --color-2:rgb(197, 197, 197);
+  --color-3:rgb(145, 145, 145);
+  --color-4:rgb(87, 87, 87);
+  --color-5:rgb(49, 49, 49);
+}
+
+@mixin flex-setting ($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+#pc {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
