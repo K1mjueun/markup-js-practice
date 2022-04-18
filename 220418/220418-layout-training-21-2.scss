@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
 
-    background-image: url("https://cdn.pixabay.com/photo/2018/04/23/14/38/adorable-3344414_960_720.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2017/06/15/08/37/cat-2404484_960_720.jpg");
     background-size: cover;
 
     header {
@@ -42,8 +42,88 @@
         @include flex(center,space-around);
         
         li {
-          font-size: medium;
+          font-size: small;
           color: #fff;
+        }
+      }
+    }
+
+    main {
+      width: 100%;
+      height: 90%;
+      display: flex;
+
+      .left {
+        width: 40%;
+        height: 100%;
+        @include flex(center,left);
+
+        .var {
+          width: 0.2%;
+          height:85%;
+          margin-left: 10%;
+          background-color: #fff;
+        }
+
+        h1 {
+          font-size: small;
+          color: #fff;
+          margin-left: 1%;
+          font-weight: normal;
+        }
+      }
+
+      .right {
+        width: 60%;
+        height: 100%;
+        @include flex(flex-end,space-around);
+
+        .main-1, .right-1,.right-2 {
+          margin-bottom: 10%;
+        }
+
+        .main-1 {
+          width: 50%;
+          height: 60%;
+      background-color: rgba(0,0,0,0.5);
+      @include flex(center,center);
+      flex-direction: column;
+      backdrop-filter: blur(10px);
+
+      h1 {
+        width: 90%;
+        height: 50%;
+      @include flex(flex-end,left);
+      color:#fff;
+      font-weight: normal;
+      margin: 5%;
+      }
+
+      p {
+        width: 90%;
+        height: 40%;
+      @include flex(flex-start,center);
+      font-size: small;
+      text-align: justify;
+      color: #fff;
+      }
+        }
+
+        .right-1 {
+          width: 20%;
+          height: 60%;
+      background-color: rgba(0,0,0,0.3);
+      @include flex(center,center);
+      color: #fff;
+      font-size: xx-large;
+      backdrop-filter: blur(5px);
+        }
+
+        .right-2 {
+          width: 20%;
+          height: 60%;
+      background-color: rgba(73, 73, 73, 0.3);
+      backdrop-filter: blur(5px);
         }
       }
     }
@@ -55,5 +135,57 @@
     background-color: rgb(9, 68, 32);
     display: flex;
     flex-direction: column;
+
+    section {
+      width: 100%;
+      height: 85%;
+    display: flex;
+    
+    .photo {
+      width: 35%;
+      height: 100%;
+      position: relative;
+
+      
+      }
+
+      .text {
+        width: 65%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+          width: 90%;
+          height: 35%;
+          color: #ccc;
+          font-weight: normal;
+      @include flex(flex-end,left);
+        }
+
+        p {
+          width: 90%;
+          height: 65%;
+          color: #ccc;
+          text-align: justify;
+          margin-top: 1%;
+          font-size: small;
+        }
+      }
+    }
+    .info {
+      width: 100%;
+      height: 15%;
+      color: rgb(158, 158, 158);
+      font-size: x-small;
+      @include flex(center,center);
+
+      p {
+        text-align: center;
+        width: 90%;
+        height: fit-content;
+      }
+
+    }
   }
 }
