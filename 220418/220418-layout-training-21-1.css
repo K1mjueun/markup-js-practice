@@ -23,4 +23,140 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+#pc header {
+  width: 100%;
+  height: 15%;
+  background-color: var(--color-1);
+}
+
+#pc main {
+  width: 100%;
+  height: 40%;
+  background-color: var(--color-2);
+}
+
+#pc section {
+  width: 100%;
+  height: 30%;
+  background-color: var(--color-3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#pc section div {
+  width: 30%;
+  height: 70%;
+  background-color: var(--color-1);
+}
+
+#pc section div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#pc section div:nth-child(1) .box-1 {
+  width: 50%;
+  height: 80%;
+  background-color: var(--color-3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+#pc section div:nth-child(1) .box-1 .high {
+  width: 90%;
+  height: 25%;
+  background-color: var(--color-1);
+}
+
+#pc section div:nth-child(1) .box-1 .low {
+  width: 90%;
+  height: 60%;
+  background-color: var(--color-1);
+}
+
+#pc section div:nth-child(1) .box-2 {
+  width: 50%;
+  height: 80%;
+  background-color: var(--color-4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  bottom: 5%;
+  right: 5%;
+}
+
+#pc section div:nth-child(1) .box-2 .high {
+  width: 90%;
+  height: 25%;
+  background-color: var(--color-1);
+}
+
+#pc section div:nth-child(1) .box-2 .low {
+  width: 90%;
+  height: 60%;
+  background-color: var(--color-1);
+}
+
+#pc footer {
+  width: 100%;
+  height: 15%;
+  background-color: var(--color-4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#pc footer div {
+  width: 25%;
+  height: 70%;
+  background-color: var(--color-1);
+}
+
+#pc footer div:nth-child(2) {
+  width: 40%;
+}
 /*# sourceMappingURL=220418-layout-training-21-1.css.map */
