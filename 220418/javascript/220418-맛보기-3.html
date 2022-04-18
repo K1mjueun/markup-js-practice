@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <!-- 스크립트를 아래 쓰는 이유는 나중에 읽게 하려고! -->
+
+  <script>
+    // 변수는 "따옴표"를 쓰지 않는다
+  const root = document.querySelector("#root");
+  console.log(root); //기록을 볼래
+
+  // 작성을 했다면 반드시 console.log()를 찍는다=확인한다 : 완전히 눈에 들어올때까지 한줄, 한개 쓸때마다 차근차근
+
+  console.dir(root); //구조를 볼래
+
+  let back = 100; //변수를 초기화했다(initialize) or 변수를 선언했다 or 초기 설정 했다
+
+  root.style.width = back + "vw"; //변수를 할당했다(assignment)
+  root.style.height = back + "vh";
+  root.style.backgroundColor = "#ccc";
+  // 구조를 보니, style이라는 속성에 width 값이 있더라
+  </script>
+</body>
+</html>
