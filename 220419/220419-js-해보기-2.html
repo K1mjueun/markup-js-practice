@@ -96,5 +96,22 @@
       </div>
     </div>
   </div>
+
+  <script>
+
+    const click1 = document.querySelector(
+    'section:nth-child(1)');
+  click1.addEventListener('click', function(event) {
+  event.target.style.opacity = 0;
+  });
+
+  const click2 = document.querySelector(
+    'section:nth-child(1)');
+  click2.addEventListener('mouseleave', function(event) {
+  event.target.style.opacity = 0.5;
+  });
+
+  
+  </script>
 </body>
 </html>
