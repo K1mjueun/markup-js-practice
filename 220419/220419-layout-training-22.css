@@ -14,9 +14,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -46,7 +46,63 @@
 }
 
 #pc nav {
-  width: 100%;
+  width: 60%;
   height: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: absolute;
+  z-index: 2;
+  top: 30%;
+  left: 30%;
+}
+
+#pc nav ul {
+  width: 10%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#pc nav ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ccc;
+}
+
+#pc .section-1, #pc .section-2 {
+  width: 80%;
+  height: 35%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: absolute;
+  z-index: 3;
+}
+
+#pc .section-1 {
+  top: 30%;
+}
+
+#pc .section-2 {
+  bottom: -10%;
 }
 /*# sourceMappingURL=220419-layout-training-22.css.map */

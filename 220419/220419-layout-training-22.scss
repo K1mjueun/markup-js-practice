@@ -10,7 +10,7 @@
   width: 100vw;
   height: 200vh;
   background-color: rgb(56, 56, 56);
-  @include flex (center, center);
+  @include flex (center, flex-end);
   flex-direction: column;
   position: relative;
 
@@ -38,7 +38,45 @@
   }
 
   nav {
-    width: 100%;
+    width: 60%;
     height: 5%;
+    @include flex(center,flex-start);
+    
+    position: absolute;
+    z-index: 2;
+    top:30%;
+    left: 30%;
+
+    ul {
+      width: 10%;
+      height: 100%;
+    @include flex(center,space-around);
+    flex-direction: column;
+      
+    li {
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      background-color: #ccc;
+    }
+    }
+  }
+
+  .section-1, .section-2 {
+    width: 80%;
+    height: 35%;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    z-index: 3;
+  }
+
+  .section-1 {
+    top: 30%;
+  }
+
+  .section-2 {
+    bottom: -10%;
   }
 }
