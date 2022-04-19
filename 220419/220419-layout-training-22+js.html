@@ -4,8 +4,145 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="220419-layout-training-22.css">
   <title>Document</title>
+  <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#pc {
+  width: 100vw;
+  height: 200vh;
+  background-color: #383838;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+#pc .circle-1 {
+  width: 400px;
+  height: 400px;
+  background-color: #ff6958;
+  border-radius: 400px;
+  position: absolute;
+  top: 5%;
+  left: 30%;
+}
+
+#pc .circle-2 {
+  width: 550px;
+  height: 550px;
+  border: yellow 5px solid;
+  border-radius: 550px;
+  z-index: 1;
+  position: absolute;
+  top: 10%;
+  right: 30%;
+}
+
+#pc nav {
+  width: 60%;
+  height: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: absolute;
+  z-index: 2;
+  top: 30%;
+  left: 30%;
+}
+
+#pc nav ul {
+  width: 10%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#pc nav ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ccc;
+}
+
+#pc .section-1, #pc .section-2 {
+  width: 80%;
+  height: 35%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: absolute;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#pc .section-1 p, #pc .section-2 p {
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #fff;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+#pc .section-1 {
+  top: 30%;
+}
+
+#pc .section-2 {
+  bottom: -10%;
+}
+
+  </style>
 </head>
 <body>
   <div id="pc">
@@ -42,7 +179,18 @@
   </div>
 
   <script>
-    
+    // ??안됀다;;
+
+    const section1 = document.querySelector('.section-1');
+    section1.style.order = 1;
+    const section2 = document.querySelector('.section-2');
+    section1.style.order = 2;
+
+    section1.addEventListener('click',function() {
+      console.dir(section1);
+      section1.style.order = 2;
+      section2.style.order = 1;
+    });
   </script>
 </body>
 </html>
