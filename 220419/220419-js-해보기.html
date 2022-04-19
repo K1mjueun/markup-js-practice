@@ -21,7 +21,7 @@
   #mobile {
     width: 400px;
     height: 800px;
-    border-radius: 20px;
+    border-radius: 30px;
     background: rgb(202,211,255);
     background: linear-gradient(45deg, rgba(202,211,255,0.1) 0%, rgba(84,166,255,0.1) 100%);
     box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
@@ -41,7 +41,7 @@
     align-items: center;
     justify-content: flex-start;
     font-size: xx-large;
-    color: #fff;
+    color: rgb(255, 255, 255);
   }
 
   nav {
@@ -66,6 +66,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
+
+    position: relative;
   }
 
   main > section {
@@ -75,6 +77,39 @@
     background-image: url("https://i.pinimg.com/originals/d5/e3/fd/d5e3fd600d7c4a694746a6a0db70589d.png");
     background-size: cover;
   }
+
+#js-hover {
+    width: 95%;
+    height: 35%;
+    margin-top: 10%;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.album {
+  width: 40%;
+  height: 80%;
+  background-image: url("https://image.bugsm.co.kr/album/images/500/200926/20092683.jpg");
+  background-size: cover;
+}
+
+.text {
+  width: 45%;
+  height: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.text > h1 {
+  color: #fff;
+  font-size: 10px;
+}
 
   </style>
 </head>
@@ -91,9 +126,27 @@
 
       <main>
         <section></section>
+
+        <div id="js-hover">
+        <div class="album"></div>
+
+        <div class="text">
+          <h1>ALBUM : SHE'S A BABY(single)</h1>
+          <h1>TITLE : SHE'S A BABY</h1>
+          <h1>ARTIST : ZICO</h1>
+          <h1>RELEASE : 2017.04.13.</h1>
+          <h1>MV DIRECTOR : WHO?</h1>
+        </div>
+        </div>
+
       </main>
 
     </div>
   </div>
+
+  <script>
+  
+
+  </script>
 </body>
 </html>
