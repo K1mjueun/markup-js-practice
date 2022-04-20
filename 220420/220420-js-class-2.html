@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="title">hello</h1>
+
+  <script>
+  let a = document.getElementById('title');
+  // document에서 ID로 element를 가져와, ☆ID 이름은 ☆문자열 title이야
+  // 가져온 애의 이름을 a라고 하자
+
+  console.dir(a);
+  //변수 a의 구조를 볼래
+  console.log(a.style);
+  //변수 a의 style이 key 값이 뭐야?
+
+  let coloValue = "orangered";
+  // 변수 선언 (자스는 문자열인것만 파악 가능할 뿐 오렌지색인지 모른다)
+  a.style.color = coloValue;
+  if(a.style.color === "orangered") {
+    a.style.color = "rgba(58,251,247,0.5)"
+  }
+
+  </script>
+</body>
+</html>
