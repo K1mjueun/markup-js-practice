@@ -7,7 +7,100 @@
   <script src="https://kit.fontawesome.com/c0547f77dd.js" crossorigin="anonymous"></script>
   <title>Document</title>
   <style>
-    *{margin:0; padding:0;}
+    *{margin:0; padding:0; list-style-type: none;}
+
+    #pc {
+      width: 100vw;
+      height: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(255, 243, 240);
+    }
+
+    #mobile {
+      width: 400px;
+      height: 800px;
+      background-color: #fff;
+      box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+      border-radius: 30px;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    header {
+      width: 90%;
+      height: 7%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      font-size: x-large;
+      color: #ccc;
+    }
+
+    main {
+      width: 115px;
+      height: 115px;
+      border-radius: 115px;
+      background: rgb(255,218,225);
+      background: linear-gradient(135deg, rgba(255,218,225,1) 0%,
+      rgba(255,241,193,1) 100%);
+      margin-bottom: 5%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main > h1 {
+      font-size: small;
+      color: rgb(70, 70, 70);
+    }
+
+    #colors {
+      width: 100%;
+      height: 75%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+
+    #colors > li {
+    width: 80%;
+    height: 8%;
+    border-radius: 100px;
+    /* border-style: solid;
+    border-image: linear-gradient(to right, rgba(255,218,225,1) 0%, rgba(255,241,193,1) 100%);
+    border-image-slice: 1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: rgb(255,218,225);
+    background: linear-gradient(90deg, rgba(255,218,225,1) 0%, rgba(255,241,193,1) 100%);
+    }
+
+    h2 {
+      width: 97%;
+      height: 83%;
+      border-radius: 100px;
+      background-color: #fff;
+
+      display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(126, 126, 126);
+    font-size: small;
+    font-weight: normal;
+    }
+
   </style>
 </head>
 <body>
@@ -21,13 +114,16 @@
         <h1>COLOR</h1>
       </main>
 
-      <li>RED</li>
-      <li>ORANGE</li>
-      <li>BLUE</li>
-      <li>GREEN</li>
-      <li>PURPLE</li>
-      <li>PINK</li>
-      <li>YELLOW</li>
+      <div id="colors">
+      <li><h2>RED</h2></li>
+      <li><h2>ORANGE</h2></li>
+      <li><h2>BLUE</h2></li>
+      <li><h2>GREEN</h2></li>
+      <li><h2>PURPLE</h2></li>
+      <li><h2>PINK</h2></li>
+      <li><h2>YELLOW</h2></li>
+    </div>
+
     </div>
   </div>
 </body>
