@@ -8,3 +8,40 @@
   --color-5:rgb(58, 58, 58);
   --color-6:#000;
 }
+
+@mixin flex ($align,$justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+#display {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  .one {
+    width: 20%;
+    height: 100%;
+    background-color: var(--color-2);
+  }
+
+  .two {
+    width: 15%;
+    height: 100%;
+    background-color: var(--color-3);
+  }
+
+  .three {
+    width: 35%;
+    height: 100%;
+    background-color: var(--color-4);
+  }
+  
+  .four {
+    width: 30%;
+    height: 100%;
+    background-color: var(--color-5);
+  }
+  
+}

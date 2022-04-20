@@ -12,4 +12,36 @@
   --color-5:rgb(58, 58, 58);
   --color-6:#000;
 }
+
+#display {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#display .one {
+  width: 20%;
+  height: 100%;
+  background-color: var(--color-2);
+}
+
+#display .two {
+  width: 15%;
+  height: 100%;
+  background-color: var(--color-3);
+}
+
+#display .three {
+  width: 35%;
+  height: 100%;
+  background-color: var(--color-4);
+}
+
+#display .four {
+  width: 30%;
+  height: 100%;
+  background-color: var(--color-5);
+}
 /*# sourceMappingURL=220420-layout-training-23.css.map */
