@@ -112,21 +112,31 @@ bottom:20%;
     <main>
       <i class="fa-solid fa-play"></i>
     </main>
-
     <h1>MY PLAYLIST</h1>
 
     <div class="photo-1">
     </div>
-    
     <div class="photo-2">
     </div>
-
     <div class="photo-3">
     </div>
-
     <div class="photo-4">
     </div>
 
   </div>
+
+  <script>
+  let photo = document.querySelector('#garo');
+    photo.addEventListener('click', function(event) {
+      event.target.style.opacity = "1";
+      // console.log(event.target.style.opacity);
+      // console.log(typeof event.target.style.opacity);
+      // if(event.target.style.opacity === "1") {
+        // alert("주은씨만 보면 파이리가 떠올라");
+      //   event.target.style.opacity="0.3";}
+      }
+    );
+  </script>
+
 </body>
 </html>
