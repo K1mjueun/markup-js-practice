@@ -9,7 +9,9 @@
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&
+display=swap" rel="stylesheet">
+
   <title>Document</title>
 </head>
 
@@ -17,8 +19,8 @@
   <div id="display">
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo assumenda voluptates, reiciendis doloribus, accusantium magni, odit laudantium amet expedita possimus dignissimos enim culpa. Obcaecati impeditLorem ipsum dolor sit, amet consectetur adipisicing elit. Quo assumenda voluptates, reiciendis doloribus, accusantium magni, odit laudantium amet expedita possimus dignissimos enim culpa. Obcaecati impedit</p>
 
-  <section class="one">
-  </section>
+    <section class="one">
+    </section>
 
   <section class="two">
 <h1>B</h1>
@@ -39,6 +41,13 @@
   <section class="four">
 <h1>G</h1>
   </section>
-  </div>
+
+  <script>
+  const white = document.querySelector('#display');
+    white.addEventListener('click', function(event) {
+      event.target.style.backgroundColor = 'white';});
+    </script>
+  
+</div>
 </body>
 </html>
