@@ -129,14 +129,38 @@
   </div>
 
   <script>
-    const original = 'linear-gradient(90deg, rgba(255,218,225,1) 0%, rgba(255,241,193,1) 100%)';
-    
+    let original = 'linear-gradient(90deg, rgba(255,218,225,1) 0%, rgba(255,241,193,1) 100%)';
+
     const red = 'linear-gradient(45deg, rgba(255,231,231,1) 0%, rgba(255,88,88,1) 100%)';
+    const orange = 'linear-gradient(45deg, rgba(255,231,206,1) 0%, rgba(255,152,66,1) 100%)';
+    const blue = 'linear-gradient(45deg, rgba(204,225,255,1) 0%, rgba(66,115,255,1) 100%)';
+    const green = 'linear-gradient(45deg, rgba(223,255,220,1) 0%, rgba(88,255,112,1) 100%)';
+    const purple = 'linear-gradient(45deg, rgba(242,221,255,1) 0%, rgba(161,88,255,1) 100%)';
+    const pink = 'linear-gradient(45deg, rgba(255,229,237,1) 0%, rgba(255,147,181,1) 100%)';
+    const yellow = 'linear-gradient(45deg, rgba(255,254,229,1) 0%, rgba(255,240,114,1) 100%)';
 
   let color = document.getElementsByTagName('li');
 
   color[0].addEventListener('mouseover', function(event) {event.target.style.background = red});
   color[0].addEventListener('mouseleave', function(event) {event.target.style.background = original});
+
+  color[1].addEventListener('mouseover', function(event) {event.target.style.background = orange});
+  color[1].addEventListener('mouseleave', function(event) {event.target.style.background = original});
+
+  color[2].addEventListener('mouseover', function(event) {event.target.style.background = blue});
+  color[2].addEventListener('mouseleave', function(event) {event.target.style.background = original});
+
+  color[3].addEventListener('mouseover', function(event) {event.target.style.background = green});
+  color[3].addEventListener('mouseleave', function(event) {event.target.style.background = original});
+
+  color[4].addEventListener('mouseover', function(event) {event.target.style.background = purple});
+  color[4].addEventListener('mouseleave', function(event) {event.target.style.background = original});
+
+  color[5].addEventListener('mouseover', function(event) {event.target.style.background = pink});
+  color[5].addEventListener('mouseleave', function(event) {event.target.style.background = original});
+
+  color[6].addEventListener('mouseover', function(event) {event.target.style.background = yellow});
+  color[6].addEventListener('mouseleave', function(event) {event.target.style.background = original});
 
   </script>
 </body>
