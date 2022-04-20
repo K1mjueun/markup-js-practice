@@ -97,7 +97,6 @@
       display: flex;
     align-items: center;
     justify-content: center;
-
     color: rgb(126, 126, 126);
     font-size: small;
     font-weight: normal;
@@ -128,5 +127,17 @@
 
     </div>
   </div>
+
+  <script>
+    const original = 'linear-gradient(90deg, rgba(255,218,225,1) 0%, rgba(255,241,193,1) 100%)';
+    
+    const red = 'linear-gradient(45deg, rgba(255,231,231,1) 0%, rgba(255,88,88,1) 100%)';
+
+  let color = document.getElementsByTagName('li');
+
+  color[0].addEventListener('mouseover', function(event) {event.target.style.background = red});
+  color[0].addEventListener('mouseleave', function(event) {event.target.style.background = original});
+
+  </script>
 </body>
 </html>
