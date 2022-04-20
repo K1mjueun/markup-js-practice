@@ -39,33 +39,22 @@
       position: relative;
     }
 
-    section {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 1;
-      background-color: #fff;
-      opacity: .5;
+    .hmm {
+    width: 100%;
+    height:100%;
+    z-index: 1;
     }
 
-    .photo-1>div, .photo-2>div, .photo-3>div, .photo-4>div {
-    width: 150px;
-    height: 150px;
-    border-radius: 150px;
-    background-size: cover;
-    z-index: 2;
-    }
-
-    .photo-1, .photo-1>div {
+    .photo-1{
       background-image: url("http://1.bp.blogspot.com/-T7WtZ-WR1K0/VfHeyKWgT9I/AAAAAAAAAV8/zODlnlv3B8s/s1600/red%2BVelvet7.png");
     }
-    .photo-2, .photo-2>div{
+    .photo-2{
       background-image: url("https://image.newsis.com/2022/03/21/NISI20220321_0018617458_web.jpg");
     }
-    .photo-3, .photo-3>div{
+    .photo-3{
       background-image: url("https://s.gae9.com/trend/b1cec4c8dd16355a.orig");
     }
-    .photo-4, .photo-4>div{
+    .photo-4{
       background-image: url("http://image.kmib.co.kr/online_image/2018/0527/611811110012390193_1.jpg");
     }
     
@@ -76,23 +65,19 @@
   <div id="pc">
     <div id="mobile">
       <div class="photo-1">
-        <section></section>
-        <div></div>
+        <img class=hmm src="blur.svg">
       </div>
 
       <div class="photo-2">
-        <section></section>
-        <div></div>
+        <img class=hmm src="blur.svg">
       </div>
 
       <div class="photo-3">
-        <section></section>
-        <div></div>
+        <img class=hmm src="blur.svg">
       </div>
 
       <div class="photo-4">
-        <section></section>
-        <div></div>
+        <img class=hmm src="blur.svg">
       </div>
     </div>
   </div>
@@ -100,9 +85,9 @@
   <script>
     
     const click1 = document.querySelector('#mobile');
-  click1.addEventListener('click', function(event) {
-  event.target.style.opacity = 0;});
-  
+  click1.addEventListener('click', function(event) 
+  { event.target.style.opacity = 0; } );
+
   </script>
 </body>
 </html>
