@@ -25,7 +25,7 @@
       height: 800px;
       background-color: #fff;
       box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
-      border-radius: 30px;
+      border-radius: 50px;
       overflow: hidden;
 
       display: flex;
@@ -35,8 +35,8 @@
     }
 
     header {
-      width: 90%;
-      height: 7%;
+      width: 85%;
+      height: 5%;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -120,45 +120,38 @@
   </div>
 
   <script>
-    // let original = 'linear-gradient(90deg, rgba(255,218,225,1) 0%, rgba(255,241,193,1) 100%)';
-    let original = "rgb(126, 126, 126)";
+    let original = 'linear-gradient(#fff,#fff),linear-gradient(to right, rgb(255,218,225), rgb(255,241,193))';
 
-    // const red = 'linear-gradient(45deg, rgba(255,231,231,1) 0%, rgba(255,88,88,1) 100%)';
-    const red = '#FF4E40';
-    const orange= '#E69533';
-    const blue = '#4E92E6';
-    const green = '#65FF4E';
-    const purple = '#B750FF';
-    const pink = '#FFA6B1';
-    const yellow = '#FFF78F';
-   
+    const red = 'linear-gradient(#fff,#fff), linear-gradient(141deg, rgba(255,218,225,1) 0%, rgba(255,65,90,1) 100%)';
+    const orange= 'linear-gradient(#fff,#fff), linear-gradient(141deg, rgba(255,238,218,1) 0%, rgba(255,166,40,1) 100%)';
+    const blue = 'linear-gradient(#fff,#fff), linear-gradient(141deg, rgba(218,238,255,1) 0%, rgba(26,143,255,1) 100%)';
+    const green = 'linear-gradient(#fff,#fff), linear-gradient(141deg, rgba(233,255,229,1) 0%, rgba(100,224,89,1) 100%)';
+    const purple = 'linear-gradient(#fff,#fff), linear-gradient(141deg, rgba(244,229,255,1) 0%, rgba(168,89,224,1) 100%)';
+    const pink = 'linear-gradient(#fff,#fff), linear-gradient(141deg, rgba(255,229,236,1) 0%, rgba(255,179,195,1) 100%)';
+    const yellow = 'linear-gradient(#fff,#fff), linear-gradient(141deg, rgba(255,255,218,1) 0%, rgba(253,255,103,1) 100%)';
 
-  let color = document.getElementsByTagName('h2');
-  // let none = document.getElementsByTagName('h2');
+  let color = document.getElementsByTagName('li');
 
-  color[0].addEventListener('mouseover', function(event) {event.target.style.color = red});
-  color[0].addEventListener('mouseleave', function(event) {event.target.style.color = original});
+  color[0].addEventListener('mouseover', function(event) {event.target.style.backgroundImage = red});
+  color[0].addEventListener('mouseleave', function(event) {event.target.style.backgroundImage = original});
 
-  // none[0].addEventListener('mouseover', function(event) {event.target.style.background = 'white'});
-  // none[0].addEventListener('mouseleave', function(event) {event.target.style.background = 'white'});
+  color[1].addEventListener('mouseover', function(event) {event.target.style.backgroundImage = orange});
+  color[1].addEventListener('mouseleave', function(event) {event.target.style.backgroundImage = original});
 
-  color[1].addEventListener('mouseover', function(event) {event.target.style.color = orange});
-  color[1].addEventListener('mouseleave', function(event) {event.target.style.color = original});
+  color[2].addEventListener('mouseover', function(event) {event.target.style.backgroundImage = blue});
+  color[2].addEventListener('mouseleave', function(event) {event.target.style.backgroundImage = original});
 
-  color[2].addEventListener('mouseover', function(event) {event.target.style.color = blue});
-  color[2].addEventListener('mouseleave', function(event) {event.target.style.color = original});
+  color[3].addEventListener('mouseover', function(event) {event.target.style.backgroundImage = green});
+  color[3].addEventListener('mouseleave', function(event) {event.target.style.backgroundImage = original});
 
-  color[3].addEventListener('mouseover', function(event) {event.target.style.color = green});
-  color[3].addEventListener('mouseleave', function(event) {event.target.style.color = original});
+  color[4].addEventListener('mouseover', function(event) {event.target.style.backgroundImage = purple});
+  color[4].addEventListener('mouseleave', function(event) {event.target.style.backgroundImage = original});
 
-  color[4].addEventListener('mouseover', function(event) {event.target.style.color = purple});
-  color[4].addEventListener('mouseleave', function(event) {event.target.style.color = original});
+  color[5].addEventListener('mouseover', function(event) {event.target.style.backgroundImage = pink});
+  color[5].addEventListener('mouseleave', function(event) {event.target.style.backgroundImage = original});
 
-  color[5].addEventListener('mouseover', function(event) {event.target.style.color = pink});
-  color[5].addEventListener('mouseleave', function(event) {event.target.style.color = original});
-
-  color[6].addEventListener('mouseover', function(event) {event.target.style.color = yellow});
-  color[6].addEventListener('mouseleave', function(event) {event.target.style.color = original});
+  color[6].addEventListener('mouseover', function(event) {event.target.style.backgroundImage = yellow});
+  color[6].addEventListener('mouseleave', function(event) {event.target.style.backgroundImage = original});
 
   </script>
 </body>
