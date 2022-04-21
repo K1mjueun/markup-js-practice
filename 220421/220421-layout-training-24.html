@@ -4,11 +4,58 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="220421-layout-training-24.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
   <title>Document</title>
+  <style>
+  *{margin:0; padding:0; font-family: 'Bad Script', cursive; font-size: 1rem;}
+
+  #pc {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  h1 {
+    color: rgb(105, 105, 105);
+    font-weight:lighter;
+    margin:-0.2%;
+  }
+
+  #text {
+    display: flex;
+    width: 30%;
+    height: fit-content;
+    margin:-0.2%;
+  }
+
+  #text > h1:nth-child(1) {
+    color:black;
+    font-weight: bold;
+  }
+
+  #text > h1:nth-child(2) {
+    margin-left: 1%;
+  }
+
+  </style>
 </head>
 <body>
   <div id="pc">
+    <main>
     <h1>If you cannot fly, then run.</h1>
     <h1>If you cannot run, then walk.</h1>
     <h1>And, if you cannot walk, then crawl.</h1>
@@ -16,6 +63,7 @@
     <div id="text">
     <h1>But whatever you do,</h1>
     <h1>you have to keep moving forward.</h1>
+  </main>
   </div>
   </div>
 </body>
