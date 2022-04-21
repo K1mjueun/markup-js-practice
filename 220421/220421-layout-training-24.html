@@ -66,5 +66,18 @@
   </main>
   </div>
   </div>
+
+  <script>
+    let mungu = document.getElementsByTagName('h1');
+    let main = document.getElementsByTagName('main');
+
+    mungu[3].addEventListener('click', function(event) {
+      event.target.style.color = 'red';});
+    mungu[4].addEventListener('click', function(event) {
+      event.target.style.fontWeight = 'bold';});
+    main[0].addEventListener('mouseover', function(event) {
+      event.target.style.color = 'black';});
+  
+  </script>
 </body>
 </html>
