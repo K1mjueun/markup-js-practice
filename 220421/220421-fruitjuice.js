@@ -22,7 +22,7 @@ const orangejuicePrice = orangejuice.main + orangejuice.sub + orangejuice.sweet 
 // console.log(orangejuicePrice + material.watermelon);
 
 if(orangejuicePrice > 5000) {
-  console.log(`오렌지주스는 ${orangejuicePrice}원 입니다. 주문하시겠습니까?`);
+  console.log(`오렌지주스는 ${orangejuicePrice}원인데 주문하시겠어요?`);
 } else {
-  console.log(`오렌지주스는 ${orangejuicePrice}원 입니다. 주문 도와드리겠습니다.`);
+  console.log(`오렌지주스는 ${orangejuicePrice}원 입니다.`);
 }
