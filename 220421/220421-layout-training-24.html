@@ -68,16 +68,26 @@
   </div>
 
   <script>
-    let mungu = document.getElementsByTagName('h1');
     let main = document.getElementsByTagName('main');
+    
+  let mungu = document.getElementsByTagName('h1'); // <-mungu(h1)
+  let bg = document.querySelector('#pc'); // <- bg(#pc)
 
+  bg.addEventListener('click',function(event) {
+    event.mungu[0,1,2,3].style.color = 'black';});
+    // ^ bg(#pc)를 선택했을 때 mungu(h1)들이 바뀌는 작성법은 따로 있는 건가요?
+    
     mungu[3].addEventListener('click', function(event) {
       event.target.style.color = 'red';});
-    mungu[4].addEventListener('click', function(event) {
-      event.target.style.fontWeight = 'bold';});
-    main[0].addEventListener('mouseover', function(event) {
-      event.target.style.color = 'black';});
-  
+      mungu[4].addEventListener('click', function(event) {
+        event.target.style.fontWeight = 'bold';});
+        main[0].addEventListener('mouseover', function(event) {
+          event.target.style.color = 'black';});
+          
+          console.dir(bg);
+          console.dir(mungu);
+          console.dir(main);
+          
   </script>
 </body>
 </html>
