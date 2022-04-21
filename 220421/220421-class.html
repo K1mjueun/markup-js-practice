@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: salmon;
+    } */
+
+  </style>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    //getElementById() 인수(argument)로 문자열(string)로만 받는 규칙이 있다
+    //내장 함수는 규칙이 이미 정해져있다
+    let hundred = 100;
+
+    root.style.width = hundred + "vw";
+    root.style.height = hundred + "vh";
+    root.style.backgroundColor = "pink";
+    
+    console.dir(root);
+
+    const member = ["Jueun","Minji","Yunjin","Juye","Soyoung"];
+    let count = 0;
+    // 3이면 카운트가 "Juye"부터 시작된다
+    // 0이면 카운트가 "Jueun"부터 시작된다
+
+    root.addEventListener("click",function() {
+      let result = hundred/2;
+      // hundred = hundred * 2;
+      //이 괄호 안에서 hundred는 200이 되었다
+
+      root.style.width = result + "vw";
+      root.style.height = result + "vh";
+      root.style.width = result + "vw";
+      root.style.backgroundColor = "orange";
+      root.style.color = "white";
+      root.style.fontSize = "50px";
+      root.style.fontWeight = "bold";
+
+      root.textContent = "Hello! " + member[count] + " :-)";
+      //"Hello! " + member[0] + " :-)"
+      count = count+1;
+      //+0이면 카운트하지 않는다
+      //+1을 하면 순서대로 카운트한다
+      //+2를 하면 1개를 건너뛰고 카운트한다
+      //+3을 하면 2개를 건너뛰고 카운트한다
+
+      if(count > member.length-1) {
+        count=0;
+      }
+    });
+
+  </script>
+</body>
+</html>
