@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=#r, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    
+    console.dir(root);
+    console.log(root.children); //<-children이 있네, 그리고 배열임
+    console.dir(root.children[0]);
+    console.log(root.children[0]);
+
+    document.body.style.width = "100vw";
+    document.body.style.height = "100vh";
+    document.body.style.backgroundColor = "skyblue";
+    
+    // root.children[0].textContent = "안녕! 오늘은 행복한 금요일이야!";
+    // let changeText = "내일은 토요일이야~";
+    //이거 어차피 문자열 꾸머리인데 그냥 한번에 변수에 저장할까?
+
+    const textArray = ["안녕! 오늘은 행복한 금요일이야!","내일은 토요일이야~", "모레는 일요일이네?", "글피는.... 월..", "화요일에는 맛있는거 먹자"];
+    // root.children[0].textContent = textArray[0];
+
+    //알고리즘 구상 - 문서를 클릭할 때마다 텍스트가 바뀌면 좋겠어
+    //1. 텍스트 목록이 필요할 것 같아
+    //2. 목록은 배열 순서대로 쓰던데
+    //3. 순서는 숫자니까 더하기 1만 시키면 되겠네?
+    //4. 근데 숫자는 어떻게 덧셈시켜?
+    //5. 숫자 변수를 하나 만들면 되겠네
+
+    let indexValue = 0;
+    document.body.addEventListener('wheel', function() {
+      if(root.children[0].textContent === "") {
+        root.children[0].textContent = textArray[indexValue];
+      } else {
+        indexValue++; //<- 1씩 증가시켜준다는 뜻
+        root.children[0].textContent = textArray[indexValue]; //다시 재할당
+        if(indexValue === textArray.length) {
+          indexValue = 0;
+        } //다시 무한정 바뀌게....!!??
+      }
+    });
+
+    // document.body.addEventListener('click', function() {
+    // root.children[0].textContent = textArray[1];
+
+    // // root.children[0].textContent = changeText;
+    // //문서의 body 부분을 클릭하면 두번쨰 인수로 자리잡혀 있는 함수 내용을 실행시켜줘
+    // //함수 내용을 사람들은 알고리즘이라고 불러
+    // //root의 자식 중에 0번째가 있는데 그것도 태그일거야, 그 태그 text node key에 변수 문자열을 '재할당'해줘
+    // });
+
+  </script>
+</body>
+</html>
