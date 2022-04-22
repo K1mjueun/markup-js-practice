@@ -27,17 +27,19 @@
 
 <script>
 let circle = document.getElementsByTagName("div");
-let styling = ["300px", "gray", "flex", "center", "white"];
+let styling = ["300px", "gray", "white"];
+let display = ["flex", "center"];
 console.log(circle[1]);
 console.dir(circle[1]);
 
+circle[1].style.width = styling[0];
 circle[1].style.height = styling[0];
 circle[1].style.borderRadius = styling[0];
 circle[1].style.backgroundColor = styling[1];
-circle[1].style.width = styling[0];
-circle[1].style.display = styling[2];
-circle[1].style.alignItems = styling[3];
-circle[1].style.justifyContent = styling[3];
-circle[1].style.color = styling[4];
+circle[1].style.color = styling[2];
+
+circle[1].style.display = display[0];
+circle[1].style.alignItems = display[1];
+circle[1].style.justifyContent = display[1];
 </script>
 </html>
