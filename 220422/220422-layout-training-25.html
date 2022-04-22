@@ -8,15 +8,36 @@
   <style>
     *{margin:0; padding:0;}
 
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
 </head>
 <body>
   <div id="root">
-    <div></div>
+    <div>Hi!</div>
   </div>
 </body>
 
 <script>
-  
+let circle = document.getElementsByTagName("div");
+let styling = ["300px", "gray", "flex", "center", "white"];
+console.log(circle[1]);
+console.dir(circle[1]);
+
+circle[1].style.height = styling[0];
+circle[1].style.borderRadius = styling[0];
+circle[1].style.backgroundColor = styling[1];
+circle[1].style.width = styling[0];
+circle[1].style.display = styling[2];
+circle[1].style.alignItems = styling[3];
+circle[1].style.justifyContent = styling[3];
+circle[1].style.color = styling[4];
 </script>
 </html>
