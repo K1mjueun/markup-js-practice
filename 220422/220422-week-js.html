@@ -10,9 +10,24 @@
   </style>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+  </div>
 
   <script>
+
+  const pc = document.querySelector("#root");
+  console.log(pc);
+  console.dir(pc);
+
+  pc.style.width = "100vw";
+  pc.style.height = "100vh";
+  pc.style.backgroundColor = "#ccc";
+  pc.style.display = "flex";
+  pc.style.alignItems = "center";
+  pc.style.justifyContent = "center";
+  pc.style.color = "white";
+  pc.style.fontSize = "20px";
+
   const week = {
   monday : ["학원가기", "물 많이 마시기", "도라지배즙 마시기", "저녁밥 해먹기", "참외 깎아먹기"],
   tuesday : ["학원가기", "물 3병 마시기", "홍삼즙 마시기", "저녁밥 사먹기", "디즈니 플러스 보기"],
@@ -22,6 +37,9 @@
   saturday : ["결혼식 가기", "만두랑 산책하기", "본가 가기", "가족과 밥먹기", "청년부 모임"],
   sunday : ["교회 가기", "예배팀 회식", "TV 설치하기", "넷플릭스 보기"]
 }
+
+// pc.textContent = week.monday[week.monday.length-2];
+  pc.textContent = "오늘의 할일은? " + week.monday[4]+"와 "+week.thursday[3]+" 두둥!";
 
   </script>
 </body>
