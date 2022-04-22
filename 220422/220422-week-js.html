@@ -16,6 +16,7 @@
   <script>
 
   const pc = document.querySelector("#root");
+  // 변수 pc는 #root이야
   console.log(pc);
   console.dir(pc);
 
@@ -38,8 +39,65 @@
   sunday : ["교회 가기", "예배팀 회식", "TV 설치하기", "넷플릭스 보기"]
 }
 
-// pc.textContent = week.monday[week.monday.length-2];
-  pc.textContent = "오늘의 할일은? " + week.monday[4]+"와 "+week.thursday[3]+" 두둥!";
+let test = [week.monday, week.tuesday, week.wednesday, week.thursday, week.friday, week.saturday, week.sunday];
+let count = 0;
+// 변수 count는 0이야
+
+pc.addEventListener('click',function() {
+  // 변수 pc에 click하면 이벤트가 생기게 할거야
+  // pc.textContent = test[0];
+
+  count++; // <-얜 모야
+
+  pc.textContent = test[count] + "★";
+  if(count > test.length-1) {
+  count=0;} // <- 반복은 되는데 undefined는 왜 생기는 거야
+
+  // pc.textContent = "월요일의 할일은? " + week.monday[count] + " 두둥";
+  //   count = count + 1;
+  //   if(count > week.monday.length-1) {
+  //   count = 0;
+  //   }
+
+  //   pc.textContent = "화요일의 할일은? " + week.tuesday[count] + " 짜잔";
+  //   count = count + 1;
+  //   if(count > week.tuesday.length-1) {
+  //   count = 0;
+  //   }
+
+    // pc.textContent = "수요일의 할일은? " + week.wednesday[count] + " 따란";
+    // count = count + 1;
+    // if(count > week.wednesday.length-1) {
+    // count = 0;
+    // }
+
+    //  **************************
+    // pc.textContent = "목요일의 할일은? " + week.thursday[count] + " 띠용";
+    // count = count + 1;
+    // // pc
+    // if(count > week.thursday.length-1) {
+    // count = 0;
+    // }
+
+    // pc.textContent = "금요일의 할일은? " + week.friday[count] + "~!";
+    // count = count + 1;
+    // if(count > week.friday.length-1) {
+    // count = 0;
+    // }
+
+    // pc.textContent = "토요일의 할일은? " + week.saturday[count] + " :-p";
+    // count = count + 1;
+    // if(count > week.saturday.length-1) {
+    // count = 0;
+    // }
+
+    // pc.textContent = "일요일의 할일은? " + week.sunday[count] + " ←요거";
+    // count = count + 1;
+    // if(count > week.sunday.length-1) {
+    // count = 0;
+    // }
+});
+
 
   </script>
 </body>
