@@ -5,8 +5,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+  }
+
+  #root > div {
+    width: 100px;
+    height: 100px;
+    border:1px solid #ccc;
+    color: #fff;
+  }
+
+  </style>
 </head>
 <body>
-  
+  <div id="root">
+    <div>1</div>
+    <div>2</div>
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    const one = root.children[0]; // text node에 문자열 1이라고 쓴 것
+    //children 사용을 권장! 쿼리셀렉터 많이 쓸 필요X
+    const two = root.children[1]; // text node에 문자열 2이라고 쓴 것
+    // const test = document.querySelector("#root>div:nth-child(2)"); //
+
+    two.textContent = "이건 두번째야!"; // "같다"의 의미가 아닌 "재할당"
+
+    console.log(root);
+    console.dir(root); 
+    console.dir(root.children[0]);
+    console.log(two.textContent);
+    console.log(two.style.backgroundColor);
+    // 막혔을 땐 바로 콘솔 찍어보기
+
+    // event : 무슨 일이 일어났다, 발생했다
+    one.addEventListener('click', function() {
+      two.style.transition = "1s";
+      two.textContent = "클릭했다 이놈";
+      two.style.backgroundColor = "rgb(255,102,102)";
+      two.style.width = "200px";
+      two.style.height = "200px";
+
+      if(two.style.backgroundColor === "rgb(255,102,102)") {
+        two.style.backgroundColor = "rgb(255,255,255)";
+      }
+    });
+
+  </script>
 </body>
 </html>

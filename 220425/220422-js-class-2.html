@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root">
+    <div id="box">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  </div>
+  
+  <script>
+    const root = document.querySelector("#root");
+    console.log(root);
+
+    const box = root.children[0];
+    console.log(box);
+    
+    // const all = box.children[0,1,2];
+    // console.log(all);
+    
+    const one = box.children[0];
+    const two = box.children[1];
+    const three = box.children[2];
+    console.log(one);
+    console.log(two);
+    console.log(three);
+
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    root.style.display = "flex";
+    root.style.alignItems = "center";
+    root.style.justifyContent = "center";
+    console.dir(root);
+    console.dir(root.style.display);
+    
+    box.style.width = "1500px"
+    box.style.height = "100vh"
+    box.style.display = "flex";
+    box.style.alignItems = "center";
+    box.style.justifyContent = "space-around";
+    
+    one.style.width = "200px";
+    one.style.height = "200px";
+    one.style.backgroundColor = "#ccc";
+
+    two.style.width = "200px";
+    two.style.height = "200px";
+    two.style.backgroundColor = "#ccc";
+
+    three.style.height = "200px";
+    three.style.width = "200px";
+    three.style.backgroundColor = "#ccc";
+
+    box.addEventListener("click", function() {
+    box.style.flexDirection = "column";
+    // if(box.style.flexDirection === "column") {
+    //   box.style.flexDirection = "row";
+    // }
+    });
+  </script>
+</body>
+</html>
