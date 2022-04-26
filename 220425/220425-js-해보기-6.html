@@ -32,6 +32,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    background-color: rgb(226, 241, 255);
   }
 
   header > div {
@@ -114,6 +116,8 @@
 
   <script>
     const mobile = document.querySelector("#mobile");
+    const arrow = document.querySelector("header>div");
+    console.log(arrow);
     // console.log(mobile);
 
     const main = document.querySelector("main");
@@ -122,15 +126,17 @@
     console.log(image);
     
     image[1].addEventListener("click", function() {
-    image[0,2,3].style.display = "none";
-
-    if(image[0,2,3].style.display === "none") {
-      image[0,2,3].style.display = "flex";
-    }
+    image[0].style.display = "none";
+    image[2].style.display = "none";
+    image[3].style.display = "none";
     });
 
-    // 클릭하면 변하지도 않고, 다시 돌아오지도 않는다..
-    // transition도, if도 안됀다..
+    arrow.addEventListener("click", function() {
+    image[0].style.display = "flex";
+    image[1].style.display = "flex";
+    image[2].style.display = "flex";
+    image[3].style.display = "flex";
+    });
 
   </script>
 </body>
