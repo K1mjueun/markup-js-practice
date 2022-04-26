@@ -7,6 +7,41 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="root">
+    <button>click</button>
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    const clickBtn = root.children[0]; //쿼리셀렉터, 겟엘리먼트보단 칠드런 권장
+
+    console.dir(root);
+    console.log(clickBtn);
+
+    let bgColorValue = 333;
+
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    root.style.backgroundColor = `#${bgColorValue}`;
+
+    let data = true; // on.off 개념
+    clickBtn.addEventListener("click", function() {
+    // console.log("hello");
+    // console.log(root.style.backgroundColor);
+
+    if(data === true) {
+      console.log('data 값은 : ' + data);
+      data = false;
+      root.style.backgroundColor = "salmon";
+    } else { //else 구문은 'data가 true와 같지 않으면(data !== true), data가 false와 같으면(data === false)'을 의미
+    console.log("지금 else로 data 값은 : " + data);
+    data = true;
+    root.style.backgroundColor = "darkblue";
+    }
+    });
+
+    // 굉장히 많이 사용하는 알고리즘 패턴 중 하나 - 스위치처럼 이랬다 저랬다!
+
+  </script>
 </body>
 </html>
