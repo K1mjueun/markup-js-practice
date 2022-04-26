@@ -7,6 +7,30 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="box">
+  </div>
+
+  <script>
+    const box = document.querySelector("#box");
+
+    let sizeValue = 100;
+    let colorValue = "c4c4c4";
+
+    box.style.width = `${sizeValue}vw`;
+    box.style.height = `${sizeValue}vh`;
+    box.style.backgroundColor = `#${colorValue}`;
+
+    box.addEventListener("click", function() {
+    let result;
+    console.log("result 연산이 시작되기 전에는" + sizeValue + "이 값이다.")
+    result = sizeValue/2;
+
+    box.style.width = `${result}vw`;
+    box.style.height = `${result}vw`;
+
+    sizeValue = result;
+    console.log("result 값을 sizeValue 변수에 대입시키고 난 후의 value 값은 " + sizeValue);
+    });
+  </script>
 </body>
 </html>
