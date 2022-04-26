@@ -7,6 +7,69 @@
   <title>Document</title>
 </head>
 <body>
+  <div id="root"></div>
   
+  <!-- <script>
+    const arr = ["피카츄", "라이츄", "마자용", "꼬부기"];
+    const test = ["피카츄", "라이츄", "파이리", "꼬부기"];
+    console.log(arr[2] === test[2]);
+    
+  if(arr[2] === test[2]) {
+    console.log("야호");
+  } else {
+    test[2] = "치코리타";
+    console.log(test);
+  }
+  
+  if(arr[2] === test[2]) {
+    arr[2] = "참새";
+    test[2] = "참새";
+    console.log(arr);
+    console.log(test);
+  } else {
+    console.log("메롱");
+  }
+
+</script> -->
+
+<!-- <script>
+  let a;
+  //변수만 선언해준 것
+  console.log(a);
+  a = 1;
+  console.log(a);
+  
+  const root = document.getElementById('root');
+  //const는 선언과 동시에 값을 대입해주는 것이 룰 : 변하지 않을거니까
+  //개발자들은 '변수 선언과 동시에 초기화했다'라고 한다
+  //디자이너들은 '쉐입 만들고 레이어 이름 정해줬다'라고 한다
+  console.log(b);
+  
+</script> -->
+
+<script>
+const a = document.querySelector("#root");
+
+let value = 100; // 변수로 꺼내자~, let을 쓴 이유는 언제든 변할 수 있으니까
+let colorValue = 333;
+a.style.width = value + "vw";
+a.style.height = `${value}vh`;
+a.style.backgroundColor = `#${colorValue}`; //#이 $보다 먼저 있다
+
+a.addEventListener("click", function() {
+  let result;
+  console.log("리절트 연산이 시작되기 전에는 " + value + "이 값이다.")
+  result = value/2;
+  //☆★
+
+  a.style.width = result + "vw";
+  a.style.height = result + "vh";
+
+  value = result; // 같은게 아니라 대입시킨것
+  console.log("리절트 값을 value 변수에 대입시키고 난 후의 value 값 : " + value);
+});
+
+</script>
+
 </body>
 </html>
