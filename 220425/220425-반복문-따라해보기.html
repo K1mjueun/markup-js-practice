@@ -7,6 +7,75 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <button id="click-button">Click here!</button>
+  <ul id="items">
+    <li class="items">items-1</li>
+    <li class="items">items-2</li>
+    <li class="items">items-3</li>
+    <li class="items">items-4</li>
+    <li class="items">items-5</li>
+    <li class="items">items-6</li>
+    <li class="items">items-7</li>
+    <li class="items">items-8</li>
+    <li class="items">items-9</li>
+    <li class="items">items-10</li>
+    <li class="items">items-11</li>
+    <li class="items">items-12</li>
+    <li class="items">items-13</li>
+    <li class="items">items-14</li>
+    <li class="items">items-15</li>
+    <li class="items">items-16</li>
+    <li class="items">items-17</li>
+    <li class="items">items-18</li>
+    <li class="items">items-19</li>
+    <li class="items">items-20</li>
+    <li class="items">items-21</li>
+    <li class="items">items-22</li>
+    <li class="items">items-23</li>
+    <li class="items">items-24</li>
+    <li class="items">items-25</li>
+    <li class="items">items-26</li>
+    <li class="items">items-27</li>
+    <li class="items">items-28</li>
+    <li class="items">items-29</li>
+    <li class="items">items-30</li>
+    <li class="items">items-31</li>
+    <li class="items">items-32</li>
+    <li class="items">items-33</li>
+    <li class="items">items-34</li>
+    <li class="items">items-35</li>
+    <li class="items">items-36</li>
+    <li class="items">items-37</li>
+    <li class="items">items-38</li>
+    <li class="items">items-39</li>
+    <li class="items">items-40</li>
+    <li class="items">items-41</li>
+    <li class="items">items-42</li>
+    <li class="items">items-43</li>
+    <li class="items">items-44</li>
+    <li class="items">items-45</li>
+    <li class="items">items-46</li>
+    <li class="items">items-47</li>
+    <li class="items">items-48</li>
+    <li class="items">items-49</li>
+    <li class="items">items-50</li>
+  </ul>
+
+  <script>
+   const clickB = document.getElementById("click-button");
+   const items = document.getElementById("items").children;
+
+   let index = 0;
+
+   clickB.addEventListener("click", function() {
+   for(let i = 0; i<items.length; i++) {
+     items[i].style.color = 'red';
+
+     if(items[i].textContent === "items-12") {
+       items[i].textContent = "으악악";
+     }
+   }
+   });
+  </script>
 </body>
 </html>
