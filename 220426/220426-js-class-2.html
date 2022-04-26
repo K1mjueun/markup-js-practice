@@ -11,37 +11,48 @@
     <button>click</button>
   </div>
 
-  <script>
-    const root = document.getElementById("root");
-    const clickBtn = root.children[0]; //쿼리셀렉터, 겟엘리먼트보단 칠드런 권장
+<script>
+  const root = document.getElementById("root");
+  const clickBtn = root.children[0]; //쿼리셀렉터, 겟엘리먼트보단 칠드런 권장
 
-    console.dir(root);
-    console.log(clickBtn);
+  console.dir(root);
+  console.log(clickBtn);
 
-    let bgColorValue = 333;
+  let bgColorValue = 333;
 
-    root.style.width = "100vw";
-    root.style.height = "100vh";
-    root.style.backgroundColor = `#${bgColorValue}`;
+  root.style.width = "100vw";
+  root.style.height = "100vh";
+  root.style.backgroundColor = `#${bgColorValue}`;
 
-    let data = true; // on.off 개념
-    clickBtn.addEventListener("click", function() {
-    // console.log("hello");
-    // console.log(root.style.backgroundColor);
+  let colorIs = "연어색"; // on.off 개념
+  clickBtn.addEventListener("click", function() {
+  // console.log("hello");
+  // console.log(root.style.backgroundColor);
 
-    if(data === true) {
-      console.log('data 값은 : ' + data);
-      data = false;
-      root.style.backgroundColor = "salmon";
-    } else { //else 구문은 'data가 true와 같지 않으면(data !== true), data가 false와 같으면(data === false)'을 의미
-    console.log("지금 else로 data 값은 : " + data);
-    data = true;
-    root.style.backgroundColor = "darkblue";
-    }
-    });
+  if(colorIs === "연어색") {
+    clickBtn.textContent = "나는야 연어";
+    root.style.backgroundColor = "salmon";
+    clickBtn.style.width = "300px";
+    clickBtn.style.height = "100px";
+    clickBtn.style.borderRadius = "0px";
+    console.log('지금 컬러는 ' + colorIs);
 
-    // 굉장히 많이 사용하는 알고리즘 패턴 중 하나 - 스위치처럼 이랬다 저랬다!
+    colorIs = "다크블루";
+    //바탕색이 salmon일때 colorIs가 다크블루로 되어있기 때문에 클릭버튼을 누르면 색이 바뀔 수 있는 것
+  } 
+  
+  else { //else 구문은 'data가 true와 같지 않으면(data !== true), data가 false와 같으면(data === false)'을 의미
+  root.style.backgroundColor = "darkblue";
+  console.log("지금 컬러는 " + colorIs);
+  clickBtn.textContent = "나는 다크블루";
+  clickBtn.style.borderRadius = "100px";
+  
+  colorIs = "연어색";
+   //바탕색이 darkblue일때 colorIs가 연어색으로 되어있기 때문에 클릭버튼을 누르면 색이 바뀔 수 있는 것
+  }
 
+  });
   </script>
+
 </body>
 </html>
