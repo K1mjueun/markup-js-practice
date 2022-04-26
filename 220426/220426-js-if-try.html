@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1>안녕</h1>
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    // 변수 root에 #root을 대입할게
+    const h1 = root.children[0];
+    // 변수 h1에 변수 root의 자식 중 첫번째를 대입할게
+    console.log(root);
+    // 변수 root이 무엇을 가리키는지 console에 찍어줘
+    console.log(h1);
+    // 변수 h1이 무엇을 가리키는지 console에 찍어줘
+
+    let bgcValue = "ccc";
+    //bgcValue라는 변수에 "ccc"를 대입할게
+
+    root.style.width = "100vw";
+    //변수 root의 style의 width값에 "100vw"를 대입해줘
+    root.style.height = "100vh";
+    //변수 root의 style의 height값에 "100vh"를 대입해줘
+    root.style.backgroundColor = `#${bgcValue}`;
+    //변수 root의 style의 backgroundColor값에 #bgcValue를 대입해줘
+
+    let color = "빨간색";
+    //*변수 color에 "빨간색"을 대입해줘
+    h1.addEventListener("click", function() {
+      // 변수 h1를 click하면 이벤트가 생기게 할거야
+    
+      if(color === "빨간색") {
+        //*만약 변수 color가 "빨간색"이면
+        h1.textContent = "빨간색이 됐구나!";
+        //변수 h1의 textContent에 "빨간색이 됐구나!"를 대입해주고
+        root.style.backgroundColor = "pink";
+        //변수 root의 style의 backgroundColor에 "pink"를 대입하고
+        console.log("색깔은? "+color);
+        //console에 변수 color를 찍어주는데 앞에 "색깔은"을 붙여줘
+
+        color = "파란색";
+        //*그리고 변수 color값에 "파란색"을 대입해
+      }
+      else {
+        //*만약 변수 color가 "빨간색"이 아니면
+        root.style.backgroundColor = "skyblue";
+        //변수 root의 style의 backgroundColor 값에 "skyblue"를 대입해주고
+        console.log("색깔은? "+color);
+        //console에 변수 color를 찍어주는데 앞에 "색깔은"을 붙여주고
+        h1.textContent = "파란색이 됐구나!";
+        //변수 h1의 textContent에 "파란색이 됐구나!"를 대입해줘
+
+        color = "빨간색";
+        //*그리고 변수 color값에 "빨간색"을 대입해
+      }
+    });
+
+    //* 부분 때문에 스위치가 가능한 것이다!
+
+  </script>
+</body>
+</html>
