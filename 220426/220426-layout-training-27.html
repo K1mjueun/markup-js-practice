@@ -46,12 +46,17 @@
     // console.log(boxes);
     // console.log(lorem);
     // console.log(div);
+
+    let wid = box1.style.width;
+    console.log(wid);
+    //Q.왜 콘솔에 뜨지 않을까요? 이건 잘못된 작성법인가요??
+    //변수.style.width = 다른변수.style.width/4*2 같은 방식도 사용이 안되는건가요?
     
     body.style.padding = "0";
     body.style.margin = "0";
 
-    root.style.width ="100vw";
-    root.style.height ="100vh";
+    root.style.width ="1920px";
+    root.style.height ="1080px";
     root.style.display ="flex";
     root.style.alignItems ="center";
     root.style.justifyContent ="center";
@@ -62,7 +67,7 @@
     box.style.alignItems ="center";
     box.style.justifyContent ="space-around";
     
-    box1.style.width = "600px";
+    box1.style.width = 1920/4+"px";
     box1.style.height = "700px";
     box1.style.backgroundColor = "#ccc";
 
@@ -88,17 +93,20 @@
     lorem[0].style.fontSize = "50px";
     lorem[1].style.fontSize = "15px";
 
-    div[0].style.width = 600/3+"px";
+    div[0].style.width = 1920/4/3+"px";
     div[0].style.height = 700/3+"px";
     div[0].style.backgroundColor = "#ccc";
 
-    div[1].style.width =600/3+"px";
+    div[1].style.width =1920/4/3+"px";
     div[1].style.height = 700/3+"px";
     div[1].style.backgroundColor = "#ccc";
 
-    div[2].style.width = 600/3+"px";
+    div[2].style.width = 1920/4/3+"px";
     div[2].style.height = 700/3+"px";
     div[2].style.backgroundColor = "#ccc";
+    //Q.↑위 div들처럼 작성할 때, 한번에 적용하고 싶어서 div라고만 쓰거나 div[0,1,2]라고 하면 적용이 안되는데 그건 잘못된 작성법인가요?
+
+    //중복되는 스타일을 적용할 때도 변수 한개가 아니라 >변수,변수,변수.style.attribute="value";<처럼 작성하는 법도 잘못된 것 같은데 사용할 수 없는 방법인가요?
 
     box1.addEventListener("click", function() {
       box1.style.backgroundColor = "salmon";
