@@ -63,16 +63,24 @@
 
   <script>
    const clickB = document.getElementById("click-button");
+   //변수 clickB에 #click-button을 대입해줘
    const items = document.getElementById("items").children;
+   //변수 items에 #items의 자식들을 대입해줘
 
    let index = 0;
+   //값이 변할수도 있는 index라는 변수에 숫자 0을 대입해줘
 
    clickB.addEventListener("click", function() {
+  //변수 clickB에 클릭하면 이벤트가 생기게 할거야, 클릭하면
    for(let i = 0; i<items.length; i++) {
-     items[i].style.color = 'red';
+  //변수 i에 0을 대입하고, 변수 i의 값을 items의 갯수보다 커지지 않게 하고, 변수 i 값에는 계속 +1을 해줘 
+     items[i].style.color = 'blue';
+     //그리고 변수 items[변수 i의 값]의 style의 color에 'blue'를 대입해
 
      if(items[i].textContent === "items-12") {
-       items[i].textContent = "으악악";
+      //만약 변수 items[변수 i의 값]의 textcontent에 "items-12"라고 적혀있으면
+       items[i].textContent = "파란색";
+      //변수 items[변수 i의 값]의 textcontent에 "파란색"이라고 대입해줘
      }
    }
    });
