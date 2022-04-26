@@ -12,24 +12,38 @@
 
   <script>
     const box = document.querySelector("#box");
+    // box라는 변수에 #box를 대입해줘
 
     let sizeValue = 100;
+    //sizeValue라는 변수에 숫자 100을 대입해줘
     let colorValue = "c4c4c4";
+    //colorValue라는 변수에 문자열 c4c4c4를 대입해줘
 
     box.style.width = `${sizeValue}vw`;
+    //변수 box의 style의 width값에 변수 sizeValue값 + vw를 대입해줘
     box.style.height = `${sizeValue}vh`;
+    //변수 box의 style의 height값에 변수 sizeValue값 + vh를 대입해줘
     box.style.backgroundColor = `#${colorValue}`;
+    //변수 box의 style의 backgroundColor값에 변수 colorValue값을 대입해줘
 
     box.addEventListener("click", function() {
+    //변수 box에 클릭하면 이벤트가 생기게 할건데, 변수 box를 클릭하면
     let result;
+    //result라는 변수를 만들어주고
     console.log("result 연산이 시작되기 전에는" + sizeValue + "이 값이다.")
+    //console에 'result 연산이 시작되기 전에는 + 변수 sizeValue값 + 이 값이다' 라고 띄워줘
     result = sizeValue/2;
+    //변수 result에는 변수 sizeValue값을 2로 나는 값을 대입해줘
 
     box.style.width = `${result}vw`;
+    //변수 box의 style의 width값에 변수 result값 + vw을 대입해주고
     box.style.height = `${result}vw`;
+    //변수 box의 style의 height값에는 변수 result값 + vh을 대입해줘
 
     sizeValue = result;
+    //그리고 변수 sizeValue에 변수 result 값을 재할당해줘
     console.log("result 값을 sizeValue 변수에 대입시키고 난 후의 value 값은 " + sizeValue);
+    //마지막으로 console에 변수 sizeValue 값을 띄워주는데, 앞에 'result 값을 sizeValue 변수에 대입시키고 난 후의 value 값은'을 붙여줘
     });
   </script>
 </body>
