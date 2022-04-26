@@ -28,7 +28,86 @@
   </div>
 
   <script>
+    const body = document.querySelector("body");
+    const root = document.querySelector("#root");
+    const box = document.querySelector("#box");
+    const box1 = document.querySelector("#box-1");
+    const box2 = document.querySelector("#box-2");
+    const text = document.querySelector(".text");
+    const boxes = document.querySelector(".boxes");
+    const lorem = text.children;
+    const div = boxes.children;
+
+    // console.log(root);
+    // console.log(box);
+    // console.log(box1);
+    // console.log(box2);
+    // console.log(text);
+    // console.log(boxes);
+    // console.log(lorem);
+    // console.log(div);
     
+    body.style.padding = "0";
+    body.style.margin = "0";
+
+    root.style.width ="100vw";
+    root.style.height ="100vh";
+    root.style.display ="flex";
+    root.style.alignItems ="center";
+    root.style.justifyContent ="center";
+    
+    box.style.width ="80%";
+    box.style.height ="80%";
+    box.style.display ="flex";
+    box.style.alignItems ="center";
+    box.style.justifyContent ="space-around";
+    
+    box1.style.width = "600px";
+    box1.style.height = "700px";
+    box1.style.backgroundColor = "#ccc";
+
+    box2.style.width = "48%";
+    box2.style.height = "100%";
+    box2.style.display ="flex";
+    box2.style.alignItems ="center";
+    box2.style.justifyContent ="center";
+    box2.style.flexDirection ="column";
+
+    text.style.width ="100%";
+    text.style.height ="55%";
+    text.style.display ="flex";
+    text.style.justifyContent ="center";
+    text.style.flexDirection ="column";
+
+    boxes.style.width ="100%";
+    boxes.style.height ="45%";
+    boxes.style.display ="flex";
+    boxes.style.alignItems ="center";
+    boxes.style.justifyContent ="space-between";
+
+    lorem[0].style.fontSize = "50px";
+    lorem[1].style.fontSize = "15px";
+
+    div[0].style.width = 600/3+"px";
+    div[0].style.height = 700/3+"px";
+    div[0].style.backgroundColor = "#ccc";
+
+    div[1].style.width =600/3+"px";
+    div[1].style.height = 700/3+"px";
+    div[1].style.backgroundColor = "#ccc";
+
+    div[2].style.width = 600/3+"px";
+    div[2].style.height = 700/3+"px";
+    div[2].style.backgroundColor = "#ccc";
+
+    box1.addEventListener("click", function() {
+      box1.style.backgroundColor = "salmon";
+      lorem[0].style.color = "salmon";
+      lorem[1].style.color = "salmon";
+      div[0].style.backgroundColor = "salmon";
+      div[1].style.backgroundColor = "salmon";
+      div[2].style.backgroundColor = "salmon";
+    });
 
   </script>
 </body>
