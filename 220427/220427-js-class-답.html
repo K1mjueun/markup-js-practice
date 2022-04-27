@@ -7,25 +7,41 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>hello javascript!</h1>
+  <h1>자바스크립트~!~!~!~!</h1>
 
   <script>
     const h1 = document.querySelector('h1');
     console.log(h1);
     console.dir(h1.style);
-    let fontSizeValue = 50;
+    let fontSizeValue = 30;
     h1.style.fontSize = fontSizeValue + "px";
+
+    h1.addEventListener('click', function() {
+      if (fontSizeValue < 50) {
+    fontSizeValue++;
+    console.log(fontSizeValue);
+    h1.style.fontSize = fontSizeValue + "px";}
+    
+    // if (fontSizeValue > 50) {
+      else {
+      fontSizeValue--;
+      console.log(fontSizeValue);
+      h1.style.fontSize = fontSizeValue + "px";
+    }
+    //☆다시 안작아져~!~!~!
+    });
 
     // h1.addEventListener('click', function() {
     // fontSizeValue++;
     // console.log(fontSizeValue);
     // h1.style.fontSize = fontSizeValue + "px";
     // });
-    h1.addEventListener('click', function() {
-    fontSizeValue--;
-    console.log(fontSizeValue);
-    h1.style.fontSize = fontSizeValue + "px";
-    });
+
+    // h1.addEventListener('click', function() {
+    // fontSizeValue--;
+    // console.log(fontSizeValue);
+    // h1.style.fontSize = fontSizeValue + "px";
+    // });
   </script>
 </body>
 </html>
