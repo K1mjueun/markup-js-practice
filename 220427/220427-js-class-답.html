@@ -15,17 +15,22 @@
     console.dir(h1.style);
     let fontSizeValue = 30;
     h1.style.fontSize = fontSizeValue + "px";
-
+    
+    let yap = "커져라"; // - boolean 시도
     h1.addEventListener('click', function() {
       if (fontSizeValue === 50) {
     fontSizeValue++;
     console.log(fontSizeValue);
     h1.style.fontSize = fontSizeValue + "px";}
+
+    yap = "작아져라";
     
     if (fontSizeValue < 50) {
       fontSizeValue--;
       console.log(fontSizeValue);
       h1.style.fontSize = fontSizeValue + "px";
+
+    yap = "커져라";
     }
     //☆다시 안작아져~!~!~! - boolean을 넣어서 해보세요!
   });
