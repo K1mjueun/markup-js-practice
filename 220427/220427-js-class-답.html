@@ -17,20 +17,19 @@
     h1.style.fontSize = fontSizeValue + "px";
 
     h1.addEventListener('click', function() {
-      if (fontSizeValue < 50) {
+      if (fontSizeValue === 50) {
     fontSizeValue++;
     console.log(fontSizeValue);
     h1.style.fontSize = fontSizeValue + "px";}
     
-    // if (fontSizeValue > 50) {
-      else {
+    if (fontSizeValue < 50) {
       fontSizeValue--;
       console.log(fontSizeValue);
       h1.style.fontSize = fontSizeValue + "px";
     }
-    //☆다시 안작아져~!~!~!
-    });
-
+    //☆다시 안작아져~!~!~! - boolean을 넣어서 해보세요!
+  });
+  
     // h1.addEventListener('click', function() {
     // fontSizeValue++;
     // console.log(fontSizeValue);
