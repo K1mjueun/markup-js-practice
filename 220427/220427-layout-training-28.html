@@ -28,11 +28,11 @@
     const pc = document.querySelector("#pc");
     const box = document.querySelector("#box");
     const circle = document.querySelector(".circle");
-    const div = box.children;
-    console.log(div);
+    const gray = box.children;
+    console.log(gray);
 
     pc.setAttribute('style','width:100vw; height:100vh; display:flex; align-items:center; justify-content:center;');
-    box.setAttribute('style','width:800px; height:700px; display:flex; align-items:center; justify-content:space-between; position:relative;');
+    box.setAttribute('style','width:800px; height:700px; display:flex; align-items:center; justify-content:space-between; position:relative');
 
     circle.style.backgroundColor = "rgba(240,40,40,0.5)";
     circle.style.backdropFilter = "blur(10px)";
@@ -46,18 +46,44 @@
     console.dir(circle);
     console.log(circle);
 
-    div[1].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
-    div[2].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
-    div[3].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
-    div[4].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
-    div[5].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
-    div[6].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
-    div[7].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
-    div[8].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
-    div[9].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
-    div[10].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
+    gray[1].setAttribute('style','width:50px; height:700px; background-color:#ccc; display:none;');
+    gray[2].setAttribute('style','width:50px; height:700px; background-color:#ccc; display:none;');
+    gray[3].setAttribute('style','width:50px; height:700px; background-color:#ccc; display:none;');
+    gray[4].setAttribute('style','width:50px; height:700px; background-color:#ccc; display:none;');
+    gray[5].setAttribute('style','width:50px; height:700px; background-color:#ccc; display:none;');
+    gray[6].setAttribute('style','width:50px; height:700px; background-color:#ccc; display:none;');
+    gray[7].setAttribute('style','width:50px; height:700px; background-color:#ccc; display:none;');
+    gray[8].setAttribute('style','width:50px; height:700px; background-color:#ccc; display:none;');
+    gray[9].setAttribute('style','width:50px; height:700px; background-color:#ccc; display:none;');
+    gray[10].setAttribute('style','width:50px; height:700px; background-color:#ccc; display:none;');
+
+    // gray[0,1,2,3,4,5,6,7,8,9,10].style.width = "50px";
+    // gray[0,1,2,3,4,5,6,7,8,9,10].style.height = "700px";
+    //gray[0,1,2,3,4,5,6,7,8,9,10].style.backgroundColor = "#ccc";
+    // gray.style.width = "50px";
+    // gray.style.height = "700px";
+    // gray.style.backgroundColor = "#ccc";
+
+    console.log(gray[2].style.backgroundColor);
+    console.log(gray[2]);
 
     //for문 써보기
+    box.addEventListener("click", function() {
+    for(let i = 1; i<gray.length; i++) {
+    gray[i].style.display = "flex";
+    //그냥 한꺼번에 다 변한다 - 시간차를 두는 방법이있다
+
+    if(gray[2].style.backgroundColor === "rgb(204,204,204)") {
+      //Q.로그를 찍으면 백그라운드컬러가 rgb(204,204,204)여서 이렇게 작성했는데 else값으로 나오는 이유는 뭘까요?...
+      gray[2].style.backgroundColor = "rgb(0,0,0)";
+    }
+    else {
+      gray[2].style.backgroundColor = "skyblue";
+      gray[5].style.backgroundColor = "orange";
+      gray[8].style.backgroundColor = "pink";
+    }
+  }
+});
 
   </script>
 </body>
