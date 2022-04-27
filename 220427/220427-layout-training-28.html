@@ -7,6 +7,55 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="pc">
+    <div id="box">
+      <div class="circle"></div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <script>
+    const pc = document.querySelector("#pc");
+    const box = document.querySelector("#box");
+    const circle = document.querySelector(".circle");
+    const div = box.children;
+    console.log(div);
+
+    pc.setAttribute('style','width:100vw; height:100vh; display:flex; align-items:center; justify-content:center;');
+    box.setAttribute('style','width:800px; height:700px; display:flex; align-items:center; justify-content:space-between; position:relative;');
+
+    circle.style.backgroundColor = "rgba(240,40,40,0.5)";
+    circle.style.backdropFilter = "blur(30px)";
+    circle.style.width = "500px";
+    circle.style.height = "500px";
+    circle.style.borderRadius = "500px";
+    circle.style.position = "absolute";
+    circle.style.right = "0";
+    circle.style.bottom = "-10%";
+
+    console.dir(circle);
+
+    div[1].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
+    div[2].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
+    div[3].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
+    div[4].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
+    div[5].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
+    div[6].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
+    div[7].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
+    div[8].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
+    div[9].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
+    div[10].setAttribute('style','width:50px; height:700px; background-color:#ccc;');
+
+  </script>
 </body>
 </html>
