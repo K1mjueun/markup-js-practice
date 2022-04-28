@@ -56,6 +56,21 @@
   </div>
 
   <script>
+  const pc = document.querySelector("#pc");
+  const con = document.querySelector("#container");
+  const box = con.children;
+  console.log(pc);
+  console.log(con);
+  console.log(box);
+  
+  let index = 2;
+  box[0].addEventListener("click", function() {
+  box[0].style.zIndex = index++;
+  });
+
+  box[1].addEventListener("click", function() {
+  box[1].style.zIndex = index++;
+  });
 
   </script>
 </body>
