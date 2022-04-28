@@ -26,8 +26,8 @@
   }
 
   #container > div {
-  width: 50%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
   position: absolute;
   }
 
@@ -35,14 +35,12 @@
     background-color: aquamarine;
     top:5%;
     left: 5%;
-    z-index: 0;
   }
 
   #container > div:nth-child(2) {
     background-color: rgb(45, 92, 76);
     bottom:5%;
     right:5%;
-    z-index: 1;
   }
 
   </style>
@@ -63,7 +61,7 @@
   console.log(con);
   console.log(box);
   
-  let index = 2;
+  let index = 1;
   box[0].addEventListener("click", function() {
   box[0].style.zIndex = index++;
   });
