@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script>
+    const root = document.getElementById("root");
+    // root이라는 변수에 #root을 대입
+    root.style.fontSize = "5rem";
+    // 변수 root의 style의 fontsize에 "5rem"을 대입
+    let isStatus = true;
+    // isStatus라는 변수에 true를 대입
+    let current = 0;
+    // currnet라는 변수에 0을 대입
+    root.textContent = current;
+    // 변수 root의 textContent에 변수 currnet 대입
+    root.addEventListener('click', function () {
+      // 변수 root을 클릭하면 이벤트가 생기게 할거야
+      if (isStatus === true) {
+        // 만약 변수 isStatus의 값이 true면
+        current++;
+        // 변수 currnet의 값이 클릭할 때마다 1씩 늘어나게 해줘
+        if (current >= 10) {
+          // 만약 변수 current의 값이 10보다 크거나 같다면
+          isStatus = false;
+          // 변수 isStatus의 값에 false를 대입해줘
+        }
+        // 
+        root.textContent = current;
+        // 변수 root의 textContent에 변수 current를 대입해줘
+      } else {
+        // 만약 변수 isStatus의 값이 false면
+        current--;
+        // 변수 current의 값이 1씩 줄어들게 해줘
+        if (current <= 0) {
+          // 만약 변수 curren의 값이 0보다 작거나 같으면
+          isStatus = true;
+          // 변수 isStatus의 값에 ture를 대입해줘
+        }
+        // 
+        root.textContent = current;
+        // 변수 root의 textContent에 변수 current를 대입해줘
+      }
+    })
+  </script>
+
+</body>
+
+</html>
