@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">텀블러</div>
+
+  <!-- <script>
+    const root = document.getElementById('root');
+    
+    let a ="겜";
+    let b ="블";
+    let c ="러";
+    let origin = "텀";
+    //let text = "텀블러";
+    let text = origin + b + c;
+    console.log(text);
+
+    console.dir(root);
+    //console.log(root.textContent[0]); //console에서 text가 배열임을 확인!
+    //console.log(root.innerHTML[0]);
+    
+    //root.textContent[0] = "겜";
+    text = a+b+c;
+    root.textContent = text;
+    console.log(root.textContent[0]);
+    console.log(text);
+
+    </script> -->
+    
+
+<script>
+
+//자주 쓰는 중요한 구문(스위치)
+
+const root = document.getElementById("root");
+let innerValue = 'Hello!';
+root.textContent = innerValue;
+root.style.color = '#fff';
+
+let current = 0; //*<--스위치용 변수 생성
+root.addEventListener("click", function() {
+  if (current === 0) {
+    root.style.color = 'red';
+
+    current = 1;
+
+    console.log(current);
+    root.style.fontSize = "100px";
+  }
+
+  else{ //같은 if구문을 두개 쓰는게 아니라 else로 써야 작용한다!
+    root.style.color = 'blue';
+
+    current = 0;
+
+    console.log(current);
+    root.style.fontSize = "100px";
+  }
+});
+
+</script>
+
+</body>
+</html>
