@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    const root = document.getElementById("root");
+
+    root.textContent = "Hello!"
+    let trufal = true; //* true, false는 따로 ""를 붙이지 않는다
+    let size = 30;
+    root.style.fontSize = size + 'px';
+
+    root.addEventListener("click", function() {
+    if (trufal === true) {
+    size++;
+      if (size >= 50) {
+        trufal = false;
+      }
+      root.style.fontSize = size + 'px'; //*왜 이걸 계속 쓰고 또 사이에 쓸까
+    }
+
+    else {
+      size--;
+      if(size <= 30)
+      trufal = ture;
+    }
+    root.style.fontSize = size + 'px'; //*왜 이걸 계속 쓰고 또 사이에 쓸까
+    });
+  </script>
+</body>
+</html>
