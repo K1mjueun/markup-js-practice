@@ -16,36 +16,25 @@
     let fontSizeValue = 30;
     h1.style.fontSize = fontSizeValue + "px";
     
-    let yap = "커져라"; // - boolean 시도
+    let yap = "커져라";
     h1.addEventListener('click', function() {
-      if (fontSizeValue === 50) {
+      if (yap === "커져라") {
     fontSizeValue++;
-    console.log(fontSizeValue);
-    h1.style.fontSize = fontSizeValue + "px";}
-
-    yap = "작아져라";
-    
-    if (fontSizeValue < 50) {
-      fontSizeValue--;
-      console.log(fontSizeValue);
-      h1.style.fontSize = fontSizeValue + "px";
-
-    yap = "커져라";
+    if (fontSizeValue >= 50) {
+      yap = "작아져라"
     }
-    //☆다시 안작아져~!~!~! - boolean을 넣어서 해보세요!
+    h1.style.fontSize = fontSizeValue + "px";
+  }
+    
+    else {
+      fontSizeValue--;
+      if (fontSizeValue <= 30) {
+        yap = "커져라"
+      }
+      h1.style.fontSize = fontSizeValue + "px";
+    }
+    
   });
-  
-    // h1.addEventListener('click', function() {
-    // fontSizeValue++;
-    // console.log(fontSizeValue);
-    // h1.style.fontSize = fontSizeValue + "px";
-    // });
-
-    // h1.addEventListener('click', function() {
-    // fontSizeValue--;
-    // console.log(fontSizeValue);
-    // h1.style.fontSize = fontSizeValue + "px";
-    // });
   </script>
 </body>
 </html>
