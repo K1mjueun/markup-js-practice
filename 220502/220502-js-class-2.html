@@ -33,7 +33,7 @@
     </script> -->
     
 
-<script>
+<!-- <script>
 
 //자주 쓰는 중요한 구문(스위치)
 
@@ -63,7 +63,23 @@ root.addEventListener("click", function() {
   }
 });
 
-</script>
+</script> -->
 
+<script>
+  const root = document.getElementById('root');
+  let current = 0;
+  
+  root.addEventListener('click', function() {
+  if(current < 30) {
+    current++;
+  console.log(current);
+  }
+
+  else { // 자꾸 29,30이 반복되는데 변수를 하나 더 넣으면 해결이 된다!
+  current--;
+  console.log(current);
+  }
+  });
+</script>
 </body>
 </html>
