@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <button class="A">Hi, I'm A</button>
+    <button class="B">Hi, I'm B</button>
+  </div>
+
+  <script>
+  const root = document.querySelector("#root");
+  const A = root.children[0];
+  const B = root.children[1];
+  // const A = document.getElementsByClassName("A");
+  // const B = document.getElementsByClassName("B");
+  console.log(root);
+  console.log(A);
+  console.log(B);
+
+  document.body.style.margin = 0;
+  document.body.style.padding = 0;
+
+  root.setAttribute('style', 'width:100vw; height:100vh; background-color:#ccc; display:flex; align-items:center; justify-content:center;')
+
+  A.addEventListener("click", function() {
+  root.style.backgroundColor = "#000";
+  A.textContent = "You clicked me!"
+  B.textContent = "Hi, I'm B"
+  A.style.color = "blue";
+  B.style.color = "#000";
+  });
+
+  B.addEventListener("click", function() {
+  root.style.backgroundColor = "pink";
+  B.textContent = "You clicked me!"
+  A.textContent = "Hi, I'm A"
+  B.style.color = "red";
+  A.style.color = "#000";
+  });
+
+  </script>
+</body>
+</html>
