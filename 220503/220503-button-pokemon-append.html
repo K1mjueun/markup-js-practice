@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class ="A">포켓몬 모으기</button>
+  <div id="root">
+    <!-- appendChild로 처리하면 좋을거 같은데 -->
+    </div>
+
+  <script>
+  const root = document.querySelector("#root");
+  const A = document.querySelector("button");
+  const practice = ['피카츄','라이츄','파이리','꼬부기','버터풀','야도란','피죤투','또가스'];
+  
+  console.log(root);
+  console.log(practice);
+  console.log(A);
+
+  let monster = true;
+  let number = 0;
+
+  A.addEventListener("click",function() {
+  if(monster === true) {
+    let createElm = document.createElement('h1');
+    createElm.textContent = practice[number];
+    root.appendChild(createElm);
+    number++
+    console.log(monster);
+
+    if(number === 9) {
+    createElm.textContent = "다모았다!";
+    monster = false;
+    console.log(monster);
+    }
+  }
+  else {
+    monster = true;
+    console.log(root.children.length);
+    for(let i = 0; i<= root.children.length; i++) {
+      root.removeChild(root.children[i]);
+      //▲ 다 remove가 안돼요!
+      console.log(i);
+    }
+  }
+  });
+
+  </script>
+</body>
+</html>
