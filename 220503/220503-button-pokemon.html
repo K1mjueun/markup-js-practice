@@ -7,17 +7,28 @@
   <title>Document</title>
 </head>
 <body>
+  <button class ="A">포켓몬 모으기</button>
   <div id="root">
     <h1></h1>
-    <button class ="A">포켓몬 모으기</button>
-  </div>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <!-- appendChild로 처리하면 좋을거 같은데 -->
+    </div>
 
   <script>
-  const root = document.querySelector("root");
-  const practice = ['피카츄','라이츄','파이리','꼬부기','버터풀','야도란','피죤투','또가스'];
-  const h1 = document.querySelector("h1");
+  const root = document.querySelector("#root");
+  const h1 = root.children;
   const A = document.querySelector("button");
+  const practice = ['피카츄','라이츄','파이리','꼬부기','버터풀','야도란','피죤투','또가스'];
   
+  console.log(root);
   console.log(practice);
   console.log(A);
 
@@ -25,19 +36,24 @@
   let number = 0;
   A.addEventListener("click", function() {
     if(monster === true) {
-    h1.textContent = practice[number];
+    h1[number].textContent = practice[number];
     number++;
     console.log(monster);
 
     if(number === 9) {
-      h1.textContent = "다모았다!";
+      h1[number].textContent = "다모았다!";
       monster = false;
       console.log(monster);
     }
   }
+  
   else {
-  number = 0;
-  monster = true;
+    monster = true;
+    number = 0;
+    
+    for(let i = 0; i<h1.length; i++) {
+      h1[i].textContent = "";
+    }
   }
 });
 
