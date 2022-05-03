@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <button class="A">Hi, I'm A</button>
+    <button class="B">Hi, I'm B</button>
+  </div>
+
+  <script>
+  const root = document.querySelector("#root");
+  const A = root.children[0];
+  const B = root.children[1];
+  console.log(root);
+  console.log(A);
+  console.log(B);
+
+  document.body.style.margin = 0;
+  document.body.style.padding = 0;
+
+  root.setAttribute('style', 'width:100vw; height:100vh; background-color:#ccc; display:flex; align-items:center; justify-content:center;')
+  
+  let back = true;
+  A.addEventListener("click", function() {
+  if (back === true) {
+  root.style.backgroundColor = "#000";
+  A.textContent = "You clicked me!";
+  A.style.color = "blue";
+  
+  if (root.style.backgroundColor === "#000",
+  A.textContent === "You clicked me!",
+  A.style.color === "blue")
+  back = false;}
+
+  else {
+  root.style.backgroundColor = "#ccc";
+  A.textContent = "Hi, I'm A";
+  A.style.color = "#000";
+  back = true;
+  } }
+  );
+  
+  let origin = true;
+  B.addEventListener("click", function() {
+  if (origin === true) {
+  root.style.backgroundColor = "pink";
+  B.textContent = "You clicked me!";
+  B.style.color = "red";
+  
+  if (root.style.backgroundColor === "pink",
+  B.textContent === "You clicked me!",
+  B.style.color === "red")
+  origin = false;}
+
+  else {
+  root.style.backgroundColor = "#ccc";
+  B.textContent = "Hi, I'm B";
+  B.style.color = "#000";
+  origin = true;
+  } }
+  );
+
+  </script>
+</body>
+</html>
