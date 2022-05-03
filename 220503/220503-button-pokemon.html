@@ -40,13 +40,13 @@
     number++;
     console.log(monster);
 
-    if(number === 9) {
+    if(number === practice.length+1) {
       h1[number].textContent = "다모았다!";
       monster = false;
       console.log(monster);
     }
   }
-  
+
   else {
     monster = true;
     number = 0;
