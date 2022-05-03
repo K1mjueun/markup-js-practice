@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="root">
+    <li class="menu-items">menu-1</li>
+    <li class="menu-items">menu-2</li>
+    <li class="menu-items">menu-3</li>
+    <li class="menu-items">menu-4</li>
+    <li class="menu-items">menu-5</li>
+    <li class="menu-items">menu-6</li>
+    <li class="menu-items">menu-7</li>
+    <li class="menu-items">menu-8</li>
+    <li class="menu-items">menu-9</li>
+    <li class="menu-items">menu-10</li>
+    <button>click</button>
+  </ul>
+
+  <script>
+    const root = document.getElementById('root');
+    const liItems = document.querySelectorAll('.menu-items');
+    const clickBtn = document.querySelector('button');
+    // const getTag = document.getElementsByTagName('li');
+    // const getClass = document.getElementsByClassName('menu-items');
+    //get하는 매우 다양한 방법 - querySelector☆
+    console.dir(root);
+    console.log(liItems);
+    console.log(clickBtn);
+    // console.log(getTag);
+    // console.log(getClass);
+    
+    // root.style.width = "100vw";
+    // root.style.height = "100vh";
+    // root.style.display = "flex";
+    // root.style.alignItems = "center";
+    // root.style.justifyContent = "center";
+    // root.style.backgroundColor = "salmon";
+    // root.style.flexDirection = "column";
+    root.setAttribute('style', 'width:100vw; height:100vh; display:flex; align-items:center; justify-content:center; background-color:salmon; flex-direction:column;')
+    
+    let isStatus = true;
+    clickBtn.addEventListener('click', function() {
+      if(isStatus === true) {
+        console.log('hello');
+        isStatus = false;
+        root.style.backgroundColor = "#fff";
+
+        for(let i = 0; i < liItems.length; i++) {
+          liItems[i].style.color = "#fff";
+        }
+
+      } else {
+        console.log('bye');
+        isStatus = true;
+        root.style.backgroundColor = "salmon";
+
+        for(let i = 0; i < liItems.length; i++) {
+          liItems[i].style.color = "#000";
+        }
+      }
+    });
+    //햄버거 메뉴 만드는 방법
+
+    // getTag[0].style.color = 'red';
+    // getTag[1].style.color = 'red';
+    // for(let i = 0; i < getTag.length; i++) {
+    //   getTag[i].style.color = "red";
+    //}
+    //for문~!('0')은 똑같은 스타일을 동시에 여러 태그에 적용할 때 사용한다
+  </script>
+</body>
+</html>
