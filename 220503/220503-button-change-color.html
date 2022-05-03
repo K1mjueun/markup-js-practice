@@ -7,6 +7,47 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="root">
+    <button>click!</button>
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    const button = document.querySelector("button");
+    console.log(root);
+    console.log(button);
+    
+    document.body.style.margin = 0;
+    document.body.style.padding = 0;
+    
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    root.style.display = "flex";
+    root.style.alignItems = "center";
+    root.style.justifyContent = "center";
+    root.style.backgroundColor = "#fff";
+
+    button.style.width = "200px";
+    button.style.height = "100px";
+    button.style.borderRadius = "100px";
+    button.style.backgroundColor = "#fff";
+
+    let change = true;
+    button.addEventListener("click", function() {
+      if (change === true)
+      {root.style.backgroundColor = "salmon";
+      if (root.style.backgroundColor === "salmon") {
+        change = false;
+        console.log(change);
+    }}
+    else {
+      root.style.backgroundColor = "skyblue";
+      if (root.style.backgroundColor === "skyblue") {
+        change = true;
+        console.log(change);
+      }
+    }
+  });
+  </script>
 </body>
 </html>
