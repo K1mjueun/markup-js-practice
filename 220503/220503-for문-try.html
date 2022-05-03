@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    const box = root.children;
+    console.log(root);
+    console.log(box);
+
+    document.body.style.padding = 0;
+    document.body.style.margin = 0;
+
+    root.setAttribute('style', 'width:100vw; height:100vh; background-color:#ccc; display:flex; align-items:center; justify-content:space-around;');
+
+    for(let i = 0; i<box.length; i++) {
+    box[i].style.width = "50px";
+    box[i].style.height = "50px";
+    box[i].style.backgroundColor = "orange";
+    }
+    //중복되는 스타일 한꺼번에 적용하기!
+  </script>
+</body>
+</html>
