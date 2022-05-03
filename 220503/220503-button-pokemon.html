@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1></h1>
+    <button class ="A">포켓몬 모으기</button>
+  </div>
+
+  <script>
+  const root = document.querySelector("root");
+  const practice = ['피카츄','라이츄','파이리','꼬부기','버터풀','야도란','피죤투','또가스'];
+  const h1 = document.querySelector("h1");
+  const A = document.querySelector("button");
+  
+  console.log(practice);
+  console.log(A);
+
+  let monster = true;
+  let number = 0;
+  A.addEventListener("click", function() {
+    if(monster === true) {
+    h1.textContent = practice[number];
+    number++;
+    console.log(monster);
+
+    if(number === 9) {
+      h1.textContent = "다모았다!";
+      monster = false;
+      console.log(monster);
+    }
+  }
+  else {
+  number = 0;
+  monster = true;
+  }
+});
+
+  </script>
+</body>
+</html>
