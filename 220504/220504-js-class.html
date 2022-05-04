@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="click-button">click</button>
+
+  <script>
+    const clickBtn = document.getElementsByClassName("click-button");
+    console.log(clickBtn);
+    
+    let stringValue = "hello";
+    clickBtn[0].addEventListener('click', function () {
+      //console.log("야호");
+      for(let i = 0; i<55; i++) {
+      console.log(stringValue);
+      }
+    });
+    //특정 횟수만큼 실행이 되어야 한다
+    //디자인 측면에서 DOM API --> addEventListener()
+  </script>
+</body>
+</html>
