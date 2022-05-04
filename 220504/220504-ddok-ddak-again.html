@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1></h1>
+  <button id="a">start</button>
+  <button id="b">stop</button>
+
+  <script>
+  const h1 = document.querySelector('h1');
+  const button = document.querySelector('#a');
+  const stop = document.querySelector('#b');
+  // console.log(h1);
+  // console.log(button);
+  
+  let a = 1;
+  let boolean = true;
+  button.addEventListener('click', function () {
+    let timer = setInterval(function () {
+  if(boolean === true) {
+    h1.textContent = a;
+    boolean = false;
+  }
+  else {
+    h1.textContent = a++;
+  }
+
+  stop.addEventListener('click', function () {
+  clearInterval(timer);
+  });
+}, 500);
+  });
+  </script>
+</body>
+</html>
