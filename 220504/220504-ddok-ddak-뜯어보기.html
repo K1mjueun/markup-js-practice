@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="alram">따르릉</h1>
+  <button id="a">A클릭</button>
+  <button id="b">B클릭</button>
+
+  <script>
+
+let a = "똑";
+let b = "딱";
+let isStatus = true;
+let current = 0;
+
+const alram = document.querySelector('#alram');
+const aBtn = document.querySelector('#a');
+const bBtn = document.querySelector('#b');
+console.dir(alram);
+
+aBtn.addEventListener('click', function() {
+  //aBtn을 누르면 이벤트가 생기게 하겠다
+  const timer = setInterval(function() {
+    //setInterval은 익명함수니까 timer라는 이름을 줄게
+    if(isStatus === true) {
+      //만약 isStatus 값이 true면
+      alram.textContent = a;
+      //alram의 textContent값이 a가 되게 해줘
+      isStatus = false;
+      //그리고나서 isStatus 값을 false로 대입해줘
+    } else {
+      //isStatus 값이 true가 아니면
+      alram.textContent = b;
+      //alram의 textContent값이 b가 되게 해줘
+      isStatus = true;
+      //그리고 isStatus값에 true를 대입해서 처음으로 돌아가게 해
+      current++;
+      //current는 계속 1을 더해줘
+      console.log(`지금 똑딱이 횟수는 ${current} 입니다.`);
+      alram.style.margin = `${current}px`;
+      //alram의 style의 margin값은 계속 1px씩 늘려줘
+    }
+// -----------------------------------------------
+    bBtn.addEventListener('click', function() {
+    //bBtn을 누르면 이벤트가 생기게 할거야
+      clearInterval(timer);
+      //timer를 꺼줘
+    });
+// -----------------------------------------------
+  }, 100);
+  //Tip 16은 1초에 60번, 32는 1초에 30번, 1000은 1초에 1번
+});
+
+  </script>
+</body>
+
+</html>
