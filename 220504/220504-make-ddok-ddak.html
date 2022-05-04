@@ -19,18 +19,23 @@
   let current = 0;
   a[0].addEventListener('click', function () {
     let timer = setInterval(function() {
-    current++
-    if(current === 1) {
-      console.log("똑");
-      if(current === 2) {
-      console.log("딱");
-    }
-    else {
-      current = 0;
-    }
-    }
+      if(current === 0) {
+        console.log("똑");
+        //current가 0일 때 "똑"
+        current+1;
+        //그리고 current에 1더하기
+        if(current === 1) {
+          console.log("딱");
+          //current가 1이 되면 "딱"
+        }
+        if(console.log("딱")) {
+          current = 0;
+          //current가 3이되면 다시 current를 0으로 바꾸고 반복되게
+        }
+      }
     },1000);
   });
+  
   //Tip 16은 1초에 60번, 32는 1초에 30번, 1000은 1초에 1번
   </script>
 </body>
