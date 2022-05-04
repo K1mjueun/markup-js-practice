@@ -43,9 +43,21 @@
 
 //--------------------------------------------------
 
-function b (first, second) {
-  console.log(first + second);
-  // return first + second;
-}
-b(1,2); // --> 함수가 실행되면 콘솔을 찍어줘(??)
-console.log(b(1,2)); //--> 함수를 실행한 결과값을 찍어줘
+//function b (first, second) {
+  //console.log(first + second);
+  //return first + second;
+//}
+//b(1,2); // --> 함수가 실행되면 콘솔을 찍어줘(??)
+//console.log(b(1,2)); //--> 함수를 실행한 결과값을 찍어줘
+
+//--------------------------------------------------
+
+// function b (first, second) {
+//   if(typeof first === "number") {
+  // 숫자여야만 return(타입체크)
+//     return first - second;
+//   } else {
+//  console.error("첫번째 매개변수 타입이 숫자가 아닙니다");
+//}
+// }
+// console.log(b("바보",2));
