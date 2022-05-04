@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="a">112</button>
+  <h1>삐용삐용</h1>
+
+  <script>
+  const h1 = document.querySelector("h1");
+  const button = document.querySelector("#a");
+  console.log(h1);
+  console.log(button);
+
+  let a = "red";
+  let b = "blue";
+  let boolean = true;
+
+  button.addEventListener('mouseover', function() {
+  let timer = setInterval(function () {
+  if(boolean === true) {
+    h1.style.color = a;
+    h1.style.fontSize = "50px";
+    boolean = false;
+  }
+  else {
+    h1.style.color = b;
+    h1.style.fontSize = "55px";
+    boolean = true;
+  }
+  }, 50);
+
+  button.addEventListener('mouseleave', function () {
+  clearInterval(timer);
+  });
+  });
+  </script>
+</body>
+</html>
