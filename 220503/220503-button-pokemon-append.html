@@ -54,20 +54,23 @@
     monster = false;
     //그리고 monster값을 false로 만들어
     console.log(monster);
+
+    if(monster === false) {
+      //monster값이 false면
+      for(let i = 0; i<= root.children.length; i++) {
+        root.remove(root.children[i]);
+        //root에 생긴 h1들을 다 지워!
+        //removeChild말고 remove로 하니까 됐다!
+  
+        monster = true;
+        //monster값은 다시 true로 바꾸고
+        number = 0;
+        //number값도 0으로 바꿔
+        console.log(monster);
+      }
+      // 근데 왜 다시 처음으로 안돌아가지? 엘리먼트가 안생기는디
     }
   }
-  else {
-    //monster값이 true가 아니면
-    for(let i = 0; i<= root.children.length; i++) {
-      root.remove(root.children[i]);
-      //root에 생긴 h1들을 다 지워!
-
-      //removeChild말고 remove로 하니까 됐다!
-    }
-    monster = true;
-    number = 0;
-    console.log(monster);
-    // 근데 왜 다시 처음으로 안돌아가지? 엘리먼트가 안생기는디
   }
   });
 
