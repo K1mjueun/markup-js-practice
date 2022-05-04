@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div id="second">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    const box = root.children;
+    const second = document.querySelector("#second");
+    const box2 = second.children;
+    console.log(root);
+    console.log(box);
+    console.log(second);
+    console.log(box2);
+    
+    document.body.style.flexDirection = "column";
+    console.log(document.body.style.flexDirection);
+
+    root.setAttribute('style', 'width:100vw; height:50vh; display:flex; align-items:center; justify-content:space-around;');
+    second.setAttribute('style', 'width:100vw; height:50vh; display:flex; align-items:center; justify-content:space-around;');
+
+    // for(let i =0; i<=box.length; i++) {
+    // box[i].style.width = "100px";
+    // box[i].style.height = "100px";
+    // box[i].style.backgroundColor = "pink";
+    // }
+    
+    // ↓ 기명함수 사용법
+    function boxDesign(target, width, height, backgroundColor) {
+      for(let i = 0; i<=target.length; i++) {
+        target[i].style.width = width;
+        target[i].style.height = height;
+        target[i].style.backgroundColor = backgroundColor;
+      }
+    }
+
+    // 왜 한개씩만 돼?? --> 이거는 한개씩만 된대
+    // boxDesign(box, "100px", "100px", "pink");
+    boxDesign(box2, "100px", "100px", "skyblue");
+
+  </script>
+</body>
+</html>
