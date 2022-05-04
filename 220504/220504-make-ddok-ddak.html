@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class = a>나는 A</button>
+  <button class = b>나는 B</button>
+
+  <script>
+  const a = document.getElementsByClassName("a");
+  const b = document.getElementsByClassName("b");
+  console.log(a);
+  console.log(b);
+
+  let current = 0;
+  a[0].addEventListener('click', function () {
+    let timer = setInterval(function() {
+    current++
+    if(current === 1) {
+      console.log("똑");
+      if(current === 2) {
+      console.log("딱");
+    }
+    else {
+      current = 0;
+    }
+    }
+    },1000);
+  });
+  //Tip 16은 1초에 60번, 32는 1초에 30번, 1000은 1초에 1번
+  </script>
+</body>
+</html>
