@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+     *{margin:0; padding:0;}
+
+:root {
+  --color-1:#ccc;
+  --color-2:rgb(158, 158, 158);
+  --color-3:rgb(112, 112, 112);
+  --color-4:rgb(80, 80, 80);
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+h1, .black, .blur {
+  position: absolute;
+}
+
+h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 100px;
+  color: #fff;
+  top:30%;
+  z-index: 3;
+}
+
+.black, .blur {
+width: 800px;
+height: 450px;
+border-radius: 300px;
+background-color: #000;
+opacity: .6;
+transform: rotate(5deg);
+}
+
+.black {
+  top:15%;
+  z-index: 2;
+}
+
+.blur {
+filter: blur(20px);
+z-index: 1;
+}
+
+.box-1 {
+  width: 25%;
+  height: 100%;
+  background-color: var(--color-2);
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.box-1 > p {
+  width: 90%;
+  height: 30%;
+  text-align: justify;
+  font-size: small;
+  color: var(--color-4);
+
+  padding-top: 5%;
+}
+
+.box-2 {
+  width: 34%;
+  height: 100%;
+  background-color: var(--color-3);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.box-2 > p {
+  width: 80%;
+  height: 30%;
+  text-align: justify;
+  font-size: small;
+  color: var(--color-1);
+
+  padding-bottom: 5%;
+}
+
+.box-3 {
+  width: 35%;
+  height: 100%;
+  background-color: var(--color-4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-3 > p {
+  width: 80%;
+  height: 30%;
+  text-align: justify;
+  font-size: small;
+  color: var(--color-1);
+}
+  </style>
+</head>
+<body>
+  <div id="root">
+
+    <h1>BIGFONT</h1>
+    <div class="black"></div>
+    <div class="blur"></div>
+
+    <aside>
+    <nav>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </nav>
+    </aside>
+  
+    <div class="box-1">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloribus odit doloremque, deleniti, sunt magnam minus eaque ducimus, obcaecati ex tenetur ullam dolorem. Id placeat nulla, corporis explicabo reiciendis, totam illum unde hic, mollitia porro ab tenetur excepturi earum quisquam ex! Tempore molestias mollitia nobis facere laboriosam pariatur alias recusandae debitis, vero minus aut facilis sapiente quasi veritatis, quam quod harum, ipsam voluptates maxime quia. Officia odit cum possimus repellendus. Perferendis maiores velit fugiat magnam dignissimos voluptatum molestias consectetur amet fuga, veritatis deserunt illum reprehenderit nisi aliquid, commodi quasi in autem doloribus nulla incidunt enim minima nam quia debitis? Ipsam?</p>
+    </div>
+    <div class="box-2">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloribus odit doloremque, deleniti, sunt magnam minus eaque ducimus, obcaecati ex tenetur ullam dolorem. Id placeat nulla, corporis explicabo reiciendis, totam illum unde hic, mollitia porro ab tenetur excepturi earum quisquam ex! Tempore molestias mollitia nobis facere laboriosam pariatur alias recusandae debitis, vero minus aut facilis sapiente quasi veritatis, quam quod harum, ipsam voluptates maxime quia. Officia odit cum possimus repellendus. Perferendis maiores velit fugiat magnam dignissimos voluptatum molestias consectetur amet fuga, veritatis deserunt illum reprehenderit nisi aliquid, commodi quasi in autem doloribus nulla incidunt enim minima nam quia debitis? Ipsam?molestias mollitia nobis facere laboriosam pariatur alias recusandae debitis, vero minus aut facilis sapiente quasi veritatis, quam quod harum, ipsam voluptates maxime quia. Officia odit cum possimus repellendus. Perferendis maiores velit fugiat magnam dignissimos voluptatum molestias consectetur amet fuga, veritatis deserunt illum reprehenderit nisi aliquid, commodi quasi in autem doloribus nulla incidunt enim minima nam quia debitis? Ipsam?</p>
+    </div>
+    <div class="box-3">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloribus odit doloremque, deleniti, sunt magnam minus eaque ducimus, obcaecati ex tenetur ullam dolorem. Id placeat nulla, corporis explicabo reiciendis, totam illum unde hic, mollitia porro ab tenetur excepturi earum quisquam ex! Tempore molestias mollitia nobis facere laboriosam pariatur alias recusandae debitis, vero minus aut facilis sapiente quasi veritatis, quam quod harum, ipsam voluptates maxime quia. Officia odit cum possimus repellendus. Perferendis maiores velit fugiat magnam dignissimos voluptatum molestias consectetur amet fuga, veritatis deserunt illum reprehenderit nisi aliquid, commodi quasi in autem doloribus nulla incidunt enim minima nam quia debitis? Ipsam?molestias mollitia nobis facere laboriosam pariatur alias recusandae debitis, vero minus aut facilis sapiente quasi veritatis, quam quod harum, ipsam voluptates maxime quia. Officia odit cum possimus repellendus. Perferendis maiores velit fugiat magnam dignissimos voluptatum molestias consectetur amet fuga, veritatis deserunt illum reprehenderit nisi aliquid, commodi quasi in autem doloribus nulla incidunt enim minima nam quia debitis? Ipsam?</p>
+    </div>
+
+  </div>
+
+  <script>
+    const aside = document.querySelector("aside");
+    const nav = document.querySelector("nav");
+    const div = nav.children;
+    console.log(aside);
+    console.log(nav);
+    console.log(div);
+    
+    // function paEri(target, display) {
+    //   aside.style.display = flex;
+    //   nav.style.display = flex;
+    // } ??
+
+  aside.style.width = "6%";
+  aside.style.height = "100%";
+  aside.style.backgroundColor = "var(--color-1)";
+  aside.style.display = "flex";
+  aside.style.alignItems = "flex-start";
+  aside.style.justifyContent = "center";
+
+  nav.style.width = "fit-content";
+  nav.style.height = "60%";
+  nav.style.display = "flex";
+  nav.style.alignItems = "center";
+  nav.style.justifyContent = "space-around";
+  nav.style.flexDirection = "column";
+  nav.style.marginTop = "20%";
+  
+  for(let i = 0; i < div.length; i++) {
+    div[i].style.width = "70px";
+    div[i].style.height = "70px";
+    div[i].style.backgroundColor = "var(--color-4)";
+  }
+
+  </script>
+</body>
+</html>
