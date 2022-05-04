@@ -5,12 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    body, #root {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+  </style>
 </head>
 <body>
-  <button class ="A">포켓몬 모으기</button>
-  <div id="root">
-    <!-- appendChild로 처리하면 좋을거 같은데 -->
-    </div>
+  <button>포켓몬 모으기</button>
+  <div id="root"></div>
 
   <script>
   const root = document.querySelector("#root");
@@ -25,27 +34,40 @@
   let number = 0;
 
   A.addEventListener("click",function() {
+    //A를 클릭하면 이벤트가 생기게 하겠다
   if(monster === true) {
+    //만약 monster 값이 true면
     let createElm = document.createElement('h1');
+    //creatElm이라는 변수에 새로운 엘리먼트 'h1'을 생성하는 값을 대입해
     createElm.textContent = practice[number];
+    //변수 creatElm의 textContent에는 변수 practice[변수 number]을 대입해
     root.appendChild(createElm);
+    //root의 자식을 만들거야 자식은 변수 createElm이야
     number++
+    //변수 number의 숫자가 계속 1씩 커지게 해
     console.log(monster);
 
-    if(number === 9) {
+    if(number > practice.length) {
+      //만약 number값이 practice의 길이보다 커지만
     createElm.textContent = "다모았다!";
+    //새로운 엘리먼트 h1을 만들고 거기 textContent에 "다모았다!"라고 써
     monster = false;
+    //그리고 monster값을 false로 만들어
     console.log(monster);
     }
   }
   else {
-    monster = true;
-    console.log(root.children.length);
+    //monster값이 true가 아니면
     for(let i = 0; i<= root.children.length; i++) {
-      root.removeChild(root.children[i]);
-      //▲ 다 remove가 안돼요!
-      console.log(i);
+      root.remove(root.children[i]);
+      //root에 생긴 h1들을 다 지워!
+
+      //removeChild말고 remove로 하니까 됐다!
     }
+    monster = true;
+    number = 0;
+    console.log(monster);
+    // 근데 왜 다시 처음으로 안돌아가지? 엘리먼트가 안생기는디
   }
   });
 
