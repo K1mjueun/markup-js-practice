@@ -7,6 +7,23 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="root">
+  <button>A</button>
+</div>
+  <!-- A버튼을 클릭하면 console창에 'hello'가 한번에 55번 출력되도록 알고리즘 만들기 -->
+  <script>
+  const root = document.querySelector("#root");
+  const button = root.children;
+  console.log(root);
+  console.log(button);
+
+  button[0].addEventListener("click", function() {
+    for(let i = 0; i<55; i++) {
+    let hello = "hello";
+    console.log(hello)*i;
+  }
+  });
+
+  </script>
 </body>
 </html>
