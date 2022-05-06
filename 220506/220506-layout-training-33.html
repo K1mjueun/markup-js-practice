@@ -4,9 +4,134 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://kit.fontawesome.com/c0547f77dd.js" crossorigin="anonymous"></script>
+
   <title>Document</title>
+  <style>
+  *{margin:0; padding:0;}
+
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  section {
+    width: 20%;
+    height: 50%;
+    border-radius: 50px;
+    border : #818181 solid 1px;
+    background-color: #fff;
+    opacity: 0.5;
+
+    position: absolute;
+    z-index: 2;
+
+    left: 30%;
+    top: 20%;
+  }
+
+  main {
+    width: 16%;
+    height: 43%;
+    /* border : #ff1818 solid 1px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    position: absolute;
+    z-index: 3;
+
+    left: 32%;
+    top: 23%;
+  }
+
+  main > div {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    font-size: 20px;
+    color: #818181;
+  }
+
+  main > h1 {
+    display: inline;
+    width: 100%;
+    height: fit-content;
+    font-size: 60px;
+    font-weight: normal;
+    color: rgb(61, 61, 61);
+  }
+
+  main > h2 {
+    width: 100%;
+    height: fit-content;
+    text-align: justify;
+    font-size: 10px;
+    font-weight: normal;
+    color: rgb(61, 61, 61);
+  }
+
+  button {
+    width: 25%;
+    height: 170%;
+    border: 0;
+    border-radius: 10px;
+    background-color: #ccc;
+    color: rgb(61, 61, 61);
+  }
+
+  .shadow {
+    width: 20%;
+    height: 50%;
+    border-radius: 50px;
+    opacity: 0.3;
+    background-color: #818181;
+    filter: blur(10px);
+
+    position: absolute;
+    z-index: 1;
+
+    left: 33%;
+    top: 25%;
+  }
+
+  p {
+    width: 25%;
+    height: 30%;
+    text-align: justify;
+    font-size: 5px;
+    color: #818181;
+
+    padding-left: 15%;
+  }
+
+  </style>
 </head>
 <body>
-  
+  <div id="root">
+
+    <section></section>
+
+    <main>
+      <div><i class="fa-solid fa-bars"></i></div>
+      <h1>LOREM<br>IPSUM</h1>
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem facere voluptas, at obcaecati modi eligendi nihil accusamus non quos libero qui iste! Laudantium maxime cumque, voluptatum accusamus alias dolores odit id nam aliquam voluptatibus, vitae omnis odio? Accusamus architecto minima reiciendis fuga quod aut pariatur mollitia nam, officia dolorem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem facere voluptas, at obcaecati modi eligendi nihil accusamus non quos libero qui iste! Laudantium maxime cumque, voluptatum accusamus alias dolores odit id nam aliquam voluptatibus, vitae omnis odio?</h2>
+      <div><button>close</button></div>
+    </main>
+
+    <div class="shadow"></div>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est porro provident delectus corporis consectetur inventore nobis esse excepturi dolorum facilis non sequi, neque ipsa architecto molestias harum repellat optio dicta soluta sunt. Laborum commodi quas quaerat sequi et esse ad tempora exercitationem ab tempore, fugiat architecto deserunt sunt culpa assumenda doloremque sint. Delectus nesciunt omnis ab ratione, maiores atus excepturi, veritatis iure, id rerum neque! Tenetur dolore sit obcaecati rerum, mollitia dignissimos.orem ipsum, dolor sit amet consectetur adipisicing elit. Est porro provident delectus corporis consectetur inventore nobis esse excepturi dolorum facilis non sequi, neque ipsa architecto molestias harum repellat optio dicta soluta sunt. Laborum commodi quas quaerat sequi et esse ad tempora exercitationem ab tempore, fugiat architecto deserunt sunt culpa assumenda doloremque sint. Delectus nesciunt omnis ab ratione, maiores rerum expedita volupt Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est porro provident delectus corporis consectetur inventore nobis esse excepturi dolorum facilis non sequi, neque ipsa architecto molestias harum repellat optio dicta soluta sunt. Laborum commodi quas quaerat sequi et esse ad tempora exercitationem ab tempore, fugiat architecto deserunt sunt culpa assumenda doloremque sint. Delectus nesciunt omnis ab ratione, maiores atus excepturi, veritatis iure, id rerum neque! Tenetur dolore sit obcaecati rerum, mollitia dignissimos.orem ipsum, dolor sit amet consectetur adipisicing elit. Est porro provident delectus corporis consectetur inventore nobis esse excepturi dolorum facilis non sequi, neque ipsa architecto molestias harum repellat optio dicta soluta sunt. Laborum commodi quas quaerat sequi et esse ad tempora exercitationem ab tempore, fugiat architecto deserunt sunt culpa assumenda doloremque sint. Delectus nesciunt omnis ab ratione, maiores rerum expedita volupt</p>
+  </div>
 </body>
 </html>
