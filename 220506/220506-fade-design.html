@@ -4,12 +4,161 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://kit.fontawesome.com/c0547f77dd.js" crossorigin="anonymous"></script>
+
   <title>Document</title>
   <style>
-    
+    *{margin:0; padding:0;}
+
+    #pc {
+      width: 100vw;
+      height: 100vh;
+      background: rgb(255,244,242);
+background: linear-gradient(221deg, rgba(255,244,242,1) 0%, rgba(224,206,201,1) 78%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+
+      position: relative;
+    }
+
+    nav {
+      width: 95%;
+      height: 7%;
+      font-size: 35px;
+      color: rgb(192, 180, 180);
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      position: absolute;
+      top: 0;
+    }
+
+    .icon {
+      width: fit-content;
+      height: 15%;
+      font-size: 70px;
+      color:#c08d8d;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: 5%;
+    }
+
+    main {
+    /* width: 120%;
+    height: 100%;
+    bottom:-20%; */
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+
+    .img {
+      width: 30%;
+      height: 43%;
+      background-size: cover;
+    }
+
+    main > div:nth-child(1) {
+      background-image: url("https://img.seoul.co.kr/img/upload/2016/03/09/SSI_20160309155849_V.jpg");
+    }
+    main > div:nth-child(2) {
+      background-image: url("http://file3.instiz.net/data/file3/2018/06/26/8/9/e/89efcfdee336ff711b733d90b064a60a.jpg");
+    }
+    main > div:nth-child(3) {
+      background-image: url("https://cdnweb01.wikitree.co.kr/webdata/editor/202202/17/img_20220217205458_cc3995da.webp");
+    }
+    main > div:nth-child(4) {
+      background-image: url("http://www.sportsq.co.kr/news/photo/201707/246640_235112_3017.jpg");
+    }
+    main > div:nth-child(5) {
+      background-image: url("https://ohfun.net/contents/article/images/2018/0124/1516772332002525.jpg");
+    }
+    main > div:nth-child(6) {
+      background-image: url("https://nimage.g-enews.com/phpwas/restmb_allidxmake.php?idx=5&simg=2018011118532000138dd9e5ceb6212114162187.jpg");
+    }
+
+    main > div:nth-child(4), main > div:nth-child(5), main > div:nth-child(6) {
+      opacity: .5;
+    }
   </style>
 </head>
 <body>
-  
+  <div id="pc">
+
+    <nav><i class="fa-solid fa-angle-left"></i></nav>
+    <div class="icon"><i class="fa-regular fa-face-sad-tear"></i></div>
+
+    <main>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+    </main>
+  </div>
+
+  <script>
+    const pc = document.querySelector("#pc");
+    const main = document.querySelector("main");
+    const img = main.children;
+    console.log(pc);
+    console.log(main);
+    console.log(img);
+    
+    let widthValue = 120;
+    let heightValue = 100;
+    let bottomValue = -20;
+    main.style.width = `${widthValue}%`
+    main.style.height = `${heightValue}%`
+    main.style.bottom = `${bottomValue}%`
+    
+    let opacityValue = 1;
+    let status = true;
+    
+    pc.addEventListener("wheel", function(event) {
+      console.log(event);
+    
+    let timer = setInterval(function () {
+      if(status === true) {
+        widthValue = widthValue - 5;
+        heightValue = heightValue - 5;
+        bottomValue = bottomValue + 5;
+
+        main.style.width = `${widthValue}%`
+        main.style.height = `${heightValue}%`
+        main.style.bottom = `${bottomValue}%`
+
+        console.log(main.style.width);
+        console.log(main.style.height);
+        console.log(main.style.bottom);
+    
+        if(widthValue === 95, heightValue === 75, bottomValue === 5) {
+          status = false;
+
+          console.log(status);
+        }
+      } else {
+        clearInterval(timer);
+      }
+
+    }, 20)
+    });
+
+  </script>
 </body>
 </html>
