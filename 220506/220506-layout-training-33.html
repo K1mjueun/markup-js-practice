@@ -133,5 +133,25 @@
 
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est porro provident delectus corporis consectetur inventore nobis esse excepturi dolorum facilis non sequi, neque ipsa architecto molestias harum repellat optio dicta soluta sunt. Laborum commodi quas quaerat sequi et esse ad tempora exercitationem ab tempore, fugiat architecto deserunt sunt culpa assumenda doloremque sint. Delectus nesciunt omnis ab ratione, maiores atus excepturi, veritatis iure, id rerum neque! Tenetur dolore sit obcaecati rerum, mollitia dignissimos.orem ipsum, dolor sit amet consectetur adipisicing elit. Est porro provident delectus corporis consectetur inventore nobis esse excepturi dolorum facilis non sequi, neque ipsa architecto molestias harum repellat optio dicta soluta sunt. Laborum commodi quas quaerat sequi et esse ad tempora exercitationem ab tempore, fugiat architecto deserunt sunt culpa assumenda doloremque sint. Delectus nesciunt omnis ab ratione, maiores rerum expedita volupt Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est porro provident delectus corporis consectetur inventore nobis esse excepturi dolorum facilis non sequi, neque ipsa architecto molestias harum repellat optio dicta soluta sunt. Laborum commodi quas quaerat sequi et esse ad tempora exercitationem ab tempore, fugiat architecto deserunt sunt culpa assumenda doloremque sint. Delectus nesciunt omnis ab ratione, maiores atus excepturi, veritatis iure, id rerum neque! Tenetur dolore sit obcaecati rerum, mollitia dignissimos.orem ipsum, dolor sit amet consectetur adipisicing elit. Est porro provident delectus corporis consectetur inventore nobis esse excepturi dolorum facilis non sequi, neque ipsa architecto molestias harum repellat optio dicta soluta sunt. Laborum commodi quas quaerat sequi et esse ad tempora exercitationem ab tempore, fugiat architecto deserunt sunt culpa assumenda doloremque sint. Delectus nesciunt omnis ab ratione, maiores rerum expedita volupt</p>
   </div>
+
+  <script>
+    const main = document.querySelector("section");
+    const realMain = document.querySelector("main");
+    const shadow = document.querySelector(".shadow");
+    const x = document.querySelector("main>div:nth-child(1)");
+    const closeBtn= document.querySelector("button");
+    console.log(main);
+    console.log(realMain);
+    console.log(shadow);
+    console.log(x);
+    console.log(closeBtn);
+
+    closeBtn.addEventListener("click", function() {
+    main.style.display = "none";
+    realMain.style.display = "none";
+    shadow.style.display = "none";
+    });
+
+  </script>
 </body>
 </html>
