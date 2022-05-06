@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section></section>
+  <button id = "one">Fade Out</button>
+  <button id = "two">Fade In</button>
+
+  <script>
+    const box = document.querySelector("section");
+    const one = document.querySelector("#one");
+    const two = document.querySelector("#two");
+    console.log(box);
+    console.log(one);
+    console.log(two);
+
+    box.style.width = "500px";
+    box.style.height = "500px";
+    box.style.backgroundColor = "salmon";
+    box.style.borderRadius = "100px";
+    
+    
+    one.addEventListener("click", function () {
+      
+      let opacityValue = 1;
+      box.style.opacity = opacityValue;
+      let status = true;
+      
+    let timer = setInterval(function () {
+    if(status === true){
+    opacityValue = opacityValue - 0.1;
+    box.style.opacity = opacityValue;
+
+    console.log(status);
+    console.log(opacityValue);
+
+    if (opacityValue < 0) {
+    clearInterval(timer);
+
+    console.log(status);
+    console.log(opacityValue);}
+  }
+  }, 40)
+    });
+
+    two.addEventListener("click", function () {
+      
+      let opacityValue = 0;
+      box.style.opacity = opacityValue;
+      let status = false;
+      
+    let timerTwo = setInterval(function () {
+    if(status === false){
+    opacityValue = opacityValue + 0.1;
+    box.style.opacity = opacityValue;
+
+    console.log(status);
+    console.log(opacityValue);
+
+    if (opacityValue > 1) {
+    clearInterval(timerTwo);
+
+    console.log(status);
+    console.log(opacityValue);}
+  }
+  }, 40)
+    });
+
+  </script>
+</body>
+</html>
