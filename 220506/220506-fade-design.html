@@ -130,8 +130,8 @@ background: linear-gradient(221deg, rgba(255,244,242,1) 0%, rgba(224,206,201,1) 
     let opacityValue = 1;
     let status = true;
     
-    pc.addEventListener("wheel", function(event) {
-      console.log(event);
+    pc.addEventListener("wheel", function(wheelDeltaY) {
+      console.log(wheelDeltaY);
     
     let timer = setInterval(function () {
       if(status === true) {
@@ -155,8 +155,7 @@ background: linear-gradient(221deg, rgba(255,244,242,1) 0%, rgba(224,206,201,1) 
       } else {
         clearInterval(timer);
 
-        // console.log(WheelEvent{"deltaY"});
-        // delta값을 어떻게 꺼내야 할까
+        console.log(wheelDeltaY);
       }
 
     }, 20)
