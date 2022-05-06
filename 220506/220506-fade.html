@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <button id="click-button">click</button>
+
+  <script>
+    const root = document.getElementById("root");
+    root.style.width = "100px";
+    root.style.height = "100px";
+    root.style.backgroundColor = "#333";
+
+    const clickBtn = document.getElementById('click-button');
+
+    // let opacityValue = 1;
+    // root.style.opacity = opacityValue;
+
+    //* setInterval을 처음부터 바로 쓰지 않는다!
+    // clickBtn.addEventListener("click", function () {
+      // opacityValue = 1;
+      // root.style.opacity = opacityValue;
+
+      // let fade= setInterval(function () {
+      // if(opacityValue < 1) {
+      //   opacityValue = opacityValue + 0.1;
+      //   root.style.opacity = opacityValue;
+      // } else {
+      // clearInterval(fade);
+      // }
+      // }, 30);
+    
+    let opacityValue = 0;
+    root.style.opacity = opacityValue;
+    let status = true;
+
+    clickBtn.addEventListener("click", function () {
+      setInterval(function() {
+      // if(status === true) {
+      opacityValue + 0.1
+      root.style.opacity = opacityValue;
+      // }
+      // if(opacityValue > 1) {
+      // opacityValue - 0.1;
+      // root.style.opacity = opacityValue;
+      // status = false;
+      // }
+      // else {
+      //   clearInterval(timer);
+      // }
+      }, 100)
+    });
+
+  </script>
+</body>
+</html>
