@@ -18,14 +18,12 @@
 
     const clickBtn = document.getElementById('click-button');
 
-    let opacityValue = 1;
+    let opacityValue = 0;
     root.style.opacity = opacityValue;
 
     //* setInterval을 처음부터 바로 쓰지 않는다!
     clickBtn.addEventListener("click", function () {
-      opacityValue = 1;
-      root.style.opacity = opacityValue;
-
+      
       let fade= setInterval(function () {
       if(opacityValue < 1) {
         opacityValue = opacityValue + 0.1;
