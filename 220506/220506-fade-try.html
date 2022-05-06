@@ -7,6 +7,58 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <section></section>
+  <button>Make Fade Effect</button>
+
+  <script>
+    const box = document.querySelector("section");
+    const Btn = document.querySelector("button");
+    console.log(box);
+    console.log(Btn);
+
+    box.style.width = "500px";
+    box.style.height = "500px";
+    box.style.backgroundColor = "salmon";
+    box.style.borderRadius = "100px";
+    
+    
+    Btn.addEventListener("click", function () {
+      
+      let opacityValue = 1;
+      box.style.opacity = opacityValue;
+      let status = true;
+      
+    let timer = setInterval(function () {
+    if(status === true){
+    opacityValue = opacityValue - 0.1;
+    box.style.opacity = opacityValue;
+
+    console.log(status);
+    console.log(opacityValue);
+
+    if (opacityValue < 0) {
+    status = false;
+
+    console.log(status);
+    console.log(opacityValue);
+  }
+  }
+    else {
+    opacityValue = opacityValue + 0.1;
+    box.style.opacity = opacityValue;
+
+    console.log(status);
+    console.log(opacityValue);
+
+    if(opacityValue > 1) {
+      clearInterval(timer);
+
+      console.log(status);
+      console.log(opacityValue);
+    }}
+  }, 40)
+    });
+
+  </script>
 </body>
 </html>
