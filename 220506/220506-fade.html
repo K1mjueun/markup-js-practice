@@ -18,21 +18,79 @@
 
     const clickBtn = document.getElementById('click-button');
 
-    let opacityValue = 0;
-    root.style.opacity = opacityValue;
-
+    
     //* setInterval을 처음부터 바로 쓰지 않는다!
-    clickBtn.addEventListener("click", function () {
+  //   clickBtn.addEventListener("click", function () {
       
-      let fade= setInterval(function () {
-      if(opacityValue < 1) {
-        opacityValue = opacityValue + 0.1;
-        root.style.opacity = opacityValue;
-      } else {
-      clearInterval(fade);
-      }
-      }, 30);
-    });
+  //     let opacityValue = 1;
+  //     root.style.opacity = opacityValue;
+  //     let status = true;
+
+  //     let fadeOut = setInterval(function () {
+  //     if(opacityValue > 0) {
+  //       opacityValue = opacityValue - 0.1;
+  //       root.style.opacity = opacityValue;
+  //     } else {
+  //     clearInterval(fadeOut);
+  //     }
+  //   }, 30)
+
+  //   let fadeIn = setInterval(function () {
+  //   if(clearInterval(fadeOut)) {
+  //   console.log("false야");
+  //   status = false;
+
+  //   if(status = false) {
+  //     opacityValue = opacityValue + 0.1;
+  //     root.style.opacity = opacityValue;
+
+  //     if(opacityValue > 1) {
+  //       clearInterval(fadeIn);
+  //       status = true;
+  //   }}}
+  // }, 30)
+  // });
+
+
+
+  let status = true;
+  clickBtn.addEventListener("click", function () {
+  if(status === true) {
+
+
+  }
+  });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // clickBtn.addEventListener("click", function () {
+
+    //   let opacityValue = 0;
+    //   root.style.opacity = opacityValue;
+
+    // let fadeIn = setInterval(function () {
+    // if(opacityValue < 1) {
+    //   opacityValue = opacityValue + 0.1;
+    //   root.style.opacity = opacityValue;
+    // } else {
+    // clearInterval(fadeIn);
+    // }
+    // }, 30);
+    // });
+    
     
     // let opacityValue = 0;
     // root.style.opacity = opacityValue;
