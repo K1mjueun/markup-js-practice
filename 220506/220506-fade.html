@@ -8,20 +8,21 @@
 </head>
 <body>
   <div id="root"></div>
-  <button id="click-button">click</button>
+  <button id="button-1">Fade In</button>
+  <button id="button-2">Fade Out</button>
 
   <script>
     const root = document.getElementById("root");
-    root.style.width = "100px";
-    root.style.height = "100px";
+    root.style.width = "500px";
+    root.style.height = "500px";
     root.style.backgroundColor = "#333";
 
-    const clickBtn = document.getElementById('click-button');
-
+    const BtnOne = document.getElementById('button-1');
+    const BtnTwo = document.getElementById('button-2');
     
-    //* setInterval을 처음부터 바로 쓰지 않는다!
+  //* setInterval을 처음부터 바로 쓰지 않는다!
   //   clickBtn.addEventListener("click", function () {
-      
+    
   //     let opacityValue = 1;
   //     root.style.opacity = opacityValue;
   //     let status = true;
@@ -52,14 +53,66 @@
   // });
 
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  // let opacityValue = 1;
+  // root.style.opacity = opacityValue;
+  // let status = true;
 
+  BtnOne.addEventListener("click", function () {
+
+  let fadeOut = setInterval(function () {
+
+  let opacityValue = 1;
+  root.style.opacity = opacityValue;
   let status = true;
-  clickBtn.addEventListener("click", function () {
+
   if(status === true) {
+  opacityValue = opacityValue - 0.1;
+  root.style.opacity = opacityValue;
 
-
+  console.log(status);
+  console.log(root.style.opacity);
+  
+  if(opacityValue === 0) {
+    let status = false;
   }
+  }
+  else {
+    clearInterval(fadeOut); 
+  }
+  } ,10)
   });
+
+  BtnTwo.addEventListener("click", function () {
+
+    let fadeIn = setInterval(function () {
+
+    let opacityValue = 0;
+    root.style.opacity = opacityValue;
+    let status = false;
+
+    if(status === false) {
+    opacityValue = opacityValue + 0.1;
+    root.style.opacity = opacityValue;
+
+    console.log(status);
+    console.log(root.style.opacity);
+    }
+    else{
+    clearInterval(fadeIn);
+    }
+    } ,1000)
+    });
     
     
     
