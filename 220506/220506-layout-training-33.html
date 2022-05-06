@@ -145,6 +145,11 @@
     console.log(shadow);
     console.log(x);
     console.log(closeBtn);
+    
+    console.dir(x);
+    x.addEventListener("mouseover", function() {
+    x.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    });
 
     closeBtn.addEventListener("click", function() {
     main.style.display = "none";
