@@ -150,6 +150,9 @@
     x.addEventListener("mouseover", function() {
     x.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     });
+    x.addEventListener("mouseleave", function() {
+    x.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    });
 
     closeBtn.addEventListener("click", function() {
     main.style.display = "none";
