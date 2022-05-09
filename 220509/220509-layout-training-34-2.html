@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 450px;
+      height: 450px;
+      border : 1px solid black;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow:hidden;
+    }
+
+    item {
+      min-width: 350px;
+      /*min-width 사용!*/
+      height: 350px;
+      background-color: #ccc;
+      margin:20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+      <div class="container">
+        <item></item>
+        <item></item>
+        <item></item>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
