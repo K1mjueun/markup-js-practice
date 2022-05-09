@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+    border: solid 1px orange;
+    }
+
+  li {
+    background-color: brown;
+    color: #fff;
+  }
+
+  li:hover {
+    /* addeventlistener mouseover이 들어온 것 */
+  background-color: bisque;
+  color:blue;
+  }
+
+  </style>
+</head>
+<body>
+  <ul id="menu">
+    <li class="items">items-1</li>
+    <li class="items">items-2</li>
+    <li class="items">items-3</li>
+    <li class="items">items-4</li>
+    <li class="items">items-5</li>
+    <li class="items">items-6</li>
+    <li class="items">items-7</li>
+    <li class="items">items-8</li>
+    <li class="items">items-9</li>
+    <li class="items">items-10</li>
+  </ul>
+
+  <script>
+    const ul = document.querySelector("#menu");
+    console.log(ul);
+
+    // ul.addEventListener("click", function(a) {
+    // console.log(event.target);
+    // console.dir(event.target);
+    // a.target.style.color = "yellow";
+    // a.target.style.backgroundColor = "skyblue";
+    // });
+
+    ul.addEventListener("click", function(event) {
+    console.dir(event.target);
+    if(event.target.classList.contains('items')) {
+      console.log("클래스에 items라는 친구가 들어있습니다");
+      event.target.classList.add("on");
+      //on 붙이기 / add와 remove를 통해 쉽게 토글링할 수 있다
+    } else {
+      console.log("그런 클래스는 없습니다");
+    }
+    });
+  </script>
+</body>
+</html>
