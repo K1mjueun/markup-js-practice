@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #root > div {
+    width: 300px;
+    height: 400px;
+    background-color: #ccc;
+    border-radius: 30px;
+
+    display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+
+      box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    }
+
+    #root > div > p {
+      width: 80%;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    #root > div > h1 {
+    color: gray;
+    font-size: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div>
+      <p class="lorem">Lorem ipsum dolor sit</p>
+      <p class="lorem">Lorem ipsum dolor sit</p>
+      <p class="lorem">Lorem ipsum dolor sit</p>
+      <p class="lorem">Lorem ipsum dolor sit</p>
+      <p class="lorem">Lorem ipsum dolor sit</p>
+      <h1>close</h1>
+    </div>
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    const box = root.children;
+    const closeBtn = document.querySelector("#root>div>h1");
+    const text = document.querySelector("#root>div>p");
+    // console.log(root);
+    // console.log(box);
+    // console.dir(box[0]);
+    // console.log(closeBtn);
+    console.log(text);
+    console.dir(text);
+    
+    box[0].addEventListener("click", function(event) {
+      if(event.target.classList.contains('lorem')) {
+        event.target.style.backgroundColor = "gray";
+        console.dir(event.target);
+      }
+      if(event.target.classList.contains('lorem')) {
+      event.target.classList.add('gray');
+      console.dir(event.target);
+      }
+      else {
+      event.target.classList.remove('gray');
+      }
+    });
+  </script>
+</body>
+</html>
