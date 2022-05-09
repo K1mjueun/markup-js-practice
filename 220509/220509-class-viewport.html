@@ -11,18 +11,65 @@
     console.log(document.body.clientWidth);
 
     let bodyValue = document.body;
-    let bgColorArr = ["black", "blue", "salmon"];
+    let bgColorArr = ["skyblue", "pink", "orange"];
+    let nameArr = ["짱구", "짱아", "흰둥이"];
 
-    if(bodyValue.clientWidth > 1000) {
-      document.body.style.backgroundColor = bgColorArr[0];
-    } else if(bodyValue.clientWidth > 500) {
-      bodyValue.style.backgroundColor = bgColorArr[1];
-    } else {
-      bodyValue.style.backgroundColor = bgColorArr[2];
-    }
+    // if(bodyValue.clientWidth > 1000) {
+    //   bodyValue.backgroundColor = bgColorArr[0];
+    // } else if(bodyValue.clientWidth > 500) {
+    //   bodyValue.style.backgroundColor = bgColorArr[1];
+    // } else {
+    //   bodyValue.style.backgroundColor = bgColorArr[2];
+    // }
     // viewport값을 가져와 css에서 쓰게끔 만든 @media 미디어쿼리의 근간 --> if문이 여러개 들어있을 것이다
 
     //자바스크립트 화면크기 검색하면 알 수 있어!
+    
+    bodyValue.style.transition = "1s";
+    bodyValue.style.color = "#fff";
+    
+    let sizeValue = 10;
+    bodyValue.style.fontSize = `${sizeValue}px`;
+    
+    let timer = setInterval(function () {
+      if(bodyValue.clientWidth > 1000) {
+      bodyValue.textContent = nameArr[0];
+      bodyValue.style.backgroundColor = bgColorArr[0];
+
+      sizeValue++;
+      sizeValue = sizeValue++;
+      bodyValue.style.fontSize = `${sizeValue}px`;
+
+      console.log("pc 버전");
+  
+      } else if (bodyValue.clientWidth > 500) {
+      bodyValue.textContent = nameArr[1];
+      bodyValue.style.backgroundColor = bgColorArr[1];
+
+      sizeValue++;
+      sizeValue = sizeValue++;
+      bodyValue.style.fontSize = `${sizeValue}px`;
+
+      console.log("태블릿 버전");
+  
+      } else {
+      bodyValue.textContent = nameArr[2];
+      bodyValue.style.backgroundColor = bgColorArr[2];
+
+      sizeValue++;
+      sizeValue = sizeValue++;
+      bodyValue.style.fontSize = `${sizeValue}px`;
+
+      console.log("모바일 버전");
+    }
+    }, 100)
+
+    document.body.addEventListener("click", function () {
+    clearInterval(timer);
+    bodyValue.style.backgroundColor = "#ccc";
+    bodyValue.style.fontSize = "300px";
+    });
+    
   </script>
 </body>
 </html>
