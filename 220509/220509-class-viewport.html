@@ -10,12 +10,15 @@
   <script>
     console.log(document.body.clientWidth);
 
-    if(document.body.clientWidth > 1000) {
-      document.body.style.backgroundColor = "black";
-    } else if(document.body.clientWidth > 500) {
-      document.body.style.backgroundColor = "blue";
+    let bodyValue = document.body;
+    let bgColorArr = ["black", "blue", "salmon"];
+
+    if(bodyValue.clientWidth > 1000) {
+      document.body.style.backgroundColor = bgColorArr[0];
+    } else if(bodyValue.clientWidth > 500) {
+      bodyValue.style.backgroundColor = bgColorArr[1];
     } else {
-      document.body.style.backgroundColor = "salmon";
+      bodyValue.style.backgroundColor = bgColorArr[2];
     }
     // viewport값을 가져와 css에서 쓰게끔 만든 @media 미디어쿼리의 근간 --> if문이 여러개 들어있을 것이다
 
