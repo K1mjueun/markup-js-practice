@@ -7,11 +7,41 @@
   <title>Document</title>
   <style>
     *{margin:0; padding:0;}
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 500px;
+      height: 500px;
+      border: 1px solid black;
+      margin-right: 150px;
+
+      position: absolute;
+      z-index: 1;
+    }
+
+    item {
+      width: 400px;
+      height: 400px;
+      background-color: #ccc;
+      margin: 30px;
+    }
+
   </style>
 </head>
 <body>
   <div id="root">
-    <div class="container">
+      <div class="container">
+      </div>
+
       <item></item>
       <item></item>
       <item></item>
