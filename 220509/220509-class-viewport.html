@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log(document.body.clientWidth);
+
+    if(document.body.clientWidth > 1000) {
+      document.body.style.backgroundColor = "black";
+    } else if(document.body.clientWidth > 500) {
+      document.body.style.backgroundColor = "blue";
+    } else {
+      document.body.style.backgroundColor = "salmon";
+    }
+    // viewport값을 가져와 css에서 쓰게끔 만든 @media 미디어쿼리의 근간 --> if문이 여러개 들어있을 것이다
+
+    //자바스크립트 화면크기 검색하면 알 수 있어!
+  </script>
+</body>
+</html>
