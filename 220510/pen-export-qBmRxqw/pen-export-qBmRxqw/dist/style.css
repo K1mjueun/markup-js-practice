@@ -9,10 +9,10 @@ body{
    font-size: 1.5rem;            
 }
 @media (max-width:568px){
-  .word-delay{
-    width:85%;
-    font-size:0.9rem;
-  }
+.word-delay{
+   width:85%;
+   font-size:0.9rem;
+}
 }
 p{
    color: ivory;
