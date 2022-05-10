@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+    }
+
+    /* #button {
+      background-color: #333;
+    }
+    #menu-box {
+      background-color: gray;
+    }
+    .none {
+      display: none;
+    } */
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    
+    <ul id="menu">
+      menu-title
+      <li class="items">items-1</li>
+      <li class="items">items-2</li>
+      <li class="items">items-3</li>
+      <li class="items">items-4</li>
+      <li class="items">items-5</li>
+      <li class="items">items-6</li>
+      <li class="items">items-7</li>
+      <li class="items">items-8</li>
+      <li class="items">items-9</li>
+      <li class="items">items-10</li>
+    </ul>
+
+    <!-- <div id="button">click</div>
+    <div id ="menu-box">menu</div> -->
+  </div>
+
+  <script>
+    const menu = document.getElementById("menu");
+    const items = document.getElementsByClassName("items");
+    console.log(menu);
+    console.log(items);
+    
+    let boolean = true;
+    menu.addEventListener("click", function() {
+      if(boolean === true) {
+        for(let index = 0; index<items.length; index++) {
+          items[index].style.color = "red";
+        }
+      boolean = false;
+      } else {
+        for(let index = 0; index<items.length; index++) {
+          items[index].style.color = "blue";
+        }
+      boolean = true;
+      }
+    });
+    //불리언 + for문 사용
+
+    // const clickBtn = document.getElementById("button");
+    // const menuBox = document.getElementById("menu-box");
+    // console.log(clickBtn);
+    // console.log(menuBox);
+    
+    // let boolean = true;
+    // clickBtn.addEventListener("click", function () {
+    // if(boolean === true) {
+    //   console.log("true 맞아");
+    //   boolean = false;
+    //   menuBox.style.display = "none";
+
+    // } else {
+    //   console.log("false야")
+    //   boolean = true;
+    //   menuBox.style.display = "block";
+    // }
+    // 불리언 타입으로 만들기
+
+    // clickBtn.addEventListener("click", function (){
+    // console.dir(menuBox);
+    // if(menuBox.classList.contains("none")) {
+    //   menuBox.classList.remove("none");
+    // } else {
+    //   menuBox.classList.add("none");
+    // }
+    // });
+    //classList로 만들기
+
+
+
+  </script>
+</body>
+</html>
