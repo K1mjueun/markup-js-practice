@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle-p, .circle-b, .circle-o {
+      width: 150px;
+      height: 150px;
+      border-radius: 150px;
+    }
+
+    .circle-p {
+      background-color: pink;
+    }
+    .circle-b {
+      background-color: skyblue;
+      display: none;
+    }
+    .circle-o {
+      background-color: orange;
+      display: none;
+    }
+
+    .shadow {
+      box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div class="circle-p"></div>
+    <div class="circle-b"></div>
+    <div class="circle-o"></div>
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    const circle = root.children;
+    console.log(root);
+    console.log(circle);
+    
+    
+    root.addEventListener("click", function() {
+      function random(min,max) {
+        let min = 1;
+        console.log(min);
+        let max = 3;
+        let randomNumber = Math.floor(Math.random() * (max-min)) + min;
+      }
+      // console.log(randomNumber);
+      //??? 잘 모르겠으....................
+
+    // if(circle[0].classList.contains("on")){
+    //   for(let i=0; i<circle.length; i++) {
+    //     circle[i].classList.remove("on");
+    //   }
+    // } else {
+    //   for(let i=0; i<circle.length; i++) {
+    //     circle[i].classList.add("on");
+    //   }
+    // }
+    });
+  </script>
+</body>
+</html>
