@@ -29,6 +29,7 @@ function customer(name, role, review, photoUrl) {
 
 console.clear();
 //?console.log, console.dir이 아닌 console.clear은 뭐지?
+//*console.clear은 가능한 경우 콘솔에 기록된 메세지를 다-지우는거래
 
 let customers = [
 customer('이름','직책(?)','리뷰','사진링크'),
@@ -41,9 +42,10 @@ customer('이름','직책(?)','리뷰','사진링크')
 
 renderInDOM(queryCustomer(0));
 //? renderInDOM은 뭐야 queryCustomer??
+//* 직접 만든 함수인가
 
 nextBtn.addEventListener("click", (e) => {
-  //? 이벤트를 달아줬는데, (e) => 는 뭘까
+  //? 이벤트를 달아줬는데, (e) => 는 뭘까 event?
   let currentCustomer;
   //*currentCustomer라는 변수를 쓸 예정이다
   if(currentIndex === (customers.length-1)) {
@@ -72,7 +74,7 @@ prevBtn.addEventListener("click", (e)=> {
 
 surpriseBtn.addEventListener("click", (e)=> {
 currentIndex = Math.floor(Math.random() * customers.length);
-//? ☆math.random을 사용했다!★
+//? ☆math.floor,math.random을 사용했다!★
 const currentCustomer = queryCustomer(currentIndex);
 
 renderInDOM(currentCustomer);
