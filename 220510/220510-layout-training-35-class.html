@@ -76,14 +76,12 @@
   console.log(clickBtn);
   console.log(menuBox);
   
-  let status = true;
   clickBtn.addEventListener("click", function() {
   if(menuBox.classList.contains("on")) {
-    status = true;
+    menuBox.classList.remove("on");
   }
   else{
     menuBox.classList.add("on");
-    //어떻게 다시 지울까
   }
   });
   </script>
