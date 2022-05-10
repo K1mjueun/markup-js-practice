@@ -10,6 +10,8 @@ function typeA() {
 typeA();
 
 
+//------------------------
+
 
 //* 익명함수(anonymous fuction / 함수 literal)
 //* = 함수 표현식(function expression)
@@ -19,6 +21,9 @@ const typeB = function() {
 }
 
 typeB();
+
+
+//--------------------------
 
 
 //! 아주 많이 쓰는 함수
@@ -31,3 +36,27 @@ const typeC = () => {}
 const typeE = a => {}
 //* 매개변수가 하나일때는 소괄호도 생략해도 된다
 
+
+//-----------------------------
+
+
+//* 즉시 실행 함수
+//* 선언, 호출없이 즉시 실행한다
+(function() {})();
+//문서 시작할 때 이런식으로 쓰는 경우가 왕왕 있다
+
+
+//-----------------------------
+
+
+//* 함수의 매개변수 자리에 함수가 들어가 있는 것 "콜백함수"
+//* 콜백함수는 익명이 기본이다
+//! 매우 많이 사용하기 때문에 눈에 익혀야 한다
+let test;
+test.addEventListener("type", function() {});
+
+//* 밖으로 빼낸 콜백함수
+test.addEventListener('test', testfunction);
+// 기명으로 함수를 만들었다
+//* 기명으로 함수를 만들 땐 function()<- 소괄호를 쓰지 않는다
+function testfunction() {}
