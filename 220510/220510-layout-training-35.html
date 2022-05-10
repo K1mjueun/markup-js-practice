@@ -70,13 +70,12 @@
       if(menu.length > 3) {
         status = false;}
       } else {
-          menuBox.removeChild(menu[0]);
-          menuBox.removeChild(menu[1]);
-          menuBox.removeChild(menu[2]);
-          menuBox.removeChild(menu[3]);
+        for(let i = 0; i<menu.length; i++) {
+          menu[i].remove();
+        }
         status = true;
 
-        //* 다시 처음으로 돌아가지 않는다.. 지워지지도 않는다..뭐지..
+        //* 지워지지가 않아~~
       }
     });
   </script>
