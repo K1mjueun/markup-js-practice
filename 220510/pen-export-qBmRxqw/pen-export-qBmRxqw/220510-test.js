@@ -10,7 +10,7 @@ const wordDelaySpan = document.querySelectorAll('.word-delay p span');
 const splittedArray = animatedText.split(" ");
 //? split는 뭘까
 const space = ' ';
-//? 왜 빈 공간으로 둔거지
+//? 왜 빈 공간으로 둔거지 - 글씨들 사이를 띄우려고 그런거 같아
 
 const animationObjectTransform = [
   {opacity:0,transform : 'translateY(50px)'},
@@ -44,6 +44,7 @@ for (let i = 0; i < splittedArray.length; i++) {
   span.animate(
     //? 추가한 자식에 animate?
     animationObjectTransform,{
+      //? 위에서 만든 변수를 추가한거 같아
         duration:1000,
         fill:'forwards',
            delay:i * 200,
