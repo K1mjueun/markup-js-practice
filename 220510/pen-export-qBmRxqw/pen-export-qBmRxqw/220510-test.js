@@ -20,6 +20,7 @@ const animationObjectTransform = [
   {opacity:1, offset:1, transform:'translateY(0)'}
 ];
 //? 배열안에 객체를 만든거야?
+//이게 바로 고차함수인가
 
 const animationObjectFade = [
   {opacity:0} , 

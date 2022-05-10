@@ -26,6 +26,7 @@ function customer(name, role, review, photoUrl) {
   };
 }
 //*객체를 만들어줬네
+//이것도 고차함수인가
 
 console.clear();
 //?console.log, console.dir이 아닌 console.clear은 뭐지?
@@ -46,6 +47,7 @@ renderInDOM(queryCustomer(0));
 
 nextBtn.addEventListener("click", (e) => {
   //? 이벤트를 달아줬는데, (e) => 는 뭘까 event?
+  //고차함수래 화살표 함수! 축약형
   let currentCustomer;
   //*currentCustomer라는 변수를 쓸 예정이다
   if(currentIndex === (customers.length-1)) {
@@ -83,6 +85,7 @@ renderInDOM(currentCustomer);
 function queryCustomer(customerIndex=0, customerList=customers) {
   return customerList[customerIndex];
   //? 함수를 설정하고 값을 대입해 놨어,, 그리고 그걸 뱉어내라고 하고있는거 같아
+  //기명함수??
 }
 
 function renderInDOM(currentCustomer) {
