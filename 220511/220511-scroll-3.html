@@ -15,9 +15,26 @@
     #root > section {
       width: inherit; /*100vw*/
       height: 100vh;
-      border: 1px solid slateblue;
       /* 섹션의 크기가 한 페이지 크기(풀페이지)가 되는 것 */
     }
+    
+    #root > section:nth-child(1) {
+      background-color: #ccc;
+    }
+    #root > section:nth-child(2) {
+      background-color: rgb(172, 172, 172);
+    }
+    #root > section:nth-child(3) {
+      background-color: rgb(145, 145, 145);
+    }
+    #root > section:nth-child(4) {
+      background-color: rgb(112, 112, 112);
+    }
+    #root > section:nth-child(5) {
+      background-color: rgb(80, 80, 80);
+    }
+
+
   </style>
 </head>
 <body>
@@ -47,6 +64,7 @@
     
 
     let heightValue = 0;
+    // 핸들링하기 위한 변수!
     window.addEventListener("click", function(){
     heightValue = heightValue + sections[0].offsetHeight;
     // 클릭할때마다 값이 늘어난다
@@ -56,10 +74,13 @@
       top:heightValue,
       behavior:"smooth"
     })
+    //동작
+
     if(heightValue >= root.offsetHeight) {
       heightValue = 0;
     }
     });
+    //판단
 
   </script>
 </body>
