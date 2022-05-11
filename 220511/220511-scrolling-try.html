@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    #root {
+      width: 100vw;
+    }
+
+    section {
+      width: 100%;
+      height: 100vh;
+    }
+
+    #root > section:nth-child(1) {
+      background-color: rgb(255, 235, 210);
+    }
+    #root > section:nth-child(2) {
+      background-color: rgb(255, 211, 153);
+    }
+    #root > section:nth-child(3) {
+      background-color: rgb(255, 195, 117);
+    }
+    #root > section:nth-child(4) {
+      background-color: rgb(255, 182, 86);
+    }
+    #root > section:nth-child(5) {
+      background-color: rgb(255, 167, 51);
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    const sections = root.children;
+    //const sections = document.querySelectorAll("section");
+
+    console.log(root);
+    console.log(sections);
+    
+    console.dir(root);
+    console.dir(sections[0]);
+    
+    console.log(window.scrollY);
+    
+    console.log("이 문서의 전체 높이값 "+root.offsetHeight);
+    console.log("section태그 하나의 높이값 "+sections[0].offsetHeight);
+
+    let heightValue = 0;
+    window.addEventListener("click", function() {
+    heightValue = heightValue + sections[0].offsetHeight;
+    console.log(heightValue);
+
+    window.scrollTo({
+      top:heightValue,
+      behavior:"smooth"
+    })
+
+    if(heightValue >= root.offsetHeight) {
+      heightValue = 0;
+      heightValue = heightValue - sections[0].offsetHeight;
+    }
+    });
+  </script>
+</body>
+</html>
