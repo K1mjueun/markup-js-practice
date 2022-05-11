@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    #root {
+      width: 100vw;
+      height: 500vh;
+      background: linear-gradient(0deg, skyblue, pink);
+
+      display: flex;
+    }
+
+    button {
+      width: 100px;
+      height: 70px;
+      border-radius: 20px;
+      border: 0;
+      font-size: large;
+      margin: 10px;
+      
+      position: fixed;
+      bottom:0;
+      right: 0;
+
+      /* position: sticky;
+      top:0;
+      right: 0;
+      난 fixed가 더 좋다 */
+    }
+    
+    #root>button:nth-child(2) {
+      top:0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <button>top</button>
+    <!-- <button>bottom</button> -->
+  </div>
+
+  <script>
+    const button = document.getElementsByTagName("button");
+    console.log(button[0]);
+    console.dir(button[0]);
+    // console.log(button[1]);
+    // console.dir(button[1]);
+
+    button[0].addEventListener("click", (event) => {
+    window.scrollTo({
+    top:0,
+    behavior:"smooth"
+    });
+    });
+
+    // button[1].addEventListener("click", function() {
+    // window.scrollTo({
+    // bottom:0,
+    // behavior:"smooth"
+    // });
+    // });
+    // ↑ 왜 얘는 안돼
+  
+
+
+
+
+  // window.addEventListener("click", (event)=> {
+  // window.scrollTo({
+  //   //스크롤이 지정한 위치로 간다
+  //   //* top 버튼 만드는 방법! - 맨 위로 이동하기
+  //   top:0,
+  //   behavior : "smooth"
+  // });
+  // });
+  </script>
+</body>
+</html>
