@@ -5,8 +5,60 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width: 100vw;
+      height: 500vh;
+      background-color: #ccc;
+    }
+
+    #root > section {
+      width: 100vw;
+      height: 100vh;
+      background-color: skyblue;
+      border: blue 1px solid;
+    }
+
+    #root > aside {
+      width: 50vw;
+      height: 50vh;
+      background-color: pink;
+    }
+
+  </style>
 </head>
 <body>
-  
+  <div id="root">
+  </div>
+
+  <script>
+    const maker = document.getElementById("root");
+    let article = document.createElement("article");
+    maker.appendChild(article);
+    
+    let count = 0;
+    maker.addEventListener("wheel", function() {
+      console.log("wheel 이벤트가 일어나고 있어");
+      let section = document.createElement("section");
+      section.textContent = count;
+      maker.appendChild(section);
+      count++;
+      //무한 스크롤의 원리!
+      
+      // maker.appendChild(article);
+      // 이미 사용한 appenChild는 재사용할 수 없다
+    });
+
+    maker.addEventListener('click', function() {
+    console.log("클릭이벤트가 일어나고 있어");
+    let aside = document.createElement("aside");
+    aside.textContent = "click"
+    maker.insertBefore(aside, maker.firstChild);
+    //앞에 삽입하다(삽입할 것, 삽입할 위치)
+    });
+
+  </script>
 </body>
 </html>
