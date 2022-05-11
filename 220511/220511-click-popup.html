@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin:0; padding:0;}
+
+  #root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  button {
+    width: 60px;
+    height: 30px;
+  }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <button>click</button>
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    const clickBtn = document.querySelector("button");
+    
+    let count = 0;
+    let stopMaking = true;
+    clickBtn.addEventListener('click', function() {
+      if(stopMaking === true) {
+        let popup = document.createElement("div");
+        root.appendChild(popup);
+        let popupBox = root.children;
+  
+        for(let i=1; i<root.children.length; i++) {
+          popupBox[i].style.backgroundColor = "#333";
+          popupBox[i].style.width = "100px";
+          popupBox[i].style.height = "70px";
+        }
+
+      }
+      if(root.children.length >= 5) {
+        stopMaking = false;
+
+        let text = document.createElement('p');
+        root.insertBefore(text, root.firstChild);
+        text.textContent = "안녕!!";
+
+      }
+    });
+  </script>
+</body>
+</html>
