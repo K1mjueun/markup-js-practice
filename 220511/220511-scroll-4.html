@@ -16,14 +16,14 @@
 
     #root > section {
       width: 100vw;
-      height: 100vh;
+      height: 1vh;
       background-color: skyblue;
       border: blue 1px solid;
     }
 
     #root > aside {
-      width: 50vw;
-      height: 50vh;
+      width: 100vw;
+      height: 1vh;
       background-color: pink;
     }
 
@@ -42,19 +42,27 @@
     maker.addEventListener("wheel", function() {
       console.log("wheel 이벤트가 일어나고 있어");
       let section = document.createElement("section");
+      section.setAttribute('id', `section-${count}`);
+      //동적으로 id 만드는 방법
+
       section.textContent = count;
       maker.appendChild(section);
       count++;
       //무한 스크롤의 원리!
-      
+
       // maker.appendChild(article);
       // 이미 사용한 appenChild는 재사용할 수 없다
     });
-
+    
+    let number = 0;
     maker.addEventListener('click', function() {
     console.log("클릭이벤트가 일어나고 있어");
     let aside = document.createElement("aside");
     aside.textContent = "click"
+    aside.setAttribute('class', `aside-${number}`);
+    //동적으로 class 만드는 방법
+    number++;
+
     maker.insertBefore(aside, maker.firstChild);
     //앞에 삽입하다(삽입할 것, 삽입할 위치)
     });
