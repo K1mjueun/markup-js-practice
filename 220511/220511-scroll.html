@@ -23,12 +23,32 @@
     const root = document.querySelector("#root");
     console.log(window);
     //자바스크립트 세계에서는 브라우저를 윈도우라고 부른다
-    console.log(window.innerWidth);
-    console.log(window.innerHeight);
+    console.log(document.body.scrollHeight);
 
-    window.addEventListener("wheel", (event) => {
-      console.log(event.offsetY);
-      console.log(event.deltaY);
+    let docTotalHeightValue = document.body.scrollHeight;
+    
+    window.addEventListener("scroll", (event) => {
+      let currentScrollValue = window.scrollY;
+      if(currentScrollValue > 0) {
+      console.log("당신은 방금 스크롤을 움직였습니다");
+      console.log(window.scrollY);
+      console.log('전체값' + docTotalHeightValue);
+      }
+      
+      if(window.scrollY >= 3000) {
+        console.log(window.scroll);
+        console.log("yaahooooooo");
+      }
+
+
+
+
+      
+
+      // console.log(event.offsetY);
+      // console.log(event.deltaY);
+      // console.log(window.scrollY);
+
     // console.log("스크롤 감지!");
     // window.document.body.textContent = "랄랄라라랄라";
 
@@ -37,19 +57,11 @@
     // root.style.background = "linear-gradient(0deg, skyblue, pink)"
     // };
 
-    if(event.deltaY > 0) {
-    root.style.background = "linear-gradient(0deg, skyblue, pink)"
-    } else {
-      root.style.background = "linear-gradient(0deg, black, white)"
-    };
-
     // if(event.deltaY > 0) {
-    //   window.innerWidth/2;
-    //   window.innerHeight/2;
-    //   나눠지질 않는다
-    //   console.log(window.innerWidth);
-    //   console.log(window.innerHeight);
-    // }
+    // root.style.background = "linear-gradient(0deg, pink, skyblue)"
+    // } else {
+    //   root.style.background = "linear-gradient(0deg, skyblue, pink)"
+    // };
     });
   </script>
 </body>
