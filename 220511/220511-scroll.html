@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    #root {
+      width: 100vw;
+      height: 500vh;
+      background: linear-gradient(0deg, #ccc, #333);
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    console.log(window);
+    //자바스크립트 세계에서는 브라우저를 윈도우라고 부른다
+    console.log(window.innerWidth);
+    console.log(window.innerHeight);
+
+    window.addEventListener("wheel", (event) => {
+      console.log(event.offsetY);
+      console.log(event.deltaY);
+    // console.log("스크롤 감지!");
+    // window.document.body.textContent = "랄랄라라랄라";
+
+    // if(event.offsetY > 3000) {
+    //   alert('스크롤 너무 많이 내렸어');
+    // root.style.background = "linear-gradient(0deg, skyblue, pink)"
+    // };
+
+    if(event.deltaY > 0) {
+    root.style.background = "linear-gradient(0deg, skyblue, pink)"
+    } else {
+      root.style.background = "linear-gradient(0deg, black, white)"
+    };
+
+    // if(event.deltaY > 0) {
+    //   window.innerWidth/2;
+    //   window.innerHeight/2;
+    //   나눠지질 않는다
+    //   console.log(window.innerWidth);
+    //   console.log(window.innerHeight);
+    // }
+    });
+  </script>
+</body>
+</html>
