@@ -5,8 +5,57 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+  *{margin:0; padding:0;}
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #root {
+    width: 100vw;
+    height: 200vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  button {
+    width: 50px;
+    height: 30px;
+  }
+
+  </style>
 </head>
 <body>
-  
+  <button>click</button>
+  <div id="root">
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    const clickBtn = document.querySelector("button");
+    
+    clickBtn.addEventListener('click', function() {
+    setTimeout(() => {
+      let div = document.createElement("div");
+      root.appendChild(div);
+      let popup = root.children;
+      
+      for(let i = 0; i<root.children.length; i++) {
+        popup[i].style.width = "250px";
+        popup[i].style.height = "300px";
+        popup[i].style.borderRadius = "10px";
+        popup[i].style.backgroundColor = "pink";
+      }
+    }, 2000);
+      });
+      
+  </script>
 </body>
 </html>
