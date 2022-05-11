@@ -4,9 +4,138 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
   <title>Document</title>
+  <style>
+    *{margin:0; padding:0; transition: 1s;}
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    section {
+      width: 800px;
+      height: 150px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    main, .text {
+      width: 49%;
+      height: 100%;
+    }
+
+    main {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    main > h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 55px;
+      position: absolute;
+      mix-blend-mode: multiply;
+      opacity: .5;
+    }
+
+    main > h1:nth-child(1) {
+      color:greenyellow;
+      top: 0;
+    }
+    main > h1:nth-child(2) {
+      color:yellow;
+      top: 40px;
+    }
+    main > h1:nth-child(3) {
+      color:rgb(255, 183, 157);
+      top: 15px;
+    }
+    main > h1:nth-child(4) {
+      color:rgb(255, 151, 113);
+      top: 40px;
+    }
+    main > h1:nth-child(5) {
+      color:plum;
+      top: 60px;
+    }
+    main > h1:nth-child(6) {
+      color:skyblue;
+      bottom: 0;
+    }
+
+    .text {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .text > p {
+      width: 100%;
+      font-size: 11px;
+      color: #ccc;
+    }
+
+    .bottom {
+      bottom:0px;
+    }
+
+  </style>
 </head>
 <body>
+  <div id="root">
+    <section>
+    <main>
+    <h1 class = "h1">function</h1>
+    <h1 class = "h1">index</h1>
+    <h1 class = "h1">variable</h1>
+    <h1 class = "h1">constant</h1>
+    <h1 class = "h1">object</h1>
+    <h1 class = "h1">array</h1>
+    </main>
+
+    <div class="text">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,est?</p>
+    </div>
+  </section>
+  </div>
+
+  <script>
+  const section = document.querySelector("section");
+  const main = document.querySelector("main");
+  const h1 = main.children;
+  const textBox = document.querySelector(".text");
+  console.log(section);
+  console.log(main);
+  console.log(textBox);
+  console.log(h1);
+  console.dir(h1[0]);
   
+  let status = true;
+  main.addEventListener("click", function() {
+    if(status === true) {
+      section.style.height= "200px";
+      for(let i = 0; i<h1.length; i++) {
+        h1[i].classList.add('bottom');
+      }
+      if(h1[0].style.bottom === "0px") {
+        status = false;
+      }
+      console.log(status);
+      console.log(h1[0].style.bottom);
+      console.log(h1[0].classList);
+    } else {
+
+    }
+  });
+  </script>
 </body>
 </html>
