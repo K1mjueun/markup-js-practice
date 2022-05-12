@@ -161,5 +161,17 @@
 
   </div>
 
+  <script>
+    const good = document.querySelector("main>.center>h1");
+    console.log(good);
+    
+    good.addEventListener("mouseover", function() {
+        good.textContent = "Noooh~!"
+    });
+    good.addEventListener("mouseleave", function() {
+      good.textContent = "gooood?"
+    });
+
+  </script>
 </body>
 </html>
