@@ -49,14 +49,17 @@
     const menu = header.children;
     console.log(header);
     console.log(menu);
+    console.log(root);
     console.log(menu[0].dataset);
     console.log(menu[0].dataset.mandoo);
     
     menu[0].addEventListener("click", ()=> {
       for(let i = 0; i<menu.length; i++) {
       if(menu[i].dataset.mandoo !== "1") {
+        //dataset.mandoo의 값이 1이 아니면
         menu[i].style.display = "none";
       } else {
+        //dataset.mandoo의 값이 1이면
         menu[i].style.backgroundColor = "pink";
         menu[i].style.color = "red";
         root.style.backgroundColor = "skyblue";
@@ -69,6 +72,7 @@
     //   menu[i].style.display = "none";
     // }
     // });
+    //↑ dataset을 쓰지 않았을 때?
   </script>
 </body>
 </html>
