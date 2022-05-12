@@ -31,7 +31,7 @@
       console.log(getDataset);
 
       for(let i=0; i<items.length; i++) {
-        if(items[i].dataset.targeting === "2") {
+        if(items[i].dataset.targeting === getDataset) {
           items[i].style.color = "blue";
         } else {
           items[i].style.color = "red";
