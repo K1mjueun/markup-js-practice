@@ -163,13 +163,23 @@
 
   <script>
     const good = document.querySelector("main>.center>h1");
+    const section = document.querySelector("section");
+    const main = document.querySelector("main");
     console.log(good);
-    
+    console.log(section);
+    console.log(main);
+  
     good.addEventListener("mouseover", function() {
         good.textContent = "Noooh~!"
     });
     good.addEventListener("mouseleave", function() {
       good.textContent = "gooood?"
+    });
+
+    section.addEventListener("click", function() {
+    section.style.display = "none";
+    main.style.transition = ".5s";
+    main.style.transform = "rotate(360deg)";
     });
 
   </script>
