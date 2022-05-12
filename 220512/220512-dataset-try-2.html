@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin:0; padding:0;}
+
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .circle { 
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    background-color: skyblue;
+  }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div class = "circle" data-dongri = "1"></div>
+    <div class = "circle" data-dongri = "2"></div>
+    <div class = "circle" data-dongri = "3"></div>
+    <div class = "circle" data-dongri = "4"></div>
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    const circle = root.children;
+    console.log(root);
+    console.log(circle);
+    console.log(circle[0].dataset.dongri);
+
+    root.addEventListener('click', (event)=> {
+    //이벤트를 달아주겠다
+    let getDongri = event.target.dataset.dongri;
+    //getDongti는 이벤트타겟의 데이터셋 dongri의 값이다
+    console.log(getDongri);
+
+    for(let i = 0; i<circle.length; i++) {
+      //circle들에 루프를 돌린다
+      if(circle[i].dataset.dongri === getDongri) {
+        //만약에 circle중에 getDongri랑 같은 데이터값이 있는 애는
+        //(내가 선택하는 circle은)
+        circle[i].style.backgroundColor = "pink";
+        //배경색을 핑크로 바꿔줘
+      } else {
+        circle[i].style.backgroundColor = "skyblue";
+        //나머지는 하늘색으로 바꿔줘
+      }
+    }
+    });
+  </script>
+</body>
+</html>
