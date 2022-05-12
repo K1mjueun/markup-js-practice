@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="b" data-jueun="1">1</div>
+  <div class="b" data-jueun="2">2</div>
+  <div class="b" data-jueun="3">3</div>
+  <div class="b" data-jueun="4">4</div>
+  <button id = "click">click</button>
+
+  <script>
+    const b = document.getElementsByClassName("b");
+    const clickBtn = document.getElementById("click");
+    console.dir(b);
+    //dataset을 찾아보시오
+    console.log(b[0].dataset);
+    console.log(b[0].dataset.jueun);
+
+    clickBtn.addEventListener("click", ()=> {
+    for(let i = 0; i<b.length; i++) {
+    b[i].style.color = "red";
+
+    if(b[i].dataset.jueun === "2") {
+      b[i].style.color = "blue";
+    } else {
+      b[i].style.opacity = "0.5";
+    }
+    }
+    });
+    //클릭한 것만 변하게 하는 방식을 쓸 때 - data를 활용하면 편하다!
+
+  </script>
+</body>
+</html>
