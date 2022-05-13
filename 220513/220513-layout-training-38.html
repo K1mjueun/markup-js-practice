@@ -4,9 +4,99 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/c0547f77dd.js" crossorigin="anonymous"></script>
   <title>Document</title>
+  <style>
+    *{margin:0; padding:0; transition: 1s;}
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      display: flex;
+    }
+
+    .menu {
+      width: 5%;
+      height: 100%;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
 </head>
 <body>
-  
+  <div id="root">
+    <nav class="menu">
+      <h1>
+        <i class="fa-solid fa-circle"></i>
+      </h1>
+    </nav>
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    const menu = document.querySelector(".menu");
+    const dot = menu.children;
+    // console.log(root); 
+    // console.log(menu); 
+    // console.log(dot);
+    
+    let dokdak = true;
+    dot[0].addEventListener('click', ()=> {
+      if(dokdak === true) {
+        console.log(dokdak);
+
+        dot[0].remove(dot[0].children.textContent);
+        let createX = document.createElement("h1");
+        menu.appendChild(createX);
+        createX.setAttribute('class','fa-solid fa-x');
+        //또잉??//
+        
+        let createMenuBox = document.createElement("div");
+        root.appendChild(createMenuBox);
+        createMenuBox.style.width = "20%";
+        createMenuBox.style.height = "100%";
+        createMenuBox.style.backgroundColor = "#ccc";
+        createMenuBox.style.display = "flex";
+        createMenuBox.style.alignItems = "center";
+        createMenuBox.style.justifyContent = "space-around";
+        createMenuBox.style.flexDirection = "column";
+    
+        let createMenus = document.createElement("section");
+        createMenuBox.append(createMenus);
+        // for(let i =0; i<createMenus.length; i++) {
+          createMenus.style.width = "80%";
+          createMenus.style.height = "10%";
+          createMenus.style.backgroundColor = "#fff";
+          createMenus.style.borderRadius = "20px";
+          createMenus.style.display = "flex";
+          createMenus.style.alignItems = "center";
+          createMenus.style.justifyContent = "center";
+          createMenus.textContent = "menu";
+        // }
+        //append로 여러개를 어떻게 추가하지
+
+        if(root.children.length > 1){
+          dokdak = false;}
+
+        console.log(dokdak);
+        console.log(dot[0]);
+      } else {
+        console.log("이건 false야");
+        // let div = root.children[1];
+        // console.log(div);
+        // root.removeChild(div);
+
+        // if(root.removeChild("div")) {
+        //   dokdak = true;
+        // }
+
+        //아 왜안돼
+      }
+    });
+  </script>
 </body>
 </html>
