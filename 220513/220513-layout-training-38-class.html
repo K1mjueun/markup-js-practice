@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/c0547f77dd.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; transition: 1s;}
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      display: flex;
+    }
+
+    .menu {
+      width: 5%;
+      height: 100%;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-box {
+      width: 20%;
+      height: 100%;
+      background-color: #ccc;
+      display: none;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+
+    section {
+      width: 80%;
+      height: 12%;
+      background-color: rgb(221, 221, 221);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+    }
+
+    .on {
+      display: flex;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <nav class="menu">
+      <h1>
+        <i class="fa-solid fa-circle"></i>
+      </h1>
+    </nav>
+
+    <div class="menu-box">
+      <section>menu</section>
+      <section>menu</section>
+      <section>menu</section>
+      <section>menu</section>
+      <section>menu</section>
+      <section>menu</section>
+    </div>
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    const nav = document.querySelector(".menu");
+    const dot = document.querySelector("h1");
+    const menuBox = document.querySelector(".menu-box");
+    // console.log(root);
+    // console.log(nav);
+    // console.log(dot);
+    // console.log(menuBox);
+    
+    let dokdak = true;
+    let workPlease = 0;
+    console.log(dokdak);
+
+    dot.addEventListener('click', ()=> {
+      if(dokdak === true) {
+        dot.remove(dot.children.textContent);
+        let createX = document.createElement("h1");
+        nav.appendChild(createX);
+        createX.setAttribute('class','fa-solid fa-x');
+        menuBox.classList.add("on");
+        // console.log(menuBox.classList);
+        workPlease = 1;
+        
+        if(workPlease === 1) {
+          dokdak = false;
+          console.log(dokdak);
+          // console.log(menuBox.classList);
+        }
+      } else {
+        menuBox.classList.remove("on");
+        workPlease = 0;
+
+        if(workPlease === 0) {
+          dokdak = true;
+          console.log(dokdak);
+        }
+      }
+      //왜 안되니
+    });
+  </script>
+</body>
+</html>
