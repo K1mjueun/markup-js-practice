@@ -55,9 +55,7 @@
 <body>
   <div id="root">
     <nav class="menu">
-      <h1>
         <i class="fa-solid fa-circle"></i>
-      </h1>
     </nav>
 
     <div class="menu-box">
@@ -73,43 +71,61 @@
   <script>
     const root = document.querySelector("#root");
     const nav = document.querySelector(".menu");
-    const dot = document.querySelector("h1");
+    const dot = nav.children[0];
     const menuBox = document.querySelector(".menu-box");
     // console.log(root);
-    // console.log(nav);
-    // console.log(dot);
+        console.log(nav);
+        //console.dir(nav);
+        console.log(dot);
     // console.log(menuBox);
     
-    let dokdak = true;
-    let workPlease = 0;
-    console.log(dokdak);
-
-    dot.addEventListener('click', ()=> {
-      if(dokdak === true) {
-        dot.remove(dot.children.textContent);
-        let createX = document.createElement("h1");
-        nav.appendChild(createX);
-        createX.setAttribute('class','fa-solid fa-x');
-        menuBox.classList.add("on");
-        // console.log(menuBox.classList);
-        workPlease = 1;
-        
-        if(workPlease === 1) {
-          dokdak = false;
-          console.log(dokdak);
-          // console.log(menuBox.classList);
-        }
-      } else {
+    dot.addEventListener("click", ()=> {
+      if(menuBox.classList.contains("on")) {
         menuBox.classList.remove("on");
-        workPlease = 0;
-
-        if(workPlease === 0) {
-          dokdak = true;
-          console.log(dokdak);
-        }
+        // dot.setAttribute('class','fa-solid fa-x');
+        // console.dir(dot);
+      } else {
+        menuBox.classList.add("on");
+        // dot.setAttribute('class','fa-solid fa-circle');
+        // console.dir(dot);
+        
+        // dot.remove(dot.children.textContent);
+        // let createX = document.createElement("h1");
+        // nav.appendChild(createX);
+        // createX.setAttribute('class','fa-solid fa-x');
+        // 얘때문에 안돼네
       }
-      //왜 안되니
+      //이렇게 간단하게 하면 되는 것을.. - 또 안돼
     });
+      
+      // let dokdak = true;
+      // let workPlease = 0;
+      // console.log(dokdak);
+
+      // if(dokdak === true) {
+      //   dot.remove(dot.children.textContent);
+      //   let createX = document.createElement("h1");
+      //   nav.appendChild(createX);
+      //   createX.setAttribute('class','fa-solid fa-x');
+      //   menuBox.classList.add("on");
+      //   // console.log(menuBox.classList);
+      //   workPlease = 1;
+        
+      //   if(workPlease === 1) {
+      //     dokdak = false;
+      //     console.log(dokdak);
+      //     // console.log(menuBox.classList);
+      //   }
+      // } else {
+      //   menuBox.classList.remove("on");
+      //   workPlease = 0;
+
+      //   if(workPlease === 0) {
+      //     dokdak = true;
+      //     console.log(dokdak);
+      //   }
+      // }
+      //왜 안되니
   </script>
 </body>
 </html>
