@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding: 0;}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+  const root = document.querySelector("#root");
+  const getPromptData = window.prompt("안녕! 아무거나 입력해봐");
+  //텍스트를 입력할 수 있는 창을 띄운다(프롬프트)
+
+  function typeAnything(getData) {
+    // 직접 만드는 기명함수!
+  if(typeof getData === "string") {
+    console.log(`입력한 ${getData}는 문자열이야~`);
+    root.textContent = `${getData} type is string`;
+  } else if(typeof getData === "number") {
+    console.log(`입력한 ${getData}는 숫자야~`);
+    root.textContent= `${getData} type is number`;
+  } else {
+    console.log(`입력한 ${getData}의 타입은 뭔지 모르겠네?`);
+    root.textContent = `Can not find type of ${getData}`;
+  }
+  }
+  typeAnything(getPromptData);
+  //getData값이 getPromptData(=window.prompt)의 값이 되어 함수가 작동하는 거야
+  
+  </script>
+</body>
+</html>
