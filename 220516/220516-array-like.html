@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="one"></div>
+  <div id="two">
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+  </div>
+
+  <script>
+    const one = document.querySelector('#one');
+    const twoChildren = document.getElementById('two').children;
+    const three = document.querySelectorAll('#two > section');
+    //사실 []은 컴퓨터상으로 배열이 아니지만, 배열처럼 생겼다 - 배열메서드가 알아듣지 못한다
+    
+    console.log(one);
+    console.log(twoChildren);
+    console.log(three);
+
+    const four = Array.from(three);
+    //Array.from은 배열처럼 보이는 데이터를 배열처럼 취급하겠다!
+    //.slice.call() --> "값들의 모음을 다 짤라 다시 배열자리에 넣어"를 사용하다가 생긴 Array.from / .slice.call()을 본다면 array.from 의미라고 생각하면 된다
+  
+    console.log(Array.isArray(three));
+    console.log(Array.isArray(four));
+    //const four = Array.from(three);을 했기 때문에 console.log(Array.isArray(three));는 true로 나오지만 console.log(Array.isArray(four));은 false로 나온다
+
+  </script>
+</body>
+</html>
