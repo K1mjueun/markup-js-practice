@@ -15,7 +15,12 @@ console.log(dummyText.indexOf("of"));
 //6번
 
 // Todo : Q-2. "dummy" 라는 문자열 원소를 모두 "sementic" 이라는 단어로 바꾸세요.
-
+for(let i=0; i<dummyText.length; i++) {
+  if(dummyText[i] === "dummy"){
+    dummyText[i] = "sementic";
+  }
+  console.log(dummyText);
+}
 
 // Todo : Q-3. "the" 라는 원소 다음에 "web" 이라는 단어가 추가되도록 배열을 조정하세요.
 
@@ -23,6 +28,7 @@ console.log(dummyText.indexOf("of"));
 // Todo : Q-5. 배열 속 원소들의 총 글자 갯수를 console에 출력하세요.
 console.log(dummyText.length);
 //196개
+
   </script>
 </body>
 </html>
