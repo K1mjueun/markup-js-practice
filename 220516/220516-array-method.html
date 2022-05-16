@@ -12,10 +12,80 @@
   <script>
     const crayonShinchan = ['짱구','짱아','흰둥이','유리','철수','맹구','훈이','수지'];
     const ShinchanArr = Array.from(crayonShinchan);
+
     console.log(Array.isArray(ShinchanArr));
     console.log(ShinchanArr);
 
-    
+    //Array Method
+    //pop - 배열의 뒷부분 값을 삭제('수지'가 삭제됐다)
+    // ShinchanArr.pop();
+    // console.log(ShinchanArr);
+
+    //push - 배열 뒷부분에 값을 삽입('이슬'이 맨 뒤에 추가됐다)
+    // ShinchanArr.push('이슬');
+    // console.log(ShinchanArr);
+
+    //unshift - 배열 앞부분에 값을 삽입('초코비'가 맨 앞에 추가됐다)
+    // ShinchanArr.unshift('초코비');
+    // console.log(ShinchanArr);
+
+    //shift - 배열 앞부분 값을 삭제(맨 앞 '짱구'가 삭제됐다)
+    // ShinchanArr.shift();
+    // console.log(ShinchanArr);
+
+    //splice - 배열의 특정위치에 요소를 추가하거나 삭제
+    // ShinchanArr.splice(3,2);
+    // (3,2)는 3번째 인덱스에서부터 2개를 제거한다는 의미('유리','철수'가 삭제됐다)
+    // console.log(ShinchanArr);
+
+    // ShinchanArr.splice(3,1,"액션가면","돼지");
+    // 3번째 인덱스에서부터 1개를 제거하고 그 자리에 "액션가면","돼지"를 추가한다는 의미('유리'가 삭제되고 '액션가면','돼지'가 추가됐다)
+    // console.log(ShinchanArr);
+
+    //slice - 배열의 startIndex부터 endIndex(이전)까지의 shallow copy를 새로운 배열 객체로 반환
+    // let newShinchanArr = ShinchanArr.slice(5,7);
+    //ShinchanArr의 5번째부터 7번째 이전 인덱스인 '맹구'(5번째),'훈이'(6번째)가 newShinchanArr의 배열 객체가 되었다
+    // console.log('slice',newShinchanArr);
+
+    //concat - 다수의 배열을 합치고 병합된 배열의 사본을 반환
+    // let ShinchanSong1 = ['개미','는','뚠뚠'];
+    // let ShinchanSong2 = ['오늘','도','둔둔'];
+    // let ShinchanSong3 = ['열심히','일을','하네'];
+    // let ShinchanSongs = ShinchanSong1.concat(ShinchanSong2, ShinchanSong3);
+    // ShinchanSongs의 배열 객체는 Shinchansong1,2,3이 합쳐진 것이다
+    // console.log(ShinchanSongs);
+
+    //every - 배열의 모든 요소가 제공한 함수로 구현된 테스트를 통과하는지 테스트
+    // let HiShinChan = function(value) {
+    //   return value === "떡잎마을";
+    //   반환값이 "떡잎마을"이라면 console.log에 true가 뜰 것
+    // };
+    // console.log(ShinchanArr.every(HiShinChan));
+    // ShinchanArr의 배열 객체는 "떡잎마을"이 아니기 때문에 false가 뜬다
+
+    //some - 지정된 함수의 결과가 true일 때까지 배열의 각 원소를 반복
+    // let HiShinChan = function(value) {
+    // return value === "짱아";
+    // };
+    // console.log(ShinchanArr.some(HiShinChan));
+    //ShinchanArr의 배열 객체 중 하나라도 "짱아"가 있으면 true
+
+    //forEach - 배열의 각 원소별로 지정된 함수를 실행한다
+    // ShinchanArr.forEach(function(value) {
+    // console.log(value);
+    // 한번에 배열 객체를 보여주지 않고 한개씩 콘솔에 찍어준다
+    // });
+
+    //map - 배열의 각 원소별로 지정된 함수를 실행한 결과로 구성된 새로운 배열로 반환한다
+    // let HiShinChan = function(value) {
+    // return value = "짱구";
+    // };
+    // let newShinchanArr = ShinchanArr.map(HiShinChan);
+    // console.log(newShinchanArr);
+    // newShinchanArr는 ShinchanArr과 길이가 같지만 구성하는 배열 객체는 다 "짱구"가 되었다
+
+    //filter 
+
   </script>
 </body>
 </html>
