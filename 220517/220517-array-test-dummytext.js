@@ -52,3 +52,10 @@ const countTextLength = dummyText.reduce(function(beforeValue, currentValue) {
   return beforeValue + currentValue;
 });
   console.log(countTextLength.length);
+  //* reduce도 매우 많이 씁니다
+
+
+
+  //! 굉장히 많이 쓰는, 꼭 알아야하는 배열 메서드
+  //? .forEach(), .filter(), .map(), .reduce(), join()
+  //map은 배열 재조립할 때 많이 쓴다
