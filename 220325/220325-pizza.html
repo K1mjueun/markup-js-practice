@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding:0;}
+
+    #body {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      /* 피자 도우 */
+      width: 50%;
+      height: 50%;
+      background-color: rgb(255, 190, 137);
+      border-radius: 100%;
+    }
+
+    section {
+      /* 피자 메인? */
+      width: 40%;
+      height: 40%;
+      background-color: rgb(255, 132, 118);
+      border-radius: 100%;
+      
+      position: absolute;
+      /* position : relative; */
+    }
+
+    .ham {
+    /* 페퍼로니 */
+    width: 20%;
+    height: 20%;
+    background-color: rgb(255, 79, 79);
+    border-radius: 100%;
+
+    position:inherit;
+    }
+    
+    #body > section > div:nth-child(1) {top:50px; left: 80px;}
+    #body > section > div:nth-child(2) {bottom:30px; left: 130px;}
+    #body > section > div:nth-child(3) {right:20px; bottom:120px}
+    #body > section > div:nth-child(4) {right:100px; top:120px;}
+
+    .paa {
+    /* 파 */
+    width: 2%;
+    height: 20%;
+    background-color: green;
+
+    position: inherit;
+    }
+
+    #body > section > div:nth-child(5) {top:100px; left: 80px; transform:rotate(45deg);}
+    #body > section > div:nth-child(6) {bottom:30px; left: 120px;
+      transform:rotate(60deg);}
+    #body > section > div:nth-child(7) {right:80px; bottom:50px;
+      transform:rotate(120deg);}
+    #body > section > div:nth-child(8) {right:100px; top:80px;
+      transform:rotate(5deg);}
+
+    .olive {
+      /* 올리브 */
+      width: 5%;
+      height: 5%;
+      background-color: black;
+      border-radius: 100%;
+
+      position: inherit;
+    }
+
+    #body > section > div:nth-child(9) {top:200px; left: 80px;}
+    #body > section > div:nth-child(10) {bottom:80px; left:200px;}
+    #body > section > div:nth-child(11) {right:160px; bottom:200px}
+    #body > section > div:nth-child(12) {right:120px; top:70px;}
+    
+    .potato {
+      /* 감자 */
+      width: 20%;
+      height: 10%;
+      background-color: rgb(255, 234, 166);
+      border-radius: 100% 100% 0% 0%;
+
+      position: inherit;
+    }
+
+    #body > section > div:nth-child(13) {top:200px; left: 100px;
+      transform:rotate(95deg);}
+    #body > section > div:nth-child(14) {bottom:80px; left: 50px;
+      transform:rotate(5deg);}
+    #body > section > div:nth-child(15) {right:100px; bottom:110px;
+      transform:rotate(60deg);}
+    #body > section > div:nth-child(16) {right:130px; top:100px;
+      transform:rotate(45deg);}
+
+  </style>
+</head>
+<body id="body">
+    <section>
+      <!-- 피자 메인? -->
+    <div class="ham"></div>
+    <div class="ham"></div>
+    <div class="ham"></div>
+    <div class="ham"></div>
+    <!-- 페퍼로니 -->
+
+    <div class="paa"></div>
+    <div class="paa"></div>
+    <div class="paa"></div>
+    <div class="paa"></div>
+    <!-- 파 -->
+
+    <div class="olive"></div>
+    <div class="olive"></div>
+    <div class="olive"></div>
+    <div class="olive"></div>
+    <!-- 올리브 -->
+
+    <div class="potato"></div>
+    <div class="potato"></div>
+    <div class="potato"></div>
+    <div class="potato"></div>
+    <!-- 감자 -->
+
+  </section>
+<!-- 재료들 -->
+  <main></main>
+  <!-- 피자 도우 -->
+  
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+*{margin:0; padding:0;}
+
+body {
+width: 1920px;
+height: 1080px;
+background-color: #fff;
+
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.lala {
+      /* 큰 박스 */
+      width: 400px;
+      height: 800px;
+      background-color: #c4c4c4;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      z-index: 1;
+
+      /* overflow: hidden;
+      position: relative; */
+    }
+    
+    .lala > div:nth-child(1) {
+      /* 맨 위 컨테이너 */
+      width: 400px;
+      height: 250px;
+      color:#fff;
+      
+      display: flex;
+      justify-content: center;
+
+      /* overflow: hidden;
+      position: relative; */
+    }
+    
+    .lala > div:nth-child(1) > div:nth-child(1) {
+      /* 맨 위 겹치는 원 */
+      width: 400px;
+      height: 400px;
+      background-color: #756060;
+      border-radius: 400px;
+      
+      position: absolute;
+      top: 0px;
+      z-index: 2;
+
+      /*??? overflow:hidden이 안먹혀요.. ???*/
+    }
+    
+    .lala > div:nth-child(1) > div:nth-child(2) {
+      /* 위 텍스트 박스 */
+      font-size: large;
+      margin: 20px;
+      
+      z-index: 3;
+    }
+    
+    .lala > div:nth-child(2) {
+      /* 두번째 컨테이너*/
+      width: 400px;
+      height: 200px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .lala > div:nth-child(2) > div:nth-child(1) {
+      /* 두번째 컨테이너 안 긴 타원 */
+      width: 50px;
+      height: 150px;
+      border: rgb(65, 65, 65) solid 7px;
+      border-radius: 50px;
+    }
+    
+    .lala > div:nth-child(3) {
+      /* 세번째 컨테이너(점 세개 들어있는) */
+      width: 400px;
+      height: 200px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    
+    .dot {
+      /* 점 세개 */
+      width: 15px;
+      height: 15px;
+      border-radius: 100px;
+      background-color: rgb(65, 65, 65);
+      
+      margin:10px;
+    }
+    
+    .lala > div:nth-child(4) {
+      /* 맨 밑 텍스트 컨테이너 */
+      width: 400px;
+      height: 150px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .lala > div:nth-child(4) > p {
+      /* 맨 밑 텍스트 컨테이너의 텍스트 */
+      text-align: center;
+      font-size: 10px;
+      font-weight: bold;
+      color:rgb(65, 65, 65);
+      
+      margin:20px;
+    }
+    
+    #hmm {
+      /* 오른쪽 차콜 겹치는 원 */
+      width: 400px;
+      height: 800px;
+      background-color: rgb(77, 77, 77);
+      border-radius: 400px;
+    
+      position: absolute;
+      left: 950px;
+    }
+    

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포켓몬</title>
+  <style>
+  
+.red {
+  color: red;
+  font-weight:bold;
+}
+/* class는 직접 선택자, 단점은 너무 많아진다, 적절하게 사용 */
+
+div {
+  color: blueviolet;
+  font-style: italic;
+  background-color: gainsboro;
+}
+
+
+div li:nth-child(3) {
+  color: black;
+  font-style: italic;
+}
+
+div li:nth-child(4) {
+  color :aqua;
+  font-weight: bold;
+  font-size: large;
+  font-style: normal;
+}
+
+ul li:nth-child(2) {
+  color:teal;
+}
+/* ??이거 왜 치코리타까지 teal색이 되나요?? */
+
+ul li [color="red"] {
+  font-size: 32px;
+}
+/* 리스트 중 레드컬러는 폰트가 32px이 되어라~ */
+
+  </style>
+</head>
+<body>
+  <ul>
+<li style="color: blue;">피카츄</li>
+<li>라이츄</li>
+<div>
+<li>파이리</li>
+<li>치코리타</li>
+<li>마쟈용</li>
+<li>나옹이</li>
+</div>
+<li class="red">꼬부기</li>
+<li>버터풀</li>
+<li>야도란</li>
+  </ul>
+  <!-- ul태그는 실체가 없는 빈껍데기 unorder list라고 한다 -->
+</body>
+</html>

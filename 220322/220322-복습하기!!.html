@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin:0; padding:0; box-sizing: border-box;}
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .haha {
+    width: 400px;
+    height: 800px;
+    background-color: #c4c4c4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .haha > div:nth-child(1) {
+    width: 200px;
+    height: 800px;
+    background-color: rgba(179, 67, 67,0.5);
+
+    position: absolute;
+    right: 332px;
+    /* 이게 아닌것같음.. */
+    z-index: 2;
+  }
+
+  .haha > div:nth-child(2) {
+    width: inherit;
+    height: 100px;
+    background-color: #fff;
+    border: 20px solid #c4c4c4;
+  }
+
+  .haha > div:nth-child(3) {
+    width: inherit;
+    height: 550px;
+    background-color: gray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .lala {
+    width: 400px;
+    height: 80px;
+    background-color: #fff;
+    border: 20px gray solid;
+      }
+
+  .haha > div:nth-child(4) {
+    width: 350px;
+    height: 150px;
+    background-color: #c4c4c4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="haha">
+    <div></div>
+    <div></div>
+    <div>
+      <div class="lala"></div>
+      <div class="lala"></div>
+      <div class="lala"></div>
+      <div class="lala"></div>
+      <div class="lala"></div>
+    </div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel cumque sunt ab sapiente, repudiandae facilis ea quae minima, id fugit, tempore deleniti! Quisquam voluptatibus temporibus totam quia consequatur quam expedita.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>힘들 다시</title>
+  <style>
+    *{margin:0; padding:0;}
+    ul li {list-style-type: none;}
+
+    .hoho {
+      height: 100vh;
+      width: 100vw;
+      background-color: beige;
+    }
+    
+    .hoho > div:nth-child(1) ul li {
+      margin: 20px;
+      font-weight: bold;
+    }
+
+    .hoho > div:nth-child(1) ul {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .hoho > div:nth-child(1) {
+      height: 10vh;
+      background-color: brown;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+      .hoho >  div:nth-child(2) {
+        height: 70vh;
+      background-color: beige;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      /* flex-direction은 가로row로 배열되는 요소들을 세로column로 바꿀 수 있게 한다!*/
+      }
+
+      .hoho > div:nth-child(2) > h1 {
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 20px;
+      }
+      .hoho > div:nth-child(2) > div:nth-child(2) {
+        border: 2px solid orange;
+        width: 50vw;
+        height: 5vh;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      .hoho > div:nth-child(2) > div:nth-child(3) {
+        border: 3px double orange;
+        border-radius: 5px;
+        width: 15vw;
+        height: 20px;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .hoho > div:nth-child(3) {
+      height: 20vh;
+      background-color: brown;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      }
+
+      .hoho > div:nth-child(3) p {
+        text-align: right;
+        color: white;
+      }
+
+      .hoho > div:nth-child(3) p span {
+        color: aqua;
+        font-style: italic;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="hoho">
+    <div>
+      <ul>
+        <li>haha</li>
+        <li>hoho</li>
+        <li>heehee</li>
+        <li>kiki</li>
+      </ul>
+    </div>
+      <div>
+        <h1>하하</h1>
+        <div>검색창</div>
+        <div>검색버튼</div>
+      </div>
+      <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est molestiae eum et voluptatem quia, quo ducimus explicabo harum <br>culpa. Debitis odit necessitatibus sapiente laudantium labore esse exercitationem omnis, <span> enim officiis quisquam temporibus</span> quos veniam. Sint, provident aut, eos deleniti, dolorum repellendus est accusamus et corrupti culpa maxime maiores tempore?</p>
+      </div>
+    </div>
+
+  
+</body>
+</html>

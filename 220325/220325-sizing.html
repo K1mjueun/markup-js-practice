@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin: 0; padding:0;}
+
+  #root {
+    display: flex;
+  }
+  
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ccc; 
+    }
+  
+  section {
+    border: 1px dotted #000;
+    /* 모든 section에 적용 */
+  }
+
+  #root > section {
+    width:50vw;
+    height:100vh;
+    /* root밑 section에만 적용 */
+  }
+
+  #root > section:nth-child(1) {
+    /* 왼쪽 */
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #root > section:nth-child(1) > div {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    /* 정원이 됐다! */
+    background-color: #fff;
+    border:solid 1px black;
+
+    /* position: absolute; */
+    position:relative;
+  }
+
+  #root > section:nth-child(1) > div:nth-child(1) {
+    z-index: 2;
+    left:200px;
+  }
+
+  #root > section:nth-child(1) > div:nth-child(2) {
+    z-index: 1;
+    top: 200px;
+  }
+
+  #root > section:nth-child(1) > div:nth-child(3) {
+    z-index: 3;
+    bottom: 200px;
+  }
+
+  #root > section:nth-child(2) {
+    /* 오른쪽 */
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; - 할 필요가 없다 */
+  }
+
+  #root > section:nth-child(2) > div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    color: #fff;
+
+    overflow:scroll;
+  }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+  <section>
+    <!-- 동그란 요소들 -->
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+  <section>
+    <div>
+      <h1>hello</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur voluptatem molestias sunt repellat officiis esse, eos nostrum ea rem! Ut iusto aspernatur laboriosam, esse vero eius maxime porro possimus voluptas.</p>
+      <div>friday</div>
+    </div>
+  </section>
+  <!-- div, section(semantic tag)은 똑같아 -->
+  </div>
+</body>
+</html>

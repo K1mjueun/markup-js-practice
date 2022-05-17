@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    :root {
+      --color-1:#EB714A;
+      --color-2:#AC36D1;
+      --color-3:#AEFAB7;
+      --color-4:#A3DCFF;
+      --color-5:#FA96A7;
+      /* kuler사이트에서 색을 가져왔다 */
+    }
+    /* 값을 미리 저장해놓을 수 있다(사용자 속성?처럼, 자판기처럼) 
+      --하이픈 두개와 루트를 쓰는게 법칙~!*/
+
+  body > div {
+    position: absolute;
+    /* position: relative; */
+
+    width: 100px;
+    height: 100px;
+    border: var(--color-3) 1px solid;
+    margin: 10px;
+  }
+
+  body > div:nth-child(1) {
+    top: 10px; left: 10px; background-color: var(--color-1);
+    z-index: 5;
+  }
+    /* var()꼭 쓰기 */
+  body > div:nth-child(2) {
+    top: 20px; left: 20px; background-color: var(--color-2);
+    z-index: 4;
+  }
+  body > div:nth-child(3) {
+    top: 30px; left: 30px; background-color: var(--color-3);
+    z-index: 3;
+  }
+  body > div:nth-child(4) {
+    top: 40px; left: 40px; background-color: var(--color-4);
+    z-index: 2;
+  }
+  body > div:nth-child(5) {
+    top: 50px; left: 50px; background-color: var(--color-5);
+    z-index: 1;
+  }
+  /* ctrl+alt누르고 위아래키 눌러봐 그리고 esc */
+
+  </style>
+  
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>

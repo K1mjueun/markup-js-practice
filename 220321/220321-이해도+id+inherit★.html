@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+/* 구조를 구분해가며 하나씩 쳐가면서 해라 너무 많아서 한번에 다 파악 못해 */
+
+
+.width-vw-1 { width: 1vw;}
+.width-vw-2 { width: 2vw;}
+.width-vw-3 { width: 3vw;}
+.width-vw-4 { width: 4vw;}
+.width-vw-5 { width: 5vw;}
+.width-vw-6 { width: 6vw;}
+.width-vw-7 { width: 7vw;}
+.width-vw-8 { width: 8vw;}
+.width-vw-9 { width: 9vw;}
+.width-vw-10 { width: 10vw;}
+/* ctrl+alt를 써봐요 */
+
+
+.flex-center-center {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 얜 뭐지->class setting ~ 한번에 여러개에 적용 가능★ 코드가 짧아진다아 */
+
+.border-test-1 {
+  border:1px solid red;
+}
+
+#lala{color: saddlebrown;}
+/* id는 #쓰고 ! */
+
+.abc {
+  width: 100vw;
+  height: 100vh;
+
+  /* border:1px solid red; */
+}
+
+.abc > div {
+  width: 100vw;
+  height: 33vw;
+  border: 1px solid blue;
+  /* 직계자손에게 일괄 적용 */
+}
+
+/* 중간부분(여기도 이런식으로 써놓으면 구분 편함!) */
+.abc > div:nth-child(2) {
+  background-color: #ccc;
+  
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* 배치는 부모(컨테이너)에게! */
+}
+/* 중간부분 두개의 자식 */
+.abc > div:nth-child(2) > div {
+  width: 50vw;
+  height: inherit;
+  /* inherit은 부모의 형식을 상속받겠다는 뜻! */
+  border: 1px green solid;
+}
+
+/* 중간부분 두개 자식의 첫번째 놈 */
+.abc > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+  width: inherit;
+  height: 50%;
+  /* 50%는 부모의 50% */
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* 알맹이들 */
+.abc > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div {
+  width: 50%;
+  height: inherit;
+  border: 1px solid black;
+}
+
+/* 글씨 부분 */
+.abc > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+  width: inherit;
+  height: 50%;
+  /* 50%는 부모의 50% */
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="abc border-test-1">
+    <!-- 클래스는 여러개를 동시에 적용 가능, 띄어쓰기만 하면 된다! -->
+    <div id="header"></div>
+    <!-- 머리쪽에 있어 -->
+  <div id="main" class="flex-center-center">
+    <!-- 메인이다 -->
+<div>
+</div>  
+  <div>
+    <div class="flex-center-center">
+      <div>알맹이1</div>
+      <div>알맹이2</div>
+
+    </div>
+    <div id="lala">분홍색</div>
+  </div>
+  </div>
+  
+  <div id="footer"></div>
+  <!-- 끝쪽에 있어 -->
+  </div>
+</body>
+</html>

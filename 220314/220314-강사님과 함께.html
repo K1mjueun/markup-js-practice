@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+  body {
+      margin: 0;
+    }
+    
+  .root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #c8c8c8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .root > div { 
+    /* >를 제거하면 div에 속한 모든 div들까지 다 선택 */
+    width: 95vw;
+    height: 90vh;
+    background-color: white;
+
+    display: flex;
+    /* flex의 특징, 일단 가로정렬 */
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .root > div div {
+    /* div의 div다. div > div 해도 됌 */
+    width: 50vw;
+    height: 5vw;
+    background-color: #c8c8c8;
+    /* margin: 2vw; margin대신 justify-content를 space-around로*/
+  }
+
+  .root > div div:nth-child(4) {
+    height: 2vh;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="root">
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    
+  </div>
+</body>
+</html>

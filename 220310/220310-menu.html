@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>making menu</title>
+  <style>
+
+    * {margin:0; padding:0;}
+    /* reset! 브라우저의 기본값을 쓰지 않겠다 */
+
+    body {
+      display: block;
+      /* margin: 0px; */
+    }
+
+    ul {
+      list-style-type: none;
+      /* margin: 0;
+      padding: 0; */
+      background-color: antiquewhite;
+      /* flex */
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    ul li {
+      margin:20px;
+      cursor: pointer;
+      transition: 1s;
+       /*transition은 hover에 넣지 않는게 자연스러움  */
+      background-color: orangered;
+      padding: 10px; 
+    }
+    
+    ul li:hover {
+      margin:25px;
+      color: brown;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <ul>  
+    <!-- ul 부모 태그는 너무 중요하다★ -->
+    <li>gmail</li>
+    <li>image</li>
+    <li>name</li>
+    <li>profile</li>
+    <li>김주은</li>
+  </ul>
+</body>
+</html>

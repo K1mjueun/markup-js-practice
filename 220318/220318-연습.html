@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding: 0;}
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #c4c4c4;
+    }
+    
+    .indie {
+      width: 428px;
+      height: 926px;
+      background-color: #fff;
+      border-radius: 40px;
+      box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .indie div {
+      background-color: gray;
+      color: #fff;
+      border-bottom: 2px white solid;
+    }
+
+    .indie > div:nth-child(1) {
+      width: 428px;
+      height: 80px;
+    }
+    
+    .indie > div:nth-child(2) > div:nth-child(1) {
+      width: 80px;
+      height: 35px;
+      border-right: 1px white solid;
+      text-align: center;
+    }
+
+    .indie > div:nth-child(2) > div:nth-child(2) {
+      width: 348px;
+      height: 35px;
+      border-left: 1px white solid;
+      text-align: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="indie">
+    <div>검색하기</div>
+    <!-- 1 -->
+    <div>
+      <!-- 2 -->
+      <div>●</div>
+      <div>아무거나 검색해보세요!</div>
+    </div>
+    <div>
+      <!-- 3 -->
+      <div>장르</div>
+      <div>국가</div>
+      <div>특징</div>
+    </div>
+    <div>
+      <!-- 4 -->
+      <div>
+        <!-- 4-1 -->
+        <div>코미디</div>
+        <div>코미디</div>
+      </div>
+      <div>
+        <!-- 4-2 -->
+        <div>코미디</div>
+        <div>코미디</div>
+      </div>
+      <div>
+        <!-- 4-3 -->
+        <div>코미디</div>
+        <div>코미디</div>
+      </div>
+      <div>
+        <!-- 4-4 -->
+        <div>코미디</div>
+        <div>코미디</div>
+      </div>
+      <div>●●●●</div>
+      <!-- 5 -->
+    </div>
+  </div>
+</body>
+</html>

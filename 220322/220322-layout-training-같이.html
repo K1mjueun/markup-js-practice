@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+/* semantic tag는 이름만 다르지 div와 완전히 똑같다 */
+
+/* 변수 */
+:root {
+  --height-1: 800px;
+  /* --height,--color 등을 써줘 */
+}
+    .position-absolute {position:absolute;}
+    
+    #root {
+      /* root정도는 id로 쓰는 경향이 있어요 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #wrapper {
+      width: 400px;
+      height: 800px;
+      /* width:max-content;
+      height: max-content; */
+      /* 자식의 변화가 부모까지 변하게 하는 성격 */
+    }
+
+    nav {
+      width: 200px;
+      /* height: 800px; */
+      height: var(--height-1);
+      background-color: aqua;
+
+      z-index: 1;
+      /*다른데다 z-index 다 일일이 안써도 돼 */
+    }
+
+    main {
+      width: 400px;
+      /* height: 800px; */
+      height: var(--height-1);
+      background-color: #c4c4c4;
+    }
+    
+    </style>
+</head>
+<body>
+  <!-- 겹치려고 할땐, 부모자식 관계가 아닌 형제관계로! -->
+  <div id="root">
+    <div id="wrapper">
+      <!-- div#wrapper -->
+      <nav class="position-absolute"></nav>
+      <main class="position-absolute"></main>
+    </div>
+  </div>
+</body>
+</html>

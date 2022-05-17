@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .root {
+      width: 100vw;
+      /* 브라우저 가로폭은 설정하지 않으면 알아서 지정해준다 */
+      height: 300vh;
+      /* 브라우저 세로폭은 설정하지 않으면 지정이 안된다 */
+      border:1px solid blue;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+.root div {
+width:100px;
+height: 100px;
+background-color: #c4c4c4;
+border:1px solid red;
+}
+
+.root div:nth-child(3) {
+  /* 꼭 >꺽쇠를 사용하지 않아도 된다 */
+  position: relative;
+  top: 10px;
+  left: 10px;
+  /* margin-left: 10px;는 왼쪽으로만,
+  top, left를 사용하면 대각선으로 움직인다 */
+}
+  /* ★absolute와 relative★만 이해해도 position은 끝!!
+  absolute는 절대적으로 이동할래-부모의 배치방식을 무시한다,
+  relative는 상대적으로 이동할래-부모의 배치방식을 기준으로 이동한다
+  
+  fixed는 무조건 혼자 브라우저 창 화면의 고정위치를 따른다*/
+
+  /* position은 적용시킬 값에게 직접적으로 부여한다 */
+
+  </style>
+</head>
+<body>
+  <div class="root">
+    <!-- 이거 다 한번에 만드는 방법이 있었는데,, 
+    div.root하고 탭누르면 됌!
+    div.root>items*4 하면 됌!!-->
+    <div>items-1</div>
+    <div>items-2</div>
+    <div>items-3</div>
+    <div>items-4</div>
+    <div>items-5</div>
+    </div>
+</body>
+</html>

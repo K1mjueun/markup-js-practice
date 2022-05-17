@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin: 0; padding:0; box-sizing: border-box;}
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  :root {
+    --margin:10px;
+  }
+
+  .up {
+    width: 500px;
+    height: 800px;
+    background-color: #fff;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .up > div:nth-child(1) {
+    /* 위 박스 */
+  width: 500px;
+  height: 100px;
+  background-color: skyblue;
+  border: 20px solid orange;
+
+  /* 검은 보더라인이 왜 안보이지 */
+  }
+
+  .up > div:nth-child(2) {
+    /* 가운데 박스 */
+    width: 500px;
+    height: 500px;
+    /* background-color: #fff; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row; */
+  }
+
+  .up > div:nth-child(2) > div:nth-child(1) {
+    /* 가운데 박스의 왼쪽 박스 */
+    width: 250px;
+    height: 500px;
+    background-color: rgb(255, 181, 173);
+
+    margin:var(--margin);
+  }
+
+  .up > div:nth-child(2) > div:nth-child(2) {
+    /* 가운데 박스의 오른쪽 박스 */
+    width: 250px;
+    height: 500px;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin:var(--margin);
+  }
+
+  .up > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+    /* 가운데 박스의 오른쪽 박스안의 위 박스 */
+    width: 250px;
+    height: 300px;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row; */
+
+    margin:var(--margin);
+  }
+  
+  .up > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+    /* 가운데 박스의 오른쪽 박스 안의 박스1 */
+    width: 125px;
+    height: 300px;
+    background-color: rgb(255, 181, 173);
+
+    margin-right: 10px;
+  }
+
+  .up > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+    /* 가운데 박스의 오른쪽 박스 안의 박스2 */
+    width: 125px;
+    height: 300px;
+    background-color: rgb(255, 181, 173);
+
+    margin-left: 10px;
+  }
+
+  .up > div:nth-child(2) > div:nth-child(3) {
+    /* 가운데 박스의 오른쪽 박스 안의 텍스트 박스 */
+    width: 250px;
+    height: 200px;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin:var(--margin);
+  }
+
+  .up > div:nth-child(3) {
+    width: 480px;
+    height: 300px;
+    background-color: rgb(255, 181, 173);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin:var(--margin);
+  }
+
+
+  </style>
+</head>
+<body>
+  <div class="up">
+    <!-- 가장 큰 박스 -->
+    <div></div>
+      <!-- 위 박스 / 1-->
+      
+    <div>
+      <!-- 가운데 박스 / 2 -->
+      <div></div>
+      <!-- 가운데 박스의 왼쪽 박스 / 2-1 -->
+      <div>
+        <!-- 가운데 박스의 오른쪽 박스 / 2-2 -->
+        <div>
+          <!-- 오른쪽 박스의 위 박스 / 2-2-1 --->
+          <div></div>
+          <!-- 2-2-1-1 -->
+          <div></div>
+          <!-- 2-2-1-2 -->
+        </div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non repellat incidunt ipsam! Laboriosam optio corporis illo quos atque dolorem nulla, quia nam ad modi necessitatibus illum perferendis omnis et?</div>
+        <!-- 텍스트 박스 / 2-2-3-->
+      </div>
+    </div>
+    <div></div>
+    <!-- 밑 박스 / 3 -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    
+    .abc {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      border: solid black;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .abc > div:nth-child(1) {
+      width: 100vw;
+      height: 10vh;
+      background-color: orange;
+    }
+    
+    .abc > div:nth-child(1) > div:nth-child(1) {
+      width: 95vw;
+      height: 5vh;
+      margin: 2.5vw;
+      background-color: skyblue;
+    }
+
+    .abc div:nth-child(2) {
+      align-items:center;
+      justify-content:center;
+      flex-direction: column;
+      margin:2px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .abc div:nth-child(2) > div:nth-child(1) {
+    width: 30vw;
+    height: 50vh;
+    background-color: salmon;
+    }
+
+    .abc div:nth-child(2) > div:nth-child(2) {
+      align-items:center;
+      justify-content:center;
+      margin : 2px;
+    }
+
+    .abc div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+    width: 30vw;
+    height: 50vh;
+    background-color: salmon;
+    }
+
+    .abc div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+    width: 30vw;
+    height: 50vh;
+    background-color: salmon;
+
+    }
+
+    .abc div:nth-child(2) > div:nth-child(2) > div:nth-child(3) {
+    width: 50vw;
+    height: 50vh;
+    }
+
+    .abc div:nth-child(3) {
+    width: 100vw;
+    height: 50vh;
+    background-color: salmon;
+    margin: 2px;
+    }
+    /* 완전 못함 ㅠ 열심히 해야지
+    다들 잘하는거 같음 ㅠ */
+
+
+  </style>
+</head>
+<body>
+  <div class="abc">
+    <div>
+      <!-- 1 -->
+      <div></div>
+      <!-- 1-1 -->
+    </div>
+    <div>
+      <!-- 2 -->
+      <div></div>
+      <!-- 2-1 -->
+      <div>
+        <!-- 2-2 -->
+        <div></div>
+        <!-- 2-2-1 -->
+        <div></div>
+        <!-- 2-2-2 -->
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, eum! Officia, quia exercitationem. Veritatis vel eos modi, rerum voluptas est itaque doloremque quibusdam fuga, non fugiat sunt cupiditate corporis quasi.</div>
+        <!-- 2-2-3 -->
+      </div>
+    </div>
+    <div></div>
+    <!-- 3 -->
+  </div>
+  
+</body>
+</html>

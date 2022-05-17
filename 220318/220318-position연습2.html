@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+
+  .root {
+    width: 60vw;
+    height: 100vh;
+    background-color: #c4c4c4;
+
+    display: flex;
+    /* inline-block과 block.. inline.. flex 차이는?...? */
+    overflow: hidden;
+    /* overflow를 사용하면 자식이 부모크기에 맞게 잘린다 */
+  }
+  
+  .root div:nth-child(1):hover {
+  background-color: red;
+  transition: 1s;
+  }
+
+  .root div:nth-child(3):hover {
+    background-color: pink;
+    transition: 1s;
+  }
+  
+  .root div {
+    margin:30px
+  }
+
+  .root div:nth-child(1) {
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    
+    position :relative;
+    top: 0px;
+    left: 300px;
+  }
+
+  .root div:nth-child(2) {
+    width: 500px;
+    height: 150px;
+    align-items: center;
+
+    position: absolute;
+    top:270px;
+  }
+
+  .root div:nth-child(3) {
+    width: 300px;
+    height: 200px;
+    background-color: black;
+
+    position: absolute;
+    bottom : 200px;
+  }
+  /* absolute와 relative의 정확한 차이가 뭐지 */
+
+  </style>
+
+</head>
+<body>
+  <div class="root">
+    <div></div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at libero molestias? Reprehenderit illum dignissimos, blanditiis quisquam fugiat reiciendis voluptatum laboriosam quia quibusdam eveniet odio ducimus distinctio voluptates, ipsa aspernatur natus, placeat iure dolore iste aliquam inventore similique qui! Sint quisquam, adipisci nesciunt veniam necessitatibus reprehenderit accusantium voluptates voluptas quos?</div>
+    <div></div>
+  </div>
+  
+</body>
+</html>

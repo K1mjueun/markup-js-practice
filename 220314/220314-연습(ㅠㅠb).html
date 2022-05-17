@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    ul {list-style-type: none;}
+
+    body {
+      background-color: white;
+      border: 5px red solid;
+      width: 100vw;
+      height: 100vh;
+      }
+      /* width,height를 설정 안해도 되나 */
+    
+    .list {
+      margin : 30px;
+      background-color: rgb(185, 255, 203);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .list > div:nth-child(1) ul {
+      font-weight: bold;
+      margin: 30px;
+      text-align: center;
+      /* justify-content:center를 안써도 되나 */
+    }
+
+    .list > div:nth-child(1) ul li {
+      margin: 70px;
+      background-color: white;
+      height: 3vw;
+      cursor: pointer;
+      /* 글씨가 자꾸 박스 밖으로 나간다.. */
+      }
+      
+      /* display:flex, justify-content:center,
+      align-items:center, flex-direction:column의 이해..*/
+
+      /* 어떻게해야 스크롤이 없어질까..*/
+
+</style>
+</head>
+<body>
+  <div class="list">
+    <div>
+      <ul>
+      <li>logo</li>
+      <li>id-field</li>
+      <li>pass-field</li>
+      <li>forgot password?</li>
+      <li>login button</li>
+      <li>sign up button</li>
+      <li>QR rect</li>
+      <li>corypight text</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin: 0; padding:0}
+
+  .root {
+    /* 전체 다 */
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .root > div:nth-child(1) {
+    /* 맨 위 박스 */
+    width: 95vw;
+    height: 5vh;
+    margin: 2.5vw;
+    background-color: gray;
+  }
+
+  .root > div:nth-child(2) {
+    /* 가운데 박스 */
+    width: inherit;
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .root > div:nth-child(2) > div:nth-child(1) {
+    /* 가운데 왼쪽 박스 */
+    width: 50vw;
+    height: 50vh;
+    background-color: gray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .root > div:nth-child(2) > div:nth-child(2) {
+    /* 가운데 오른쪽 박스 */
+    width: 50vw;
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .root > div:nth-child(2) > div:nth-child(2) >div:nth-child(1) {
+    /* 정렬을 위한 박스(?) */
+    width: 50vw;
+    height: 30vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .root > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+    /* 가운데 오른쪽 박스 안 박스1 */
+    width: 25vw;
+    height: 40vh;
+    background-color: gray;
+  }
+
+  .root > div:nth-child(2) > div:nth-child(2)> div:nth-child(1) > div:nth-child(2) {
+    /* 가운데 오른쪽 박스 안 박스2 */
+    width: 25vw;
+    height: 40vh;
+    background-color: gray;
+  }
+
+  .root > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) {
+    /* 가운데 오른쪽 박스 안 텍스트 박스 */
+    width: 25vw;
+    height: 10vh;
+    text-align: left;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .root > div:nth-child(3) {
+    width: 95vw;
+    height: 45vh;
+    background:gray;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  </style>
+</head>
+
+<body>
+  <div class="root">
+  <div></div>
+  <!--맨 위 박스 / 1-->
+  <div>
+    <!-- 가운데 박스 / 2 -->
+    <div></div>
+    <!-- 가운데 왼쪽 박스 / 2-1 -->
+    <div>
+      <!-- 가운데 오른쪽 박스 / 2-2 -->
+      <div>
+        <!-- 정렬을 위한 박스(?) / 2-2-1 -->
+      <div></div>
+      <!-- 가운데 오른쪽 박스 안 박스1 / 2-2-1-1 -->
+      <div></div>
+      <!-- 가운데 오른쪽 박스 안 박스2 / 2-2-1-2 -->
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ratione pariatur nostrum ipsa quas debitis tenetur nemo temporibus quae, sapiente, eaque quis consequatur atque, quisquam quasi perspiciatis dolores ad iure.</div>
+      <!-- 가운데 오른쪽 박스 안 텍스트 박스 / 2-2-3-->
+    </div>
+    </div>
+  </div>
+  <!-- 가운데 박스 -->
+  
+  <div></div>
+  <!--맨밑 박스 / 3-->
+  </div>
+</body>
+</html>

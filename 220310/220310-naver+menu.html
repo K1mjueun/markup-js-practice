@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin:0; padding:0;}
+
+.container {
+  width:1920px;
+  height:1080px;
+  background-color: wheat;
+}
+
+div {
+  list-style-type: none;
+}
+.container div {
+  width:1920px;
+  border:3px solid orange;
+  display: flex;
+  justify-content: center;
+}
+
+.container div:nth-child(1) {
+  height: 300px;
+}
+
+.container div:nth-child(2) {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.container div:nth-child(2) main {
+  width: 1920px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.container div:nth-child(2) main div {
+  width: 200px;
+  height: 350px;
+  margin: 50px;
+  background-color: wheat;
+  justify-content: center;
+  display: flex;
+}
+
+.haha:hover {
+  color:black;
+  font-weight: bold;
+  transition: 1s;
+}
+
+ul {
+      list-style-type: none;
+      background-color: antiquewhite;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    ul li {
+      margin:20px;
+      cursor: pointer;
+      transition: 1s;
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    
+    ul li:hover {
+      margin:25px;
+      color: red;
+      font-weight: bold;
+    }
+
+    h {
+      align-items: center;
+      display: flex;
+      width: 1920px;
+      height: 50px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <h>Orange Orange Orange</h>
+  <ul>
+    <li>JUEUN</li>
+    <li>gmail</li>
+    <li>image</li>
+    <li>name</li>
+    <li>profile</li>
+    <li>김주은</li>
+  </ul>
+  <div class="container">
+  <div>
+  </div>
+  <div>
+    <main class="haha">
+      <div>
+        <li>Hello</li>
+        <li>Bye</li>
+      </div>
+      <div>
+        <li>Hello</li>
+        <li>Bye</li>
+      </div>
+      <div>
+        <li>Hello</li>
+        <li>Bye</li>
+      </div>
+      <div>
+        <li>Hello</li>
+        <li>Bye</li>
+      </div>
+      <div>
+        <li>Hello</li>
+        <li>Bye</li>
+      </div>
+      <div>
+        <li>Hello</li>
+        <li>Bye</li>
+      </div>
+      <div>
+        <li>Hello</li>
+        <li>Bye</li>
+      </div>
+    
+
+    </main>
+  </div>
+
+  </div>
+</body>
+</html>

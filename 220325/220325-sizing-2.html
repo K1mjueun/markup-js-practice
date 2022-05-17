@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    .haha {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+
+      display: flex;
+      align-items: center;
+    }
+
+    section {
+      /* 화면 분할 */
+      width: 50%;
+      height: 100%;
+      border: black dotted 1px;
+      background-color: #ccc;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div {
+      /* 왼쪽 원 */
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      border: black solid 2px;
+      border-radius: 100px;
+
+      position: relative;
+    }
+
+    main {
+      /* 오른쪽 원 */
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 151, 151);
+      border: black solid 2px;
+      border-radius: 100px;
+
+      position: absolute;
+    }
+
+    .haha > section > div:nth-child(1) {z-index: 1; top:10px;}
+    .haha > section > div:nth-child(2) {z-index: 2; bottom:10px;}
+    .haha > section > div:nth-child(3) {z-index: 3; left:10px;}
+    /* 왼쪽 원들 */
+
+    .haha > section > main:nth-child(1) {z-index: 1; top:10px;}
+    .haha > section > main:nth-child(2) {z-index: 2; bottom:10px;}
+    .haha > section > main:nth-child(3) {z-index: 3; left:10px;}
+    /* 오른쪽 원들 */
+
+  </style>
+</head>
+<body>
+  <div class="haha">
+    <!-- 배경 -->
+    <section>
+      <!-- 왼쪽 -->
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+    <section>
+      <!-- 오른쪽 -->
+      <main></main>
+      <main></main>
+      <main></main>
+    </section>
+  </div>
+</body>
+</html>

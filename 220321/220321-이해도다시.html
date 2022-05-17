@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin: 0; padding:0;}
+  
+  .abc {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    border: 1px solid black;
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .abc > div:nth-child(1) {
+  width: 95vw;
+  height: 5vh;
+  margin: 2.5vw;
+  background-color: skyblue;
+  border: orange 2.5vw solid;
+  }
+
+  .abc div {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .abc > div:nth-child(2) > div:nth-child(1) {
+    width: 60vw;
+    height: 50vh;
+    background-color: salmon;
+  }
+
+  .abc > div:nth-child(2) > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .abc > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .abc > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1){
+    width: 25vw;
+    height: 30vh;
+    background-color: salmon;
+  }
+
+  .abc > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2){
+    width: 25vw;
+    height: 30vh;
+    background-color: salmon;
+  }
+
+  .abc > div:nth-child(3) {
+    width : 50vw;
+    height : 20vh;
+    text-align: center;
+  }
+
+  .abc > div:nth-child(4) {
+    width : 100vw;
+    height : 30vw;
+    background-color: salmon;
+  }
+
+
+
+
+  
+
+  </style>
+</head>
+<body>
+  <div class="abc">
+    <div></div>
+    <!-- 1 위 가로박스-->
+    <div>
+      <!-- 2 중앙 몸통박스 -->
+      <div></div>
+      <!-- 2-1 왼쪽 큰 박스 -->
+    <div>
+      <!-- 2-2★ 오른쪽 여러박스 컨테이너-->
+      <div>
+        <!-- 2-2-1 정렬을 위한 박스-->
+    <div></div>
+    <!-- 2-2-1-1 작은박스1 -->
+    <div></div>
+    <!-- 2-2-1-2 작은박스2 -->
+  </div>
+  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit consectetur aliquid laborum recusandae necessitatibus unde. Molestiae dolorem harum mollitia tempora necessitatibus cum voluptas, corporis earum illum eveniet, molestias tempore perspiciatis.</div>
+  <!-- 3 텍스트 문단 -->
+    </div>
+    </div>
+    <div></div>
+    <!-- 4 아래 가로박스 -->
+  </div>
+</body>
+</html>
