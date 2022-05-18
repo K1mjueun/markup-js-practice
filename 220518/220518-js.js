@@ -43,20 +43,52 @@ function Member(name, gender, age, deskNumber, glasses, married, shortHair, smar
 
 const memberOne = new Member("김호국", "cat", "1", "2", "no", "no", "yes", "iphone");
 //new는 새로 만들어주겠다는 의미, {}가 아니지만 new가 붙으면 객체
-console.dir(memberOne);
+// console.dir(memberOne);
 
 const testOne = new Date();
-console.dir(testOne);
-console.dir(testOne.getHours());
+// console.dir(testOne);
+// console.dir(testOne.getHours());
 //날짜, 시간, 연도 등은 기본 내장 생성자 함수
 
-function ampm(hour, msg) {
-if(hour > 12) {
-  console.log(msg+(hour-12)+"시 입니다");
-  console.log(memberOne.smartPhone);
-} else {
-  console.log("오전 "+hour+"시 입니다");
-}
-};
+// function ampm(hour, msg) {
+// if(hour > 12) {
+//   console.log(msg+(hour-12)+"시 입니다");
+//   console.log(memberOne.smartPhone);
+// } else {
+//   console.log("오전 "+hour+"시 입니다");
+// }
+// };
 
-ampm(testOne.getHours(), "오후 ");
+// ampm(testOne.getHours(), "오후 ");
+
+
+
+// function Week(day,hour) {
+// this.day = day;
+// this.hour = hour;
+// this.weekWholeTime = day*hour;
+// }
+
+// const weekhours = new Week(7,24);
+// console.dir(weekhours.weekWholeTime);
+
+
+// function Year(year, current, previous) {
+// if(year > 2021) {
+//   console.log(current + year + "년 입니다");
+// } else {
+//   console.log(previous + (year-1) + "년 이었습니다");
+// }
+// };
+// Year(testOne.getFullYear(),"현재 ","이전에 ");
+
+
+
+function Month(month, sunny, coldwind) {
+  if(4 < month < 10) {
+    console.log(sunny + month + "월 입니다");
+  } else {
+    console.log(coldwind + month + "월 입니다");
+  }
+};
+Month(testOne.getMonth(), "햇살이 강한 ", "선선한 바람이 부는 ");
