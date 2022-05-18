@@ -19,7 +19,7 @@
     }
 
     main {
-      width: 60%;
+      width: 50%;
       height: 40%;
       display: flex;
       align-items: center;
@@ -28,8 +28,8 @@
     }
 
     main > div {
-      width: 50px;
-      height: 50px;
+      width: 55px;
+      height: 55px;
       background-color: #ccc;
       border-radius: 50px;
       display: flex;
@@ -39,6 +39,7 @@
     }
 
     section {
+      margin-top: 5px;
       width: 10%;
       height: 5%;
       background-color: #ccc;
@@ -47,7 +48,7 @@
       justify-content: center;
       font-size: 20px;
     }
-    
+
   </style>
 </head>
 <body>
@@ -68,6 +69,46 @@
   <section>Click</section>
 
   <script>
+  const root = document.querySelector('#root');
+  const main = document.querySelector('main');
+  const div = main.children;
+  const clickBtn = document.querySelector('section');
+  // console.log(root);
+  // console.log(main);
+  // console.log(div);
+  // console.log(clickBtn);
+
+  let divArr = Array.from(div);
+  console.log(Array.isArray(divArr));
+  console.log(divArr);
+
+  const movingDown = [
+    {transform : "translateY(0px)"},
+    {transform : "translateY(150px)"},
+    {transform : "translateY(0px)"}
+  ]
+  const movingUp = [
+    {transform : "translateY(0px)"},
+    {transform : "translateY(-150px)"},
+    {transform : "translateY(0px)"}
+  ]
+  const timing = {
+    duration : 1500,
+    iterations : 1
+  }
+
+  clickBtn.addEventListener('click', ()=> {
+    // console.log("클릭되었습니다");
+  for(let i=0; i<divArr.length; i++) {
+    if (i%2 == 0) {
+    divArr[i].animate(movingDown, timing);
+    }
+    if (i%2 == 1) {
+    divArr[i].animate(movingUp, timing);
+    }
+  }
+  //짝수와 홀수를 구분해서 애니메이트! 오홍
+  });
 
   </script>
   </div>
