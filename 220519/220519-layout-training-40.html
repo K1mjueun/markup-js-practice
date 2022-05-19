@@ -91,16 +91,14 @@
     // });
   
   leftBtn.addEventListener('click', ()=> {
-    let = i < numberDiv.length;
-      if(i===0) {
-        numberDiv[i];
-        i = 4;
-      } else {
-        numberDiv[i];
-        i++;
-      }
+    numberDiv[0] = numberDiv[4];
+    numberDiv[1] = numberDiv[0];
+    numberDiv[2] = numberDiv[1];
+    numberDiv[3] = numberDiv[2];
+    numberDiv[4] = numberDiv[3];
+    
     console.log("작동되고있어");
-    console.log(numberDiv);
+    console.log(numberDiv[0]);
   });
 
   </script>
