@@ -7,6 +7,36 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <script>
+
+    function add(a,b) {
+      return a+b;
+    };
+
+    //배열 생성기를 만들어보자
+    function arrMaker(element) {
+    // function arrMakerReturnArr(element) --> 이런 식으로 쓰면 확인하기 좋다
+
+      // let arr = [];
+      //배열을 초기화했다(배열 쓸거야)
+      // arr.push(element);
+      //배열 메서드 push:맨 뒤 요소로 추가할게
+      // return arr;
+
+      let arr = [];
+      arr[0] = element;
+      arr[1] = add(1,2);
+      if(typeof element === "string") {
+        arr[2] = element.length;
+      };
+      return arr;
+    };
+
+    console.log(arrMaker('멍멍'));
+    console.log(typeof(arrMaker('멍멍')));
+    //object라고 뜬다
+    console.log(Array.isArray(arrMaker('멍멍')));
+
+  </script>
 </body>
 </html>
