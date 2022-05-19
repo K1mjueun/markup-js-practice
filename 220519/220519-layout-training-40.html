@@ -5,8 +5,86 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    #box {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    #button-left, #button-right {
+      width: 100px;
+      height: 100px;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+
+    #number-box {
+      width: 500px;
+      height: 100px;
+      display: flex;
+    }
+
+    #number-box > div {
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+
+  </style>
 </head>
 <body>
-  
+  <!-- 슬라이더 직접 코드로 짠다 -->
+  <div id="box">
+    <div id="button-left">＜</div>
+
+    <div id="number-box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+
+    <div id="button-right">＞</div>
+  </div>
+
+  <script>
+    // 배열메서드 사용하기
+    const box = document.querySelector('#box');
+    const leftBtn = document.querySelector('#button-left');
+    const rightBtn = document.querySelector('#button-right');
+    const numberBox = document.querySelector("#number-box");
+    const numberDiv = numberBox.children;
+    // console.log(box); 
+    // console.log(leftBtn); 
+    // console.log(rightBtn); 
+    // console.log(numberBox); 
+    // console.log(numberDiv); 
+
+    let numberDivArr = Array.from(numberDiv);
+    console.log(Array.isArray(numberDivArr));
+    console.log(numberDivArr);
+    
+    leftBtn.addEventListener('click', ()=> {
+        function LeftBtnClick(last) {
+      numberDivArr.shift();
+      numberDivArr.unshift(last);
+    };
+    LeftBtnClick(numberDivArr[4]);
+    });
+
+  </script>
 </body>
 </html>
