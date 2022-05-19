@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section id = "I'm section">난 section</section>
+  <main id = "I'm main">난 main</main>
+  <article id = "I'm article">난 article</article>
+  <header id = "I'm header">난 header</header>
+  <footer id = "I'm footer">난 footer</footer>
+
+  <script>
+    const Imsection = document.getElementById("I'm section");
+    const Immain = document.getElementById("I'm main");
+    const Imarticle= document.getElementById("I'm article");
+    const Imheader= document.getElementById("I'm header");
+    const Imfooter= document.getElementById("I'm footer");
+
+    // console.dir(Imsection);
+    // console.log(Imsection.tagName.toLowerCase());
+
+    function tagNameFinder(element) {
+    if(element.tagName !== "" || element.tagName !== null ) {
+      return element.tagName.toLowerCase();
+    }
+    };
+    console.log(tagNameFinder(Imsection));
+    console.log(tagNameFinder(Immain));
+    console.log(tagNameFinder(Imarticle));
+    console.log(tagNameFinder(Imheader));
+    console.log(tagNameFinder(Imfooter));
+
+  </script>
+</body>
+</html>
