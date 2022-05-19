@@ -61,7 +61,6 @@
   </div>
 
   <script>
-    // 배열메서드 사용하기
     const box = document.querySelector('#box');
     const leftBtn = document.querySelector('#button-left');
     const rightBtn = document.querySelector('#button-right');
@@ -72,18 +71,37 @@
     // console.log(rightBtn); 
     // console.log(numberBox); 
     // console.log(numberDiv); 
-
-    let numberDivArr = Array.from(numberDiv);
-    console.log(Array.isArray(numberDivArr));
-    console.log(numberDivArr);
     
-    leftBtn.addEventListener('click', ()=> {
-        function LeftBtnClick(last) {
-      numberDivArr.shift();
-      numberDivArr.unshift(last);
-    };
-    LeftBtnClick(numberDivArr[4]);
-    });
+    //배열로 만들기
+    // let numberDivArr = Array.from(numberDiv);
+    // console.log(Array.isArray(numberDivArr));
+    // console.log(numberDivArr);
+    
+    // 배열메서드 사용하기
+    // leftBtn.addEventListener('click', ()=> {
+    //   function LeftBtnClick(last) {
+    //     numberDivArr.push(last);
+        //push는 배열 맨 뒷부분에 값을 삽입하는 것
+        // numberDivArr.shift();
+        //shift는 배열 앞부분 값을 삭제하는 것
+    //   };
+    //   LeftBtnClick(numberDivArr[0]);
+    //   console.log("작동돼");
+    //   console.log(numberDivArr);
+    // });
+  
+  leftBtn.addEventListener('click', ()=> {
+    for(let i = 4; i<numberDiv.length; i--) {
+      if(i===0) {
+        numberDiv[i];
+        i = 4;
+      } else {
+        numberDiv[i];
+      }
+    }
+    console.log("작동되고있어");
+    console.log(numberDiv);
+  });
 
   </script>
 </body>
