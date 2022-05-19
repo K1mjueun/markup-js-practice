@@ -10,7 +10,19 @@
   <span id = "test">this is 스팬</span>
 
   <script>
-    const test = 
+    const test = document.getElementById('test');
+    console.dir(test);
+
+    function tagNameFinder(elem) {
+      if(elem.tagName !== "" && elem.tagName !== null) {
+        return elem.tagName.toLowerCase();
+        //toLowerCase는 소문자로 바꾸어준다
+      }
+    };
+    console.log(tagNameFinder(test));
+
+    const makeSpan = document.createElement(tagNameFinder(test));
+    // = const makeSpan = document.createElement(span);
   </script>
 </body>
 </html>
