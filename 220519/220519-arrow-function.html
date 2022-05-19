@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="root">click</button>
+
+  <script>
+    const button = document.getElementById('root');
+
+    button.addEventListener('click', function() {
+      //익명함수 방식으로 콜백함수를 작성한 것 - function(){}
+      //매개변수자리에 함수가 들어온 경우를 콜백함수라고 한다
+      // console.log(this);
+    });
+
+    // button.addEventListener('click', ()=> {
+    //   화살표 함수로 작성 후 this를 확인하면 window를 가리킨다
+    //   console.log(this);
+    // });
+
+
+    // function testTwo(a) {
+    //   console.log(a);
+    // }
+    // function testOne(a) {
+    // testTwo();
+    // };
+    // testOne(1);
+
+    function testOne(a) {
+      const testTwo = () => {
+        console.log(this);
+      }
+      testTwo();
+    };
+    testOne(1);
+
+  </script>
+</body>
+</html>
