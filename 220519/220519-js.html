@@ -7,6 +7,51 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <button id="root">click</button>
+  <h1 id="h1">test</h1>
+  <h1 id="h2">이것은 h2입니다</h1>
+
+  <script>
+    // console.log(this);
+    //this는 window를 가리킨다
+    
+    // console.log(window);
+    // console.log(document);
+    // console.log(window.document);
+    // console.log(this.document);
+    //console.log(document)와 console.log(window.document), console.log(this.document)는 같다
+    // console.dir(document);
+
+    const root = window.document.querySelector('#root');
+    const h1 = document.getElementById('h1');
+    const h2 = document.getElementById('h2');
+
+    // window.document.body.addEventListener('click', function() {
+    // console.log(this);
+    //this가 버튼을 가리키고 있다
+    // this.style.backgroundColor = 'skyblue';
+    // });
+
+    // root.addEventListener('click', function() {
+    //   root.style.color = 'red';
+    // });
+
+    function thisEvent(element, color) {
+    //캡슐화시키자 어디든 쓸 수 있게
+    element.addEventListener('click', function() {
+      this.style.color = color;
+    })
+    element.addEventListener('mouseover', function() {
+      this.style.backgroundColor = color;
+    })
+    };
+
+    thisEvent(root, "skyblue");
+    thisEvent(h1, "pink");
+    thisEvent(h2, "orange");
+    //유연한 this
+    //this를 확인하지 않고 외워서 막 쓰면 엉뚱해진다
+
+  </script>
 </body>
 </html>
