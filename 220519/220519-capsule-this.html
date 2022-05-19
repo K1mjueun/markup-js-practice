@@ -7,6 +7,34 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="root">
+    <h1>안녕</h1>
+    <h2>hello</h2>
+    <h3>hi</h3>
+  </div>
+
+  <script>
+    const root = document.querySelector("#root");
+    const greetings = root.children;
+    // console.log(root);
+    // console.log(greetings);
+
+    function colorChange(element, color1, color2) {
+      element.addEventListener('mouseover', function() {
+        this.style.backgroundColor = color1;
+        this.style.color = color2;
+        console.log(this);
+      });
+
+      element.addEventListener('mouseleave', function() {
+        this.style.backgroundColor = "#fff";
+        console.log(this);
+      });
+    };
+    colorChange(greetings[0], "black","#ccc");
+    colorChange(greetings[1], "pink","skyblue");
+    colorChange(greetings[2], "orange","salmon");
+
+  </script>
 </body>
 </html>
