@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const root = document.querySelector("#root");
+    console.log(typeof root);
+    
+    for(let props in root) {
+    const p = document.createElement('p');
+    p.textContent = props;
+    root.appendChild(p);
+    console.log(props);
+    };
+
+    console.log(root.children);
+
+    for(let i=0; i<root.children.length; i++) {
+      root.children[i].style.display = "flex";
+      root.children[i].style.alignItems = "center";
+      root.children[i].style.justifyContent = "center";
+
+    if(i%2 === 0) {
+      root.children[i].style.color = "skyblue";
+    } else {
+      root.children[i].style.color = "white";
+      root.children[i].style.backgroundColor = "pink";
+    }
+    };
+  </script>
+</body>
+</html>
