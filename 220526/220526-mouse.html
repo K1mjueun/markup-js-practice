@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #333;
+      color: #ccc;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: relative;
+    }
+
+    h1 {
+      position: absolute;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <h1>111</h1>
+    <h1>222</h1>
+  </div>
+
+  <script>
+    const root = document.getElementById('root');
+    console.dir(root);
+    console.dir(root.children[0]);
+
+    let totalHeight = root.offsetHeight;
+    function percentage (total, percent) {
+      let result = (total * percent) / 100;
+      return  result;
+    };
+    console.log(percentage(totalHeight,50));
+    console.log(percentage(255,56));
+
+    root.addEventListener('mousemove', (event) => {
+    root.children[0].textContent = event.offsetX;
+    root.children[1].textContent = event.offsetY;
+
+    root.children[0].style.top = `${event.offsetX/10}%`;
+    root.children[0].style.bottom = `${event.offsetY/10}%`;
+    root.children[0].style.right= `${event.offsetY/10}%`;
+    root.children[0].style.left = `${event.offsetX/10}%`;
+
+    root.children[1].style.top = `${event.offsetY/10}%`;
+    root.children[1].style.bottom = `${event.offsetX/10}%`;
+    root.children[1].style.right= `${event.offsetX/10}%`;
+    root.children[1].style.left = `${event.offsetY/10}%`;
+    });
+
+    // -----------------------------------------
+    
+    // let bgColorValue = 0;
+    // let bgColor = `rgb(${bgColorValue},${bgColorValue},${bgColorValue})`;
+
+    // let result = (total * percent) / 100;
+    // 전체값에서 퍼센트값을 구하는 공식
+
+    // let setResult = Math.round((255*35)/100);
+    // console.log(setResult);
+
+    // root.style.backgroundColor = "rgb(0,0,0)";
+    // root.style.backgroundColor = bgColor;
+
+    // root.addEventListener('mousemove', (event) => {
+    // // console.log(event.offsetX);
+    // // console.log(event.offsetY);
+    // root.children[0].textContent = event.offsetX;
+    // root.children[1].textContent = event.offsetY;
+    // });
+  </script>
+</body>
+</html>
