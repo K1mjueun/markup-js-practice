@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 배열 생성
+    const listFunctions = [];
+    // 동적으로 함수 추가
+    for(let i = 0; i<5; i++) {
+    // 1초 후 처리하는 비동기 함수 생성
+    const func = (resolve) => {
+      // setTimeout으로 지연 작업 처리
+      setTimeout(()=> {
+        console.log('함수 ${i} 처리완료');
+        resolve();
+      }, 1000);
+    };
+    listFunctions.push(func);
+    }
+    console.log(listFunctions);
+
+    execute(); //?........
+
+    async function execute() {
+      for(let i = 0; i < listFunctions.length; i++) {
+        const func = listFunctions[i];
+        await new Promise(func);
+      }
+    }
+  </script>
+</body>
+</html>
