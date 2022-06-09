@@ -22,6 +22,9 @@ leftBtn.addEventListener("click", function() {
   //shift - 배열 맨 앞의 요소 제거
   imgArr.push(temp);
   //push - 배열 맨 뒤에 요소 추가
+
+  imgArr[0].style.display = "flex";
+  imgArr[imgArr.length-1].style.display = "none";
   
   console.log(imgArr);
 });
@@ -35,6 +38,9 @@ rightBtn.addEventListener("click", function() {
   //pop - 배열 맨 뒤의 요소 제거
   imgArr.unshift(temp);
   //unshift - 배열 맨 앞에 요소 추가
+
+  imgArr[0].style.display = "none";
+  imgArr[imgArr.length-1].style.display = "flex";
 
   console.log(imgArr);
 })
