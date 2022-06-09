@@ -18,20 +18,25 @@
       <li data-slide-item="2">2</li>
       <li data-slide-item="3">3</li>
       <li data-slide-item="4">4</li>
+      <!-- data slide item? 데이터 셋으로 구현 -->
 
     </ul>
   </div>
   <script>
     const slideContainer = document.getElementById('slide');
     const slideItems = Array.from(document.querySelectorAll("#slide li"));
+    //slide에 있는 list를 다 배열로 만들었다
     const left = document.getElementById('left');
     const right = document.getElementById('right');
 
     let current = 0;
 
+    //함수1
     function displayControl(arr) {
       arr.forEach((value) => {
+        //반복문..
         let getDatasetValue = Number(value.dataset.slideItem);
+        // Number?
         if (getDatasetValue === current) {
         value.style.display = "block";
         } else {
@@ -41,6 +46,16 @@
     }
     displayControl(slideItems);
 
+    // slideItems.forEach((value) => {
+    //     let getDatasetValue = Number(value.dataset.slideItems);
+    //     if (getDatasetValue === current) {
+    //     value.style.display = "flex";
+    //     } else {
+    //     value.style.display = "none";
+    //     }
+    //   });
+
+    //함수2
     function buttonEvent(eventTrigger, targetElement) {
       eventTrigger.addEventListener('click', function () {
         if (eventTrigger === left) {
@@ -61,6 +76,26 @@
     };
     buttonEvent(left, slideItems);
     buttonEvent(right, slideItems);
+
+    // left.addEventListener('click', function () {
+    //       current--;
+    //       if (current < 0) {
+    //         current = slideItems.length - 1;
+    //       }
+    //       displayControl(slideItems);
+    //     }
+    //   });
+
+    // right.addEventListener('click', function () {
+    //       current++;
+    //       if (current >= slideItems.length) {
+    //         current = 0;
+    //       }
+    //       displayControl(slideItems);
+    //     }
+    //   });
+
+
 
   </script>
 </body>
