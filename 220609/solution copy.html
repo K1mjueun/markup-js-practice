@@ -56,7 +56,7 @@
       <li data-slide-item="2">2</li>
       <li data-slide-item="3">3</li>
       <li data-slide-item="4">4</li>
-      <!-- data slide item? 데이터 셋으로 구현 -->
+      <!-- data slide item 데이터 셋으로 구현 -->
     </ul>
     <button id="right">right</button>
   </div>
@@ -74,16 +74,17 @@
     //함수1
     function displayControl(arr) {
       arr.forEach((value) => {
-        //array만 쓸수 있는 반복문인 forEach
-        //배열의 요소 첫번째부터 마지막까지 반복하며 꺼낼 수 있다
+        //배열만 쓸수 있는 반복문 forEach
         let getDatasetValue = Number(value.dataset.slideItem);
         // Number함수는 데이터를 숫자로 변환한다
+        // 데이터타입이 문자열(data-slide-item="0")이니까 숫자로 바꿔준거야~~
         if (getDatasetValue === current) {
-        value.style.display = "flex";
+          value.style.display = "flex";
         } else {
-        value.style.display = "none";
+          value.style.display = "none";
         }
-        //?value..
+
+        console.log(value.dataset.slideItem);
       });
     }
     displayControl(slideItems);
@@ -92,22 +93,20 @@
     // 배열 반복문을 sildeItems배열에 적용했다
 
     //     let getDatasetValue = Number(value.dataset.slideItems);
-    //     변수 getDatasetValue에 원하는 요소의 데이터 값을 숫자로 변환하여 대입(?)
+    //     변수 getDatasetValue에 원하는 요소의 데이터셋 값을 숫자로 변환하여 대입
 
     //     if (getDatasetValue === current) {
-    //     만약 변수 getDatasetValue에 대입된 값이 0이라면
+    //     만약 변수 getDatasetValue에 대입된 값이 current값과 같다면
 
     //     value.style.display = "flex";
-    //     원하는 요소의 디스플레이 값은 flex가 된다
+    //     데이터셋 값이 current값과 같은 요소의 디스플레이는 flex가 된다
 
     //     } else {
-    //     변수 getDatasetValue에 대입된 값이 0이 아니라면
+    //     변수 getDatasetValue에 대입된 값이 current값과 다르다면
 
     //     value.style.display = "none";
-    //     원하는 요소의 디스플레이 값은 none이 된다
+    //     데이터셋 값이 current값과 다른 요소의 디스플레이는 none이 된다
     //     }
-
-    //     value는 뭘까우..
     //   });
 
     //함수2
@@ -136,13 +135,14 @@
     // left 버튼을 클릭하면
 
     //       current--;
-    //       변수 current의 값은 1씩 작아진다
+    //       current의 값은 1씩 작아진다
 
     //       if (current < 0) {
-    //       만약 변수 current값이 0보다 작아지면
+    //       만약 current값이 0보다 작아지면
 
     //         current = slideItems.length - 1;
-    //         변수 current의 값은 sildeItems의 마지막 원소의 배열과 같아진다
+    //         current의 값은 sildeItems의 마지막 원소의 배열과 같아진다
+    //         (4가 되는거지!)
     //       }
     //       displayControl(slideItems);
     //     }
@@ -152,13 +152,14 @@
     // right 버튼을 클릭하면
 
     //       current++;
-    //       변수 current의 값은 1씩 늘어난다
+    //       current의 값은 1씩 늘어난다
 
     //       if (current >= slideItems.length) {
-    //       만약 변수 current의 값이 sildeItems의 길이값보다 크거나 같아지면
+    //       만약 current의 값이 sildeItems의 길이값보다 크거나 같아지면
+    //       (5가 되거나 5보다 커지면!)
 
     //         current = 0;
-    //         변수 current의 값은 0이 된다
+    //         current의 값은 0이 된다
     //       }
     //       displayControl(slideItems);
     //     }
