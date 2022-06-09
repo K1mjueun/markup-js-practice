@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin:0; padding:0;}
+
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ccc;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  aside {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color:gray;
+  }
+
+  .display-1,.display-2,.display-3,.display-4,.display-5 {
+    width: 1000px;
+    height: 600px;
+    background-size: cover;
+    background-color: #fff;
+  }
+
+  .display-2,.display-3,.display-4,.display-5 {
+    display: none;
+  }
+
+  .display-1 {
+    background-image: url("/목업-윈디-메인.png");
+  }
+
+  .display-2 {
+    background-image: url("/목업-윈디-폰-1.png");
+  }
+
+  .display-3 {
+    background-image: url("/목업-윈디-폰-2.png");
+  }
+
+  .display-4 {
+    background-image: url("/목업-윈디-폰-가로형-1.png");
+  }
+
+  .display-5 {
+    background-image: url("/목업-윈디-폰-가로형-2.png");
+  }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <aside></aside>
+    <div class="display-1"></div>
+    <div class="display-2"></div>
+    <div class="display-3"></div>
+    <div class="display-4"></div>
+    <div class="display-5"></div>
+    <aside></aside>
+  </div>
+
+  <script src="/220609-silder.js"></script>
+</body>
+</html>
