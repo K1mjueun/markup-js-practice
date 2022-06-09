@@ -6,12 +6,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-</head>
+  <style>
+    *{margin:0; padding:0;}
 
+    #root {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #slide, #slide > li {
+      width: 1000px;
+      height: 600px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: black;
+      font-size: 50px;
+    }
+
+    #slide > li:nth-child(1) {
+      background-color: pink;
+    }
+    #slide > li:nth-child(2) {
+      background-color: skyblue;
+    }
+    #slide > li:nth-child(3) {
+      background-color: orange;
+    }
+    #slide > li:nth-child(4) {
+      background-color: salmon;
+    }
+    #slide > li:nth-child(5) {
+      background-color: plum;
+    }
+
+  </style>
+</head>
 <body>
   <div id="root">
     <button id="left">left</button>
-    <button id="right">right</button>
     <ul id="slide">
       <li data-slide-item="0">0</li>
       <li data-slide-item="1">1</li>
@@ -19,8 +57,8 @@
       <li data-slide-item="3">3</li>
       <li data-slide-item="4">4</li>
       <!-- data slide item? 데이터 셋으로 구현 -->
-
     </ul>
+    <button id="right">right</button>
   </div>
   <script>
     const slideContainer = document.getElementById('slide');
@@ -38,10 +76,10 @@
       arr.forEach((value) => {
         //array만 쓸수 있는 반복문인 forEach
         //배열의 요소 첫번째부터 마지막까지 반복하며 꺼낼 수 있다
-        let getDatasetValue = Number(value.dataset.slideItems);
+        let getDatasetValue = Number(value.dataset.slideItem);
         // Number함수는 데이터를 숫자로 변환한다
         if (getDatasetValue === current) {
-        value.style.display = "block";
+        value.style.display = "flex";
         } else {
         value.style.display = "none";
         }
@@ -54,20 +92,22 @@
     // 배열 반복문을 sildeItems배열에 적용했다
 
     //     let getDatasetValue = Number(value.dataset.slideItems);
-    //     변수를 만들고 변수에 원하는 요소의 데이터 값을 숫자로 변환한 것을 대입(?)
+    //     변수 getDatasetValue에 원하는 요소의 데이터 값을 숫자로 변환하여 대입(?)
 
     //     if (getDatasetValue === current) {
-    //     만약 변수에 대입된 값이 0이라면
+    //     만약 변수 getDatasetValue에 대입된 값이 0이라면
 
     //     value.style.display = "flex";
     //     원하는 요소의 디스플레이 값은 flex가 된다
 
     //     } else {
-    //     변수에 대입된 값이 0이 아니라면
+    //     변수 getDatasetValue에 대입된 값이 0이 아니라면
 
     //     value.style.display = "none";
     //     원하는 요소의 디스플레이 값은 none이 된다
     //     }
+
+    //     value는 뭘까우..
     //   });
 
     //함수2
