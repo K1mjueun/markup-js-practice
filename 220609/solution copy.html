@@ -26,32 +26,47 @@
     const slideContainer = document.getElementById('slide');
     const slideItems = Array.from(document.querySelectorAll("#slide li"));
     //slide에 있는 list를 다 배열로 만들었다
+
     const left = document.getElementById('left');
     const right = document.getElementById('right');
 
     let current = 0;
+    //함수에 사용할 변수 선언
 
     //함수1
     function displayControl(arr) {
       arr.forEach((value) => {
-        //반복문..
-        let getDatasetValue = Number(value.dataset.slideItem);
-        // Number?
+        //array만 쓸수 있는 반복문인 forEach
+        //배열의 요소 첫번째부터 마지막까지 반복하며 꺼낼 수 있다
+        let getDatasetValue = Number(value.dataset.slideItems);
+        // Number함수는 데이터를 숫자로 변환한다
         if (getDatasetValue === current) {
         value.style.display = "block";
         } else {
         value.style.display = "none";
         }
+        //?value..
       });
     }
     displayControl(slideItems);
 
     // slideItems.forEach((value) => {
+    // 배열 반복문을 sildeItems배열에 적용했다
+
     //     let getDatasetValue = Number(value.dataset.slideItems);
+    //     변수를 만들고 변수에 원하는 요소의 데이터 값을 숫자로 변환한 것을 대입(?)
+
     //     if (getDatasetValue === current) {
+    //     만약 변수에 대입된 값이 0이라면
+
     //     value.style.display = "flex";
+    //     원하는 요소의 디스플레이 값은 flex가 된다
+
     //     } else {
+    //     변수에 대입된 값이 0이 아니라면
+
     //     value.style.display = "none";
+    //     원하는 요소의 디스플레이 값은 none이 된다
     //     }
     //   });
 
@@ -78,18 +93,32 @@
     buttonEvent(right, slideItems);
 
     // left.addEventListener('click', function () {
+    // left 버튼을 클릭하면
+
     //       current--;
+    //       변수 current의 값은 1씩 작아진다
+
     //       if (current < 0) {
+    //       만약 변수 current값이 0보다 작아지면
+
     //         current = slideItems.length - 1;
+    //         변수 current의 값은 sildeItems의 마지막 원소의 배열과 같아진다
     //       }
     //       displayControl(slideItems);
     //     }
     //   });
 
     // right.addEventListener('click', function () {
+    // right 버튼을 클릭하면
+
     //       current++;
+    //       변수 current의 값은 1씩 늘어난다
+
     //       if (current >= slideItems.length) {
+    //       만약 변수 current의 값이 sildeItems의 길이값보다 크거나 같아지면
+
     //         current = 0;
+    //         변수 current의 값은 0이 된다
     //       }
     //       displayControl(slideItems);
     //     }
