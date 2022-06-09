@@ -36,18 +36,19 @@ rightBtn.addEventListener("click", function() {
 leftBtn.addEventListener("click", function() {
   let temp;
   temp = imgArr[imgArr.length-1];
+  //left버튼이 무언가 잘못되었다
 
   imgArr.pop();
   //pop - 배열 맨 뒤의 요소 제거
   //?mockupImg5가 배열 맨 뒤니까 제거되겠지
   imgArr.unshift(temp);
   //unshift - 배열 맨 앞에 요소 추가
-  //?temp를 추가하는 거니까 mockupImg4가 배열 맨 앞으로 추가되겠지
+  //?temp를 추가하는 거니까 mockupImg5가 배열 맨 앞으로 추가되겠지
 
   imgArr[0].style.display = "none";
-  //?배열 맨 앞의 요소는 mockupImg4가 되었으니 mockupImg4의 display가 none이 되겠지
+  //?배열 맨 앞의 요소는 mockupImg5가 되었으니 mockupImg5의 display가 none이 되겠지
   imgArr[imgArr.length-1].style.display = "flex";
-  //?배열 맨 뒤의 요소는 mockupImg3이 되었으니 mockupImg3의 display가 flex가 되겠지
+  //?배열 맨 뒤의 요소는 mockupImg4이 되었으니 mockupImg4의 display가 flex가 되겠지
 
   console.log(imgArr);
-})
+});
