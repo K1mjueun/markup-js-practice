@@ -7,6 +7,50 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="abc"></div>
+
+  <script>
+    console.dir(document.body);
+    const root = document.createElement('div');
+    //요소를 만든다
+    const section = document.createElement('section');
+    root.appendChild(section);
+    root.id = "root";
+    document.body.appendChild(root);
+    //요소를 붙인다
+
+    //만든다 붙인다 만든다 붙인다
+
+    // for(let i = 0; i < 500; i++) {
+    //   const li = document.createElement('li');
+    //   document.body.appendChild(li);
+    // }
+    //여러개를 만들어 붙이고 싶다면 for문을 사용하면 된다
+
+    const array = ["img-1.jpg"];
+
+    setTimeout(()=> {
+      for(let i = 0; i < 500; i++) {
+      const li = document.createElement('li');
+      document.body.appendChild(li);
+      img.setAttribute('src', `images/imgaes/images-[i].jpg`);
+      li.appendChild(img);
+      ul.appendChild(li);
+    }
+    },5000);
+
+    root.innerHTML = "만두는 나이가 먹을수록 애기가 되는 귀요미";
+
+    const abc = document.getElementById("abc");
+
+    let test = "<ul></ul>";
+    let box = '';
+    for(let i = 0; i<100; i++) {
+      box = box+test;
+    }
+
+    console.log(box);
+    abc.innerHTML = box;
+  </script>
 </body>
 </html>
