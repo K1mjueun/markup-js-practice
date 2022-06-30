@@ -19,9 +19,21 @@
 
 // console.log(realone("바보"));
 
-function one(ipgoo, ipgootoo) {
+// function one(ipgoo, ipgootoo) {
 
-  return ipgoo+ipgootoo
+//   return ipgoo+ipgootoo
+// }
+
+// console.log(one("아버지가 ","방에 들어가신다"));
+
+function one(ipgoo, ipgootoo, count) {
+  let strings = `${ipgoo} ${ipgootoo}`
+  for(let i = 0; i<count; i++) {
+    console.log(strings);
+  }
+  return "메롱";
 }
 
-console.log(one("아버지가 ","방에 들어가신다"));
+console.log(one("아버지가","방에들어가신다",5));
+// console.log(one("<div>","</div>",5));
+// ^ 이렇게 한다면?
