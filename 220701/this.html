@@ -13,7 +13,7 @@
     console.log(trigger);
 
     const handler = {
-      removerElement : function(element) {
+      removerElement(element) {
       element.addEventListener('click', function() {
         this.remove(this);
       });
