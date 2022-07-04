@@ -1,4 +1,22 @@
 /* work-page-windie */
+
+*{margin:0; padding:0; transition: .5s;  font-family: 'Gochi Hand', cursive;}
+
+  :root {
+  --color-white-1:#fff;
+  --color-white-2:#f0f0f0;
+  --color-gray-1:#D9D9D9;
+  --color-gray-2:#ccc;
+  --color-real-gray:gray;
+  --color-black-1:#1C1C1C;
+  --color-black-2:#000;
+  --color-bage-1:#FFF8F1;
+  --color-bage-2:#FAE1C8;
+  --color-bage-3:#EEB392;
+  --color-orbrown-1:#D79977;
+  --color-orbrown-2:#DC7135;
+  }
+
 #work-page-windie {
   width: 100vw;
   height: 100vh;
@@ -28,7 +46,7 @@
 .arrow {
   width: 42px;
   height: 42px;
-  background-image: url('/portfolio-sticker/img/new-arrow.png');
+  background-image: url('/img/new-arrow.png');
   background-size: cover;
 }
 
@@ -61,7 +79,7 @@ header {
 .w-sticker-1 {
   width: 150px;
   height: 45px;
-  background-image: url("/portfolio-sticker/img/스티커/윈디-스티커-가로형.png");
+  background-image: url("/img/스티커/윈디-스티커-가로형.png");
 
   left: -12%;
   bottom : 15%;
@@ -73,7 +91,7 @@ header {
 .w-sticker-2 {
   width: 82px;
   height: 82px;
-  background-image: url("/portfolio-sticker/img/스티커/윈디-스티커-직사각형-1.png");
+  background-image: url("/img/스티커/윈디-스티커-직사각형-1.png");
 
   right: 5%;
   bottom: 20%;
@@ -181,7 +199,7 @@ header {
 .contact-stamp-1 {
   width: 150px;
   height: 150px;
-  background-image: url('/portfolio-sticker/img/스티커/contact-stamp.png');
+  background-image: url('/img/스티커/contact-stamp.png');
   background-size: cover;
   position: absolute;
 
@@ -203,21 +221,21 @@ header {
 }
 
 .windie-display-1 {
-  background-image: url("/portfolio-sticker/img/목업/목업-윈디-메인.png");
+  background-image: url("/img/목업/목업-윈디-메인.png");
 }
 
 .windie-display-2 {
-  background-image: url("/portfolio-sticker/img/목업/목업-윈디-폰-1.png");
+  background-image: url("/img/목업/목업-윈디-폰-1.png");
 }
 
 .windie-display-3 {
-  background-image: url("/portfolio-sticker/img/목업/목업-윈디-폰-2.png");
+  background-image: url("/img/목업/목업-윈디-폰-2.png");
 }
 
 .windie-display-4 {
-  background-image: url("/portfolio-sticker/img/목업/목업-윈디-폰-가로형-1.png");
+  background-image: url("/img/목업/목업-윈디-폰-가로형-1.png");
 }
 
 .windie-display-5 {
-  background-image: url("/portfolio-sticker/img/목업/목업-윈디-폰-가로형-2.png");
+  background-image: url("/img/목업/목업-윈디-폰-가로형-2.png");
 }
