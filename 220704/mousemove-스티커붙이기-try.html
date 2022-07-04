@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+*{margin:0; padding:0;
+}/* transition: 1s;} */
+  /* transition 적용하니까 안됌 */
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: pink;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sticker-1,.sticker-2,.sticker-3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  position: absolute;
+}
+
+.sticker-1,.sticker-2,.sticker-3:hover {
+  cursor: pointer;
+}
+
+.sticker-1 {
+  background-color: orange;
+  top: 30%;
+  left: 30%;
+}
+.sticker-2 {
+  background-color: skyblue;
+  bottom: 30%;
+  right: 30%;
+}
+.sticker-3 {
+  background-color: bisque;
+}
+
+</style>
+<body>
+  <div id="root">
+    <div class="sticker-1"></div>
+    <div class="sticker-2"></div>
+    <div class="sticker-3"></div>
+  </div>
+  
+  <script>
+
+    const root = document.getElementById("root");
+    const stickers = root.children;
+
+    function sticker(target) {
+      target.onmousedown = function(event) {
+  
+      let shiftX = event.clientX - target.getBoundingClientRect().left;
+      let shiftY = event.clientY - target.getBoundingClientRect().top;
+      
+      target.style.position = 'absolute';
+      target.style.zIndex = 1000;
+      document.body.append(target);
+      
+      moveAt(event.pageX, event.pageY);
+      
+      // 초기 이동을 고려한 좌표 (pageX, pageY)에서
+      // 공을 이동합니다.
+      function moveAt(pageX, pageY) {
+        target.style.left = pageX - shiftX + 'px';
+        target.style.top = pageY - shiftY + 'px';
+      }
+      
+      function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+      }
+      
+      // mousemove로 공을 움직입니다.
+      document.addEventListener('mousemove', onMouseMove);
+      
+      // 공을 드롭하고, 불필요한 핸들러를 제거합니다.
+      target.onmouseup = function() {
+        document.removeEventListener('mousemove', onMouseMove);
+        target.onmouseup = null;
+      };
+      
+      };
+      
+      target.ondragstart = function() {
+      return false;
+      };
+    }
+
+    sticker(stickers[0]);
+    sticker(stickers[1]);
+    sticker(stickers[2]);
+  </script>
+</body>
+</html>
