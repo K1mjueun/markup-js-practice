@@ -17,33 +17,36 @@
     justify-content: center;
     align-items: center;
     position: relative;
-
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    background-image: url("/Whiplash-2.jpg");
-  }
-
-  #root > div, #root > div > img {
-    width: 100%;
-    height: 100%;
+    overflow: hidden;
   }
 
   #root > div {
-    position: absolute;
-  }
-  
-  #root > div > img {
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    z-index: 2;
+    position: absolute;
   }
 
+  #root > div:nth-child(1) {
+    background-image: url("/imgtype-1.png");
+    z-index: 2;
+  }
+  
   #root > h1 {
     position: absolute;
-    font-size:300px;
-    color: #fff;
     z-index: 1;
+    
+    font-size:300px;
+    color:#333;
+    mix-blend-mode:multiply;
+    font-family: sans-serif;
+
+    top:-10%;
+  }
+
+  #root > div:nth-child(3) {
+    background-image: url("/Whiplash-2.jpg");
   }
 </style>
 
@@ -51,17 +54,21 @@
   <div id="root">
     <div></div>
     <h1>WHIPLASH</h1>
+    <div></div>
   </div>
 
   <script>
     const root = document.getElementById("root");
-    const person = root.children[0];
-    const text = root.children[1];
 
-    root.addEventListener("click", function() {
-      text.style.zIndex = 2;
+    const inRoot = {
+      person : root.children[0],
+      text : root.children[1],
+      bgImg : root.children[2]
+    };
+
+    inRoot.person.addEventListener("click", function() {
+      inRoot.text.style.zIndex = 2;
     });
-
-    </script>
+  </script>
 </body>
 </html>
